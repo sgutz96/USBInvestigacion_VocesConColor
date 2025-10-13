@@ -1,82 +1,99 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyecto NNA - Agenciamiento y Expresión</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Plantilla: Bootstrap + Three.js + Rellax + ArcGIS</title>
+
+  <!-- Bootstrap CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ArcGIS API for JavaScript (CSS) -->
+  <link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css">
 
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/style2.css">
-  <link rel="stylesheet" href="./css/home.css">
-
+<link rel="stylesheet" href="./css/home.css">
+  
 </head>
-
 <body>
-  <!-- NAVIGATION -->
-  <nav>
 
-    <img src="./assets/img/Logo.png" alt="" srcset="">
 
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-container">
+    <img src="./assets/img/Logo.png" alt="Logo del proyecto" class="logo">
+
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+      ☰
+    </button>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="./equipo.html">Personas del Proyecto</a></li>
+      <li><a href="./clases.html">Secciones</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </div>
+
+  <!-- Popup del menú móvil -->
+  <div class="menu-popup" id="menu-popup">
     <ul>
       <li><a href="#" class="active">Home</a></li>
       <li><a href="./equipo.html">Personas del Proyecto</a></li>
       <li><a href="./clases.html">Secciones</a></li>
       <li><a href="#">Contacto</a></li>
     </ul>
-  </nav>
+  </div>
+</nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <canvas id="heroCanvas"></canvas>
 
-    <div class="hero-text">
-      <h1>interactua con nuestro mundo</h1>
-      <p>
-        lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat.
-      </p>
-      <button class="btn-primary" id="exploreButton">Explora</button>
+<!-- HERO SECTION -->
+<section id="hero">
+  <canvas id="threeCanvas"></canvas>
+
+  <div class="hero-content">
+    <h1>Proyecto NNA</h1>
+    <p>Explorando experiencias interactivas con naturaleza y tecnología</p>
+  </div>
+</section>
+
+<!-- MARQUESINA DE EMOCIONES -->
+<section class="emociones">
+  <div class="marquesina">
+    <div class="marquesina-track">
+      <span>Alegría</span>
+      <span>Tristeza</span>
+      <span>Pasión</span>
+      <span>Solidaridad</span>
+      <span>Esperanza</span>
+      <span>Creatividad</span>
+      <span>Confianza</span>
+      <span>Alegría</span>
+      <span>Tristeza</span>
+      <span>Pasión</span>
+      <span>Solidaridad</span>
+      <span>Esperanza</span>
+      <span>Creatividad</span>
+      <span>Confianza</span>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- MARQUESINA DE EMOCIONES -->
-  <section class="emociones">
-    <div class="marquesina">
-      <div class="marquesina-track">
-        <span>Alegría</span>
-        <span>Tristeza</span>
-        <span>Pasión</span>
-        <span>Solidaridad</span>
-        <span>Esperanza</span>
-        <span>Creatividad</span>
-        <span>Confianza</span>
-        <span>Alegría</span>
-        <span>Tristeza</span>
-        <span>Pasión</span>
-        <span>Solidaridad</span>
-        <span>Esperanza</span>
-        <span>Creatividad</span>
-        <span>Confianza</span>
-      </div>
-    </div>
-  </section>
+<!-- About -->
+<section class="about">
+  <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=500&h=400&fit=crop"
+    alt="NNA en actividad artística">
+  <div class="about-text">
+    <h2>Sobre el Proyecto</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ab quia perspiciatis officia eligendi dolorum
+      ut nobis maxime inventore quos laboriosam commodi consequuntur dolor ipsa quas adipisci non optio veniam.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis adipisci assumenda est? Culpa temporibus
+      officiis sapiente, libero harum ipsa amet eaque! Dolorem eveniet aspernatur, saepe nihil inventore reiciendis
+      quia eos.</p>
+    <button><a href="#recursos">Conocer Más</a></button>
+  </div>
+</section>
 
-  <!-- About -->
-  <section class="about">
-    <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=500&h=400&fit=crop"
-      alt="NNA en actividad artística">
-    <div class="about-text">
-      <h2>Sobre el Proyecto</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ab quia perspiciatis officia eligendi dolorum
-        ut nobis maxime inventore quos laboriosam commodi consequuntur dolor ipsa quas adipisci non optio veniam.</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis adipisci assumenda est? Culpa temporibus
-        officiis sapiente, libero harum ipsa amet eaque! Dolorem eveniet aspernatur, saepe nihil inventore reiciendis
-        quia eos.</p>
-      <button class="btn-primary"><a href="#recursos">Conocer Más</a></button>
-    </div>
-  </section>
 
   <!-- TRAILER -->
   <section class="trailer">
@@ -91,11 +108,11 @@
           allowfullscreen></iframe>
       </div>
 
-      <button class="btn-secondary">Ver Completo</button>
+      <button>Ver Completo</button>
     </div>
   </section>
 
-  <!-- MAPA -->
+<!-- MAPA -->
   <section class="map-section">
     <div class="map-header">
       <h2>Mapas Interactivos - Regiones de Colombia</h2>
@@ -129,7 +146,7 @@
     </div>
   </section>
 
-  <!-- RECURSOS -->
+   <!-- RECURSOS -->
   <section class="recursos" id="recursos">
     <h2>Recursos</h2>
 
@@ -164,111 +181,99 @@
     </div>
   </section>
 
+ <!-- EXPLORA POR CLASE -->
+<section class="explora" id="explora">
+  <h2>Explora por Disciplina Artística</h2>
 
+  <div class="explora-container">
 
-
-
-  <!-- EXPLORA POR CLASE -->
-  <section class="classes">
-    <h2>Explora por Disciplina Artística</h2>
-    <div class="class-grid">
-
-      <div class="class-card" onclick="window.location.href='#danza'">
-        <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?w=300&h=200&fit=crop" alt="Danza expresiva">
-        <div class="content">
-          <h3>Clase 1</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, tenetur aspernatur magni.</p>
-          <button class="btn-secondary">Explorar Danza</button>
-        </div>
+    <div class="explora-card" onclick="window.location.href='#danza'">
+      <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?w=300&h=200&fit=crop" alt="Danza expresiva">
+      <div class="content">
+        <h3>Clase 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, tenetur aspernatur magni.</p>
+        <button>Explorar Danza</button>
       </div>
-
-      <div class="class-card" onclick="window.location.href='#artes'">
-        <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=300&h=200&fit=crop"
-          alt="Pintura creativa">
-        <div class="content">
-          <h3>Clase 2</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, tenetur aspernatur magni.</p>
-          <button class="btn-secondary">Explorar Artes</button>
-        </div>
-      </div>
-
-      <div class="class-card" onclick="window.location.href='#musica'">
-        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=200&fit=crop"
-          alt="Música colaborativa">
-        <div class="content">
-          <h3>Clase 3</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, tenetur aspernatur magni.</p>
-          <button class="btn-secondary">Explorar Música</button>
-        </div>
-      </div>
-
     </div>
-    <button class="btn-primary">Conoce Más</button>
-  </section>
 
-  <!-- TESTIMONIOS -->
-  <section class="testimonials">
-    <h2>Voces de Transformación</h2>
-    <div class="testimonial-list">
-
-      <div class="testimonial-card">
-        <img src="./assets/img/chapter cover/chapter_1.webp" alt="Testimonio 1">
-        <div class="testimonial-content">
-          <h3>Podcast Capitulo 1</h3>
-          <p>"Este proyecto me permitió descubrir mi voz y compartirla con otros. A través del arte pude contar mi
-            historia sin miedo."</p>
-          <button class="btn-primary"
-            onclick="window.open('https://open.spotify.com/track/3n3Ppam7vgaVa1iaRUc9Lp','_blank')">
-            ▶ Escuchar
-          </button>
-        </div>
+    <div class="explora-card" onclick="window.location.href='#artes'">
+      <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=300&h=200&fit=crop" alt="Pintura creativa">
+      <div class="content">
+        <h3>Clase 2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, tenetur aspernatur magni.</p>
+        <button>Explorar Artes</button>
       </div>
+    </div>
 
-      <div class="testimonial-card">
-        <img src="./assets/img/chapter cover/chapter_1.webp" alt="Testimonio 2">
-        <div class="testimonial-content">
-          <h3>Podcast Capitulo 2</h3>
-          <p>"Gracias al arte pude expresar mis emociones y sentirme acompañada. Encontré una familia en este espacio
-            creativo."</p>
-          <button class="btn-primary"
-            onclick="window.open('https://open.spotify.com/track/4uLU6hMCjMI75M1A2tKUQC','_blank')">
-            ▶ Escuchar
-          </button>
-        </div>
+    <div class="explora-card" onclick="window.location.href='#musica'">
+      <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=200&fit=crop" alt="Música colaborativa">
+      <div class="content">
+        <h3>Clase 3</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, tenetur aspernatur magni.</p>
+        <button>Explorar Música</button>
       </div>
+    </div>
 
-      <div class="testimonial-card">
-        <img src="./assets/img/chapter cover/chapter_1.webp" alt="Testimonio 3">
-        <div class="testimonial-content">
-          <h3>Podcast Capitulo 3</h3>
-          <p>"El proyecto me enseñó que mis experiencias son valiosas. Ahora ayudo a otros niños a encontrar su propia
-            voz."</p>
-          <button class="btn-primary"
-            onclick="window.open('https://open.spotify.com/track/6UelLqGlWMcVH1E5c4H7lY','_blank')">
-            ▶ Escuchar
-          </button>
-        </div>
+  </div>
+
+  <button>Conoce Más</button>
+</section>
+<!-- TESTIMONIOS -->
+<section class="testimonials" id="testimonios">
+  <h2>Voces de Transformación</h2>
+
+  <div class="testimonials-wrapper">
+
+    <div class="testimonio-card">
+      <img src="./assets/img/chapter cover/chapter_1.webp" alt="Podcast Capítulo 1">
+      <div class="testimonio-info">
+        <h3>Podcast Capítulo 1</h3>
+        <p>"Este proyecto me permitió descubrir mi voz y compartirla con otros. 
+          A través del arte pude contar mi historia sin miedo."</p>
+        <button class="btn btn-primary"
+          onclick="window.open('https://open.spotify.com/track/3n3Ppam7vgaVa1iaRUc9Lp','_blank')">
+          ▶ Escuchar
+        </button>
       </div>
-
     </div>
-    <button class="btn-primary">Conoce Mas</button>
-  </section>
+
+    <div class="testimonio-card">
+      <img src="./assets/img/chapter cover/chapter_1.webp" alt="Podcast Capítulo 2">
+      <div class="testimonio-info">
+        <h3>Podcast Capítulo 2</h3>
+        <p>"Gracias al arte pude expresar mis emociones y sentirme acompañada. 
+          Encontré una familia en este espacio creativo."</p>
+        <button class="btn btn-primary"
+          onclick="window.open('https://open.spotify.com/track/4uLU6hMCjMI75M1A2tKUQC','_blank')">
+          ▶ Escuchar
+        </button>
+      </div>
+    </div>
+
+    <div class="testimonio-card">
+      <img src="./assets/img/chapter cover/chapter_1.webp" alt="Podcast Capítulo 3">
+      <div class="testimonio-info">
+        <h3>Podcast Capítulo 3</h3>
+        <p>"El proyecto me enseñó que mis experiencias son valiosas. 
+          Ahora ayudo a otros niños a encontrar su propia voz."</p>
+        <button class="btn btn-primary"
+          onclick="window.open('https://open.spotify.com/track/6UelLqGlWMcVH1E5c4H7lY','_blank')">
+          ▶ Escuchar
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="testimonios-footer">
+    <button class="btn btn-secondary">Conoce Más</button>
+  </div>
+</section>
 
 
-  <!-- YOUTUBE -->
-  <section class="youtube-section">
-    <div>
-      <h2>Explora Más en Video</h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, nulla aspernatur. Rem, magnam aliquam ullam
-        labore, fuga nulla facere a accusantium dolore aspernatur tempora autem delectus repudiandae hic harum
-        provident!</p>
-    </div>
-    <div>
-      <iframe src="https://www.youtube.com/watch?v=NpEaa2P7qZI" frameborder="0" allowfullscreen
-        title="Video del proyecto">
-      </iframe>
-    </div>
-  </section>
+
+
+
 
   <!-- FOOTER -->
   <footer>
@@ -282,19 +287,26 @@
     </p>
   </footer>
 
-  <!-- THREE.JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
 
-  <script src="./JS/Banner.js"></script>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="./JS/Testimonios.js"></script>
 
-  <!-- mapa -->
-  <script src="./JS/Mapa.js"></script>
+  <!-- SCRIPTS: librerías (CDN) -->
+  <!-- Bootstrap Bundle (incluye Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Three.js (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+
+  <!-- Rellax.js (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js"></script>
+
+  <!-- ArcGIS API for JavaScript (CDN) -->
+  <script src="https://js.arcgis.com/4.26/"></script>
+
+  <script src="./js/Nav.js" ></script>
+  <script src="./js/hero.js"></script>
+<script src="./js/map.js"></script>
+<script src="./js/recursos.js"></script>
 
 </body>
-
 </html>

@@ -1,630 +1,656 @@
-
-/* ===== HERO SECTION ===== */
-/* ===== HERO SECTION ===== */
-.hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+/* 🟩 HERO SECTION */
+#hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.hero canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    z-index: 0;
+/* Canvas de Three.js */
+#threeCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
 }
 
-.hero-text {
-    position: absolute;
-    top: 30%;
-    left: 10%;
-    max-width: 450px;
-    /* El color del texto principal del Hero será blanco hueso */
-    color: var(--blanco-hueso);
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* Usa la variable de espaciado para el espacio entre elementos */
-    gap: var(--margen-espacio);
+/* Contenido sobre el canvas */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: var(--color-green);
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 2rem;
 }
 
-.hero-text h1 {
-    /* H1 del Hero usa el estilo que ya definiste */
-    font-size: 2.5rem;
-    font-weight: 700;
-    line-height: 1.2;
-    color: var(--blanco-hueso);
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
 }
 
-.hero-text p {
-    /* Párrafo del Hero usa los estilos que ya definiste */
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: var(--espacio-m);
-    /* Agrega un pequeño margen debajo del párrafo */
+.hero-content p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #333;
 }
 
-/* El botón ya está estilizado con la clase .btn-primary, pero aquí puedes darle un estilo adicional */
-.hero-text .btn-primary {
-    /* Estilo de "botón fantasma" */
-    background-color: transparent;
-    color: var(--blanco-hueso);
-    border: 1px solid var(--blanco-hueso);
-    padding: var(--padding-interno) var(--margen-espacio);
+/* 🔹 Evitar que el canvas sobresalga del viewport */
+body, html {
+  overflow-x: hidden;
 }
 
-.hero-text .btn-primary:hover {
-    /* Estilo al pasar el mouse */
-    background-color: var(--verde-suave);
-    color: var(--texto-principal);
-    border-color: var(--verde-suave);
-}
+
 
 /* ================= MARQUESINA ================= */
 .emociones {
-    /* Se usa el morado como color de fondo de la marquesina */
-    background: var(--morado-claro);
-    padding: var(--padding-interno) 0;
-    overflow: hidden;
-    position: relative;
+  background: var(--color-green); /* Fondo verde naturaleza */
+  padding: 1.5rem 0;
+  overflow: hidden;
+  position: relative;
 }
 
 .marquesina {
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-    overflow: hidden;
-    /* Se agrega un gradiente para un efecto de "desvanecimiento" */
-    -webkit-mask-image: linear-gradient(90deg,
-            transparent,
-            white 15%,
-            white 85%,
-            transparent);
-    mask-image: linear-gradient(90deg,
-            transparent,
-            white 15%,
-            white 85%,
-            transparent);
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+
+  /* Efecto de desvanecimiento a los lados */
+  -webkit-mask-image: linear-gradient(90deg, transparent, white 15%, white 85%, transparent);
+  mask-image: linear-gradient(90deg, transparent, white 15%, white 85%, transparent);
 }
 
 .marquesina-track {
-    display: inline-block;
-    animation: scroll-left 20s linear infinite;
-    /* Se quita el padding-left, ya que el contenido duplicado soluciona el salto */
+  display: inline-block;
+  animation: scroll-left 25s linear infinite;
 }
 
 .marquesina-track span {
-    display: inline-block;
-    /* Se usa la variable de espaciado para el margen */
-    margin: var(--padding-interno) var(--margen-espacio);
-    font-size: 1.5rem;
-    /* Tamaño de fuente más grande para destacar */
-    font-weight: 700;
-    /* El color del texto es el blanco hueso de tu paleta */
-    color: var(--blanco-hueso);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  margin: 0 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--bg-white-stone); /* Texto blanco piedra */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
+/* 🔄 Animación continua */
 @keyframes scroll-left {
-    0% {
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-/* ===== ABOUT SECTION ===== */
-.about {
+/* 📱 Ajuste responsivo */
+@media (max-width: 768px) {
+  .marquesina-track span {
+    font-size: 1.1rem;
+    margin: 0 1rem;
+  }
+}
 
-    max-width: 1200px;
-    /* Utiliza las variables de margen y padding */
-    margin: var(--margen-seccion) auto;
-    padding: var(--padding-bloque);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* Usa la variable de espaciado */
-    gap: var(--margen-espacio);
+/* Sección About */
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 5rem 10%;
+  background-color: var(--bg-white-stone);
+  color: #333;
 }
 
 .about img {
-    width: 100%;
-    /* Las propiedades de borde, sombra y transición son nuevas variables */
-    border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+  width: 45%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
 }
 
 .about img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  transform: scale(1.03);
 }
 
 .about-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* Se ha cambiado para centrar el contenido verticalmente */
-    align-items: flex-start;
+  width: 50%;
 }
 
 .about-text h2 {
-    /* H2 usa el estilo que ya definiste */
-    margin-bottom: var(--espacio-m);
-    color: var(--verde-suave);
-    font-size: 2rem;
-    font-weight: 700;
+  font-size: 2rem;
+  color: var(--color-green);
+  margin-bottom: 1rem;
 }
 
 .about-text p {
-    /* Párrafo usa los estilos base que ya definiste */
-    margin-bottom: var(--espacio-m);
-    color: var(--texto-suave);
-    font-size: 1rem;
-    font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #444;
 }
 
-.about .about-text button a {
-    text-decoration: none;
-    color: var(--blanco-hueso);
+.about-text button {
+  background-color: var(--color-green);
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.about-text button:hover {
+  background-color: var(--color-yellow);
+  color: #333;
+}
+
+.about-text button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Responsividad */
+@media (max-width: 900px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 1.5rem;
+  }
+
+  .about img {
+    width: 100%;
+  }
+
+  .about-text {
+    width: 100%;
+  }
 }
 
 /* ================= TRAILER ================= */
 .trailer {
-    /* Se usa un gradiente que combina los colores de tu paleta */
-    background: linear-gradient(135deg, var(--blanco-hueso), var(--verde-suave));
-    /* Utiliza las variables de espaciado */
-    padding: var(--margen-seccion) var(--padding-bloque);
-    text-align: center;
+  background-color: var(--bg-white-stone);
+  color: black;
+  padding: 5rem 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .trailer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: var(--margen-espacio);
+  max-width: 900px;
+}
+
+.trailer h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-green);
+  font-weight: 700;
+}
+
+.trailer p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #333;
 }
 
 .trailer-video {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16/9;
-    margin-bottom: var(--margen-espacio);
-    border-radius: 12px;
-    /* Se usa un valor directo para la consistencia del borde */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Relación 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2rem;
 }
 
 .trailer-video iframe {
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
-/* ===== MAPA SECTION ===== */
+/* Botón */
+.trailer button {
+  background-color: var(--color-green);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.trailer button:hover {
+  background-color: var(--color-blue);
+  color: black;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .trailer {
+    padding: 3rem 1.5rem;
+  }
+
+  .trailer h2 {
+    font-size: 2rem;
+  }
+
+  .trailer p {
+    font-size: 1rem;
+  }
+}
+
+/* ================= MAPA INTERACTIVO ================= */
 .map-section {
-    padding: var(--margen-seccion) var(--padding-bloque);
-    background-color: var(--blanco-hueso);
+  background-color: var(--bg-white-stone);
+  color: var(--color-green);
+  padding: 5rem 10%;
+  text-align: center;
 }
 
-.map-header {
-    text-align: center;
-    margin-bottom: var(--margen-espacio);
+.map-header h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--color-green);
+  margin-bottom: 0.5rem;
 }
 
+.map-header p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Tabs */
 .map-tabs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--padding-interno);
-    margin-bottom: var(--margen-espacio);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
 }
 
 .tab-button {
-    background: transparent;
-    border: 2px solid var(--verde-suave);
-    padding: var(--padding-interno) var(--margen-espacio);
-    font-weight: 600;
-    font-size: 1rem;
-    color: var(--verde-suave);
-    cursor: pointer;
-    border-radius: 25px;
-    transition: all 0.3s ease;
+  background-color: var(--color-green);
+  color: white;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.tab-button:hover,
+.tab-button:hover {
+  background-color: var(--color-blue);
+  color: black;
+}
+
 .tab-button.active {
-    background: var(--verde-suave);
-    color: var(--blanco-hueso);
+  background-color: var(--color-yellow);
+  color: black;
 }
 
+/* Map container */
 .map-content-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background: var(--bg-yellow-stone);
 }
 
 .map-content {
-    display: none;
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    background: var(--blanco-hueso);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
 }
 
 .map-content.active {
-    display: block;
+  display: block;
 }
 
 .map-content iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 1rem;
 }
 
-/* ==== RECURSOS ==== */
+/* Responsive */
+@media (max-width: 768px) {
+  .map-section {
+    padding: 3rem 1rem;
+  }
+
+  .tab-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .map-header h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ================= RECURSOS ================= */
 .recursos {
-    /* Fondo con blanco hueso y padding de tu sistema */
-    background-color: var(--blanco-hueso);
-    padding: var(--margen-seccion) var(--padding-bloque);
-    text-align: center;
+  background-color: var(--bg-yellow-stone);
+  color: var(--color-green);
+  padding: 5rem 10%;
+  text-align: center;
+  position: relative;
 }
 
+.recursos h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-green);
+  margin-bottom: 3rem;
+}
+
+/* Swiper container */
 .recursosSwiper {
-    /* Padding interno para el swiper */
-    padding: var(--padding-interno);
+  width: 100%;
+  margin: 0 auto;
 }
 
-.recursosSwiper .swiper-wrapper {
-    display: flex;
-    gap: var(--margen-espacio);
-}
-
+/* Tarjetas */
 .recurso-card {
-    /* Tarjetas con fondo blanco hueso */
-    background-color: var(--amarillo-brillante);
-    padding: var(--margen-espacio);
-    /* Borde superior con color principal de tu paleta */
-    border-top: 4px solid var(--verde-suave);
-    border-radius: 12px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 220px;
-    transition: all 0.3s ease;
+  background-color: var(--bg-white-stone);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .recurso-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilos para los controles de Swiper */
-.swiper-button-prev,
-.swiper-button-next {
-    color: var(--morado-claro) !important;
+.recurso-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.recurso-card h3 {
+  font-size: 1.2rem;
+  color: var(--color-green);
+  font-weight: 600;
+}
+
+/* Flechas */
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--color-green);
+  transition: color 0.3s;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: var(--color-blue);
+}
+
+/* Paginación */
+.swiper-pagination-bullet {
+  background-color: var(--color-green);
+  opacity: 0.4;
 }
 
 .swiper-pagination-bullet-active {
-    background: var(--morado-claro) !important;
+  background-color: var(--color-green);
+  opacity: 1;
 }
 
-/* ==== SECCIÓN CLASES ==== */
-.classes {
-    /* Fondo con tu color blanco hueso */
-    background-color: var(--blanco-hueso);
-    padding: var(--margen-seccion) var(--padding-bloque);
-    text-align: center;
+.swiper-wrapper{
+    display: flex;
+        flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 5px;
 }
 
-.classes h2 {
-    /* H2 de tu sistema de diseño */
+/* Responsive */
+@media (max-width: 768px) {
+  .recursos {
+    padding: 3rem 5%;
+  }
+
+  .recurso-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .recursos h2 {
     font-size: 2rem;
-    font-weight: 700;
-    line-height: 1.2;
-    color: var(--morado-claro);
-    margin-bottom: var(--margen-espacio);
+  }
 }
 
-.class-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--margen-espacio);
-    max-width: 1200px;
-    margin: 0 auto var(--margen-espacio) auto;
+/* ================= EXPLORA POR CLASE ================= */
+.explora {
+  background-color: var(--bg-white-stone);
+  color: var(--color-green);
+  padding: 5rem 10%;
+  text-align: center;
 }
 
-.class-card {
-    /* Tarjetas con blanco hueso de fondo */
-    background: var(--amarillo-brillante);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    display: flex;
-    flex-direction: column;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    /* Borde con un color de acento de tu paleta */
-    border-bottom: 5px solid var(--verde-suave);
+.explora h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-green);
+  margin-bottom: 3rem;
 }
 
-.class-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+/* Contenedor principal */
+.explora-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
-.class-card img {
+/* Tarjeta */
+.explora-card {
+  background-color: var(--bg-yellow-stone);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explora-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.explora-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Contenido interno */
+.explora-card .content {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.explora-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-green);
+}
+
+.explora-card p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.explora-card button {
+  background-color: var(--color-green);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.explora-card button:hover {
+  background-color: var(--color-blue);
+  color: #000;
+}
+
+/* Botón final */
+.explora > button {
+  background-color: var(--color-yellow);
+  color: #000;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.8rem 2rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.explora > button:hover {
+  background-color: var(--color-green);
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .explora {
+    padding: 3rem 5%;
+  }
+
+  .explora h2 {
+    font-size: 2rem;
+  }
+
+  .explora-card .content {
+    text-align: center;
+  }
+
+  .explora-card button {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.class-card .content {
-    padding: var(--margen-espacio);
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: var(--padding-interno);
-}
-
-.class-card h3 {
-    /* H3 de tu sistema de diseño */
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1.2;
-    color: var(--morado-claro);
-}
-
-.class-card p {
-    /* Párrafo de tu sistema de diseño */
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--texto-suave);
-}
-
-/* El botón dentro de la tarjeta ahora usa la clase .btn-secondary */
-.class-card button {
-    margin-top: auto;
+  }
 }
 
 
-/* SECCIÓN TESTIMONIOS */
 .testimonials {
-    max-width: 1200px;
-    /* Espaciado del sistema de diseño */
-    margin: var(--margen-seccion) auto;
-    padding: var(--padding-bloque);
-    text-align: center;
+  padding: 60px 20px;
+  background-color: var(--color-fondo, #f9f9f9);
+  text-align: center;
 }
 
-
-
-.testimonial-list {
-    display: flex;
-    flex-direction: column;
-    gap: var(--margen-espacio);
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-texto, #222);
 }
 
-.testimonial-card {
-    display: flex;
-    align-items: center;
-    gap: var(--margen-espacio);
-    padding: var(--margen-espacio);
-    background: var(--amarillo-brillante);
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    /* Borde con un color de tu paleta */
-    border-left: 4px solid var(--verde-suave);
-    transition: all 0.3s ease;
+.testimonials-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.testimonial-card:hover {
-    transform: translateY(-5px);
+.testimonio-card {
+  display: flex;
+  align-items: center;
+  background: var(--color-blanco, #fff);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 
-.testimonial-card img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    flex-shrink: 0;
-    /* Borde de la imagen con un color de tu paleta */
-    border: 3px solid var(--azul-cian);
+.testimonio-card:hover {
+  transform: translateY(-5px);
 }
 
-.testimonial-content {
-    text-align: left;
-    flex: 1;
+.testimonio-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
 }
 
-.testimonial-content h3 {
-    margin-bottom: var(--padding-interno);
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1.2;
-    color: var(--morado-claro);
+.testimonio-info {
+  flex: 1;
+  text-align: left;
+  padding: 1.5rem;
 }
 
-.testimonial-content button:hover {
-    background: var(--amarillo-brillante);
+.testimonio-info h3 {
+  margin-bottom: 0.5rem;
+  color: var(--color-primario, #0055aa);
 }
 
-/* El botón principal hereda los estilos de la clase .btn-primary */
-.testimonials>button {
-    margin-top: var(--margen-espacio);
+.testimonio-info p {
+  color: var(--color-texto, #444);
+  margin-bottom: 1rem;
+  line-height: 1.5;
 }
 
-/* ===== Youtube ===== */
-.youtube-section {
-    max-width: 1200px;
-    /* Utiliza las variables de espaciado */
-    margin: var(--margen-seccion) auto;
-    padding: var(--padding-bloque);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--margen-espacio);
-    align-items: center;
+.btn {
+  cursor: pointer;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease;
 }
 
-.youtube-section h2 {
-    /* H2 de tu sistema de diseño */
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: var(--espacio-m);
-    color: var(--morado-claro);
+.btn-primary {
+  background-color: var(--color-secundario, #1db954);
+  color: white;
 }
 
-.youtube-section p {
-    /* Párrafo de tu sistema de diseño */
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--texto-suave);
+.btn-primary:hover {
+  background-color: var(--color-secundario-hover, #18a44a);
 }
 
-.youtube-section iframe {
-    width: 100%;
-    aspect-ratio: 16/9;
-    /* Estilos para el video */
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
+.btn-secondary {
+  background-color: var(--color-primario, #000);
+  color: white;
 }
 
-.youtube-section iframe:hover {
-    transform: scale(1.02);
-}
-
-/* ========================================= */
-/* ===== MEDIA QUERIES PARA RESPONSIVE ===== */
-/* ========================================= */
-
-/* --- Tablet (hasta 768px) --- */
-@media screen and (max-width: 768px) {
-    /* Hero Section */
-    .hero-text {
-        top: 20%;
-        left: 5%;
-        right: 5%;
-        max-width: none;
-        text-align: center;
-        align-items: center;
-    }
-
-    .hero-text h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero-text p {
-        font-size: 0.9rem;
-    }
-
-    /* Marquee */
-    .marquee-text {
-        font-size: 3rem;
-    }
-
-    /* About Section */
-    .about-section {
-        flex-direction: column;
-        gap: var(--margen-espacio);
-    }
-    
-    .about-image {
-        max-width: 80%;
-    }
-
-    /* Trailer Section */
-    .trailer-section .trailer-video {
-        height: 300px;
-    }
-
-    /* Map Section */
-    .map-tabs {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-    }
-
-    /* Resources & Testimonials */
-    .swiper-slide {
-        padding: 1rem;
-    }
-
-    .swiper-slide .card {
-        flex-direction: column;
-    }
-
-    .swiper-slide .card img {
-        margin-bottom: 1rem;
-    }
-    
-    .swiper-slide .card .testimonial-content {
-        text-align: center;
-    }
-
-    /* Classes Section */
-    .classes-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-    
-    .class-card {
-        height: auto;
-    }
-
-    /* Youtube Section */
-    .youtube-section {
-        grid-template-columns: 1fr;
-    }
-
-    .youtube-section iframe {
-        height: 300px;
-    }
-}
-
-/* --- Móvil (hasta 480px) --- */
-@media screen and (max-width: 480px) {
-    /* Hero Section */
-    .hero-text {
-        top: 15%;
-    }
-
-    .hero-text h1 {
-        font-size: 1.8rem;
-    }
-
-    /* Marquee */
-    .marquee-text {
-        font-size: 2rem;
-    }
-
-    /* Youtube Section */
-    .youtube-section iframe {
-        height: 250px;
-    }
-
-    /* Classes Section */
-    .classes-grid {
-        grid-template-columns: 1fr;
-    }
+.testimonios-footer {
+  margin-top: 2rem;
 }

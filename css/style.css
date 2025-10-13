@@ -1,169 +1,159 @@
-/* ===== VARIABLES CSS - SISTEMA ESTANDARIZADO ===== */
 :root {
-  /* Paleta de azules (60-30-20) */
-  --primary-60: #f0f7ff;
-  --secondary-30: #3b82f6;
-  --accent-20: #1e40af;
-  
-  /* Escalas complementarias */
-  --blue-50: #eff6ff;
-  --blue-100: #dbeafe;
-  --blue-200: #bfdbfe;
-  --blue-300: #93c5fd;
-  --blue-400: #60a5fa;
-  --blue-500: #3b82f6;
-  --blue-600: #2563eb;
-  --blue-700: #1d4ed8;
-  --blue-800: #1e40af;
-  --blue-900: #1e3a8a;
-  
-  /* === SISTEMA TIPOGRÁFICO === */
-  /* Jerarquía de tamaños */
-  --font-size-xs: 0.75rem;    /* 12px */
-  --font-size-sm: 0.875rem;   /* 14px */
-  --font-size-base: 1rem;     /* 16px */
-  --font-size-lg: 1.125rem;   /* 18px */
-  --font-size-xl: 1.25rem;    /* 20px */
-  --font-size-2xl: 1.5rem;    /* 24px */
-  --font-size-3xl: 2rem;      /* 32px */
-  --font-size-4xl: 2.5rem;    /* 40px */
-  --font-size-5xl: 3rem;      /* 48px */
-  
-  /* Pesos de fuente */
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  --font-weight-extrabold: 800;
-  
-  /* Alturas de línea */
-  --line-height-tight: 1.2;
-  --line-height-normal: 1.5;
-  --line-height-relaxed: 1.6;
-  --line-height-loose: 1.8;
-  
-  /* === SISTEMA DE COLORES === */
-  /* Colores de texto principales */
-  --text-primary: #111827;     /* Texto principal - gris muy oscuro */
-  --text-secondary: #374151;   /* Texto secundario - gris medio */
-  --text-muted: #6b7280;       /* Texto suave - gris claro */
-  --text-light: #9ca3af;       /* Texto muy suave */
-  --text-white: #ffffff;       /* Texto blanco */
-  
-  /* Colores de fondo */
-  --bg-primary: var(--primary-60);
-  --bg-secondary: var(--blue-50);
-  --bg-accent: var(--blue-100);
-  --bg-white: #ffffff;
-  --bg-gray-light: #f9fafb;
-  --bg-gray-medium: #f3f4f6;
-  
-  /* Colores de marca y acción */
-  --brand-primary: var(--secondary-30);
-  --brand-secondary: var(--accent-20);
-  --brand-accent: #00aaff;
-  
-  /* Espaciado */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 2rem;
-  --spacing-lg: 3rem;
-  --spacing-xl: 4rem;
-  --spacing-2xl: 5rem;
-  
-  /* Efectos */
-  --border-radius: 12px;
-  --transition: all 0.3s ease;
-  --shadow: 0 4px 12px rgba(30, 64, 175, 0.15);
-  --shadow-hover: 0 8px 25px rgba(30, 64, 175, 0.25);
+  --bg-white-stone: #f9f8f4;
+  --bg-yellow-stone: #f5e6b0;
+  --color-green: #5c8a4b;
+  --color-blue: #a7d8f0;
+  --color-yellow: #f8e49c;
 }
 
-/* ===== CLASES TIPOGRÁFICAS UTILITARIAS ===== */
-.text-heading-1 {
-  font-size: var(--font-size-5xl);
-  font-weight: var(--font-weight-extrabold);
-  line-height: var(--line-height-tight);
-  color: var(--text-primary);
-}
-
-.text-heading-2 {
-  font-size: var(--font-size-4xl);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-tight);
-  color: var(--text-primary);
-}
-
-.text-heading-3 {
-  font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-normal);
-  color: var(--text-primary);
-}
-
-.text-heading-4 {
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-normal);
-  color: var(--text-primary);
-}
-
-.text-heading-5 {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-normal);
-  color: var(--text-primary);
-}
-
-.text-body-large {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-normal);
-  line-height: var(--line-height-relaxed);
-  color: var(--text-secondary);
-}
-
-.text-body {
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-normal);
-  line-height: var(--line-height-relaxed);
-  color: var(--text-secondary);
-}
-
-.text-body-small {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-normal);
-  line-height: var(--line-height-normal);
-  color: var(--text-muted);
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 
 
 
-/* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 768px) {
-  :root {
-    --font-size-5xl: 2.5rem;    /* Reducir en móvil */
-    --font-size-4xl: 2rem;      /* Reducir en móvil */
-    --font-size-3xl: 1.75rem;   /* Reducir en móvil */
+nav {
+  width: 100%;
+  background-color: var(--bg-white-stone);
+  color: black;
+  padding: 0.5rem 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+}
+
+/* Links desktop */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--color-green);
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Popup móvil */
+.menu-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-yellow-stone);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 99;
+}
+
+.menu-popup ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.menu-popup a {
+  display: block;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  color: var(--color-green);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-popup a:hover {
+  color: var(--color-blue);
+}
+
+/* 🔹 Responsive */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
   }
-  
-  .tab-button {
-    flex: 1 1 100%;
-    text-align: center;
+
+  .menu-toggle {
+    display: block;
   }
-  
-  .about {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
+
+  .menu-popup.active {
+    display: flex;
   }
-  
-  .youtube-section {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-  }
-  
-  .hero-text {
-    left: 5%;
-    right: 5%;
-    max-width: none;
-  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 🌾 FOOTER */
+footer {
+  background-color: var(--color-green);
+  color: var(--bg-white-stone);
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+footer a {
+  color: var(--color-yellow);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+footer a:hover {
+  opacity: 0.7;
 }
