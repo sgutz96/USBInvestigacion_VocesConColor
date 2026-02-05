@@ -1,0 +1,101 @@
+/* ================= CLASES ================= */
+
+.clases-header {
+  padding: 6rem 10% 3rem;
+  text-align: center;
+  background-color: var(--bg-white-stone);
+}
+
+.clases-header h1 {
+  font-size: 2.8rem;
+  color: var(--color-green);
+  margin-bottom: 1rem;
+}
+
+.clases-header p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* GRID */
+.clases-grid {
+  padding: 4rem 10%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  background-color: var(--bg-yellow-stone);
+}
+
+/* CARD */
+.clase-card {
+  position: relative;
+  background-color: var(--bg-white-stone);
+  border-radius: 1.2rem;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clase-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+}
+
+/* NUMERO */
+.clase-num {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-yellow);
+  opacity: 0.7;
+}
+
+/* TEXTO */
+.clase-card h3 {
+  font-size: 1.6rem;
+  color: var(--color-green);
+  margin-bottom: 0.8rem;
+}
+
+.clase-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* BOTON */
+.clase-card button {
+  background-color: var(--color-green);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.6rem 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clase-card button:hover {
+  background-color: var(--color-blue);
+  color: #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .clases-header {
+    padding: 4rem 1.5rem 2rem;
+  }
+
+  .clases-grid {
+    padding: 3rem 1.5rem;
+  }
+
+  .clase-num {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,130 @@
+/* ================= CLASE ================= */
+
+.clase-banner {
+  position: relative;
+  height: 70vh;
+}
+
+.clase-banner img {
+  height: 70vh;
+  object-fit: cover;
+}
+
+.clase-banner-text {
+  position: absolute;
+  bottom: 3rem;
+  left: 10%;
+  max-width: 600px;
+  background: rgba(0,0,0,0.55);
+  padding: 2rem;
+  border-radius: 1rem;
+  color: white;
+}
+
+.clase-banner-text span {
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--color-yellow);
+}
+
+.clase-banner-text h1 {
+  font-size: 2.8rem;
+  margin: 0.5rem 0;
+}
+
+/* ================= ABOUT ================= */
+.clase-about,
+.clase-video,
+.clase-material,
+.clase-galeria {
+  padding: 5rem 10%;
+  background-color: var(--bg-white-stone);
+}
+
+.clase-about h2,
+.clase-video h2,
+.clase-material h2,
+.clase-galeria h2 {
+  color: var(--color-green);
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.clase-about p {
+  max-width: 800px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ================= VIDEO ================= */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+/* ================= MATERIAL ================= */
+.material-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.material-card {
+  display: block;
+  padding: 1.5rem;
+  background-color: var(--bg-yellow-stone);
+  border-radius: 1rem;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.material-card:hover {
+  transform: translateY(-5px);
+  background-color: var(--color-green);
+  color: white;
+}
+
+/* ================= GALERIA ================= */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.galeria-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.galeria-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .clase-banner-text {
+    left: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .clase-about,
+  .clase-video,
+  .clase-material,
+  .clase-galeria {
+    padding: 3rem 1.5rem;
+  }
+}

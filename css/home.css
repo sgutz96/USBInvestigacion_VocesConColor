@@ -1,49 +1,107 @@
-/* 🟩 HERO SECTION */
-#hero {
+/* ================= Banner ================= */
+.banner {
   position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  width: 100%;
+  height: calc(100vh - 120px);
+  background: black;
 }
 
-/* Canvas de Three.js */
-#threeCanvas {
-  position: absolute;
-  top: 0;
-  left: 0;
+.banner canvas {
   width: 100%;
   height: 100%;
   display: block;
-  z-index: 0;
 }
 
-/* Contenido sobre el canvas */
-.hero-content {
-  position: relative;
-  z-index: 2;
-  color: var(--color-green);
-  text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 0 2rem;
+/* BOTÓN FULLSCREEN */
+#fullscreenBtn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 14px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
-.hero-content h1 {
-  font-size: 3rem;
-  font-weight: 700;
+#fullscreenBtn:hover {
+  background: white;
+  color: black;
 }
 
-.hero-content p {
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  color: #333;
+/* FOOTER */
+.footer {
+  height: 60px;
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* 🔹 Evitar que el canvas sobresalga del viewport */
-body, html {
-  overflow-x: hidden;
+/* Asegura que el canvas sea flexible dentro del contenedor */
+.banner:fullscreen canvas {
+  width: 100vw;
+  height: 100vh;
 }
 
+
+/* Asegura que el canvas se estire al máximo en pantalla completa */
+.banner:fullscreen #three-canvas {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Soporte para navegadores basados en Safari/Webkit */
+.banner:-webkit-full-screen #three-canvas {
+  width: 100vw;
+  height: 100vh;
+}
+
+
+/* Transición suave del banner */
+.banner {
+  transition: height 0.5s ease, width 0.5s ease;
+}
+
+/* Estado fullscreen visual */
+.banner.is-fullscreen {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Botón más pro */
+#fullscreenBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+#fullscreenBtn:hover {
+  transform: scale(1.05);
+}
+
+/* Icono rotando */
+#fullscreenBtn .icon {
+  transition: transform 0.3s ease;
+}
+
+.banner.is-fullscreen #fullscreenBtn .icon {
+  transform: rotate(180deg);
+}
+
+
+#ARButton {
+  background: rgba(0, 255, 204, 0.8) !important;
+  color: black !important;
+  border: none !important;
+  bottom: 80px !important; /* Para que no tape tu footer */
+  border-radius: 8px !important;
+  font-weight: bold !important;
+}
 
 
 /* ================= MARQUESINA ================= */
@@ -99,7 +157,8 @@ body, html {
   }
 }
 
-/* Sección About */
+
+/* ================= About ================= */
 .about {
   display: flex;
   align-items: center;
@@ -259,6 +318,7 @@ body, html {
     font-size: 1rem;
   }
 }
+
 
 /* ================= MAPA INTERACTIVO ================= */
 .map-section {
@@ -654,3 +714,11 @@ body, html {
 .testimonios-footer {
   margin-top: 2rem;
 }
+
+
+
+
+
+
+
+
