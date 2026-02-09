@@ -35,6 +35,11 @@ const arButton = ARButton.createButton(renderer, {
   optionalFeatures: ['dom-overlay'],
   domOverlay: { root: document.body }
 });
+
+// Mejorar accesibilidad del botón AR
+arButton.setAttribute('aria-label', 'Activar modo de Realidad Aumentada');
+arButton.setAttribute('title', 'Ver en Realidad Aumentada');
+
 document.body.appendChild(arButton);
 
 // --- 3. CONTROLES DE ÓRBITA ---
@@ -65,21 +70,32 @@ fullscreenBtn.addEventListener('click', () => {
     if (banner.requestFullscreen) {
       banner.requestFullscreen();
     }
-    fullscreenBtn.innerHTML = "⛶ Contraer";
+    fullscreenBtn.innerHTML = '<span class="icon" aria-hidden="true">⛶</span> <span class="text">Contraer</span>';
+    fullscreenBtn.setAttribute('aria-label', 'Contraer visualización 3D desde pantalla completa');
     controls.enabled = true;
   } else {
     if (document.exitFullscreen) {
       document.exitFullscreen();
     }
-    fullscreenBtn.innerHTML = "⛶ Expandir";
+    fullscreenBtn.innerHTML = '<span class="icon" aria-hidden="true">⛶</span> <span class="text">Expandir</span>';
+    fullscreenBtn.setAttribute('aria-label', 'Expandir visualización 3D a pantalla completa');
     controls.enabled = false;
+  }
+});
+
+// Soporte de teclado para el botón fullscreen
+fullscreenBtn.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    fullscreenBtn.click();
   }
 });
 
 // Ajuste si el usuario sale con la tecla ESC
 document.addEventListener('fullscreenchange', () => {
   if (!document.fullscreenElement) {
-    fullscreenBtn.innerHTML = "⛶ Expandir";
+    fullscreenBtn.innerHTML = '<span class="icon" aria-hidden="true">⛶</span> <span class="text">Expandir</span>';
+    fullscreenBtn.setAttribute('aria-label', 'Expandir visualización 3D a pantalla completa');
     controls.enabled = false;
     scene.background = new THREE.Color(0x111111);
     
@@ -117,3 +133,7 @@ renderer.setAnimationLoop(() => {
   controls.update();
   renderer.render(scene, camera);
 });
+
+// Anunciar estado de carga para lectores de pantalla
+canvas.setAttribute('aria-busy', 'false');
+canvas.setAttribute('aria-live', 'polite');
