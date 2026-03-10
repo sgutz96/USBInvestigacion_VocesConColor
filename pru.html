@@ -1,0 +1,1975 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infancia que Resiste — Voces con Color</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* ===== VARIABLES ===== */
+    :root {
+      --orange:  #d7822c;
+      --blue:    #55b0d2;
+      --pink:    #cc6699;
+      --green:   #a3c037;
+      --purple:  #7b6baa;
+      --yellow:  #f5c842;
+      --dark:    #1a1a2e;
+      --white:   #fffdf7;
+      --cream:   #fdf6e3;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--white);
+      color: #222;
+      overflow-x: hidden;
+    }
+
+    /* ===== CRAYON TEXTURE OVERLAY ===== */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: var(--white);
+      border-bottom: 3px solid var(--green);
+      padding: 0 5%;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 20px rgba(163,192,55,0.15);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .nav-logo-icon {
+      width: 44px;
+      height: 44px;
+    }
+
+    .nav-brand {
+      font-size: 1.1rem;
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--dark);
+    }
+
+    .nav-brand span { color: var(--green); }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #444;
+      position: relative;
+      padding-bottom: 4px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 3px;
+      border-radius: 2px;
+      background: var(--orange);
+      transition: width 0.3s;
+    }
+
+    .nav-links a:hover { color: var(--orange); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 26px; height: 3px;
+      border-radius: 2px;
+      background: var(--dark);
+      transition: all 0.3s;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      min-height: 600px;
+      overflow: hidden;
+    }
+
+    /* Left gradient for text legibility */
+    .hero-visual::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(13,13,26,0.72) 0%,
+        rgba(13,13,26,0.45) 40%,
+        transparent 70%
+      );
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 8%;
+      transform: translateY(-50%);
+      z-index: 10;
+      padding-top: 72px;
+      max-width: 560px;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(163,192,55,0.85);
+      backdrop-filter: blur(6px);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title .line1 { color: #f0a0c8; display: block; text-shadow: 0 2px 12px rgba(0,0,0,0.6); }
+    .hero-title .line2 { color: var(--orange); display: block; font-size: 1.3em; text-shadow: 0 2px 16px rgba(0,0,0,0.6); }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.75);
+      max-width: 480px;
+      margin-bottom: 2.5rem;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: white;
+      padding: 14px 32px;
+      border-radius: 100px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 6px 20px rgba(215,130,44,0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(215,130,44,0.45);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.1);
+      color: white;
+      padding: 14px 32px;
+      border-radius: 100px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border: 2px solid rgba(255,255,255,0.5);
+      cursor: pointer;
+      transition: all 0.2s;
+      backdrop-filter: blur(6px);
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: var(--dark);
+      border-color: white;
+      transform: translateY(-3px);
+    }
+
+    .hero-visual {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background: #0d0d1a;
+      overflow: hidden;
+    }
+
+    #three-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100% !important;
+      height: 100% !important;
+      display: block;
+    }
+
+    .banner-ui {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding-bottom: 2.5rem;
+      gap: 1rem;
+    }
+
+    .banner-hint {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.9);
+      padding: 8px 18px;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      pointer-events: none;
+      z-index: 2;
+      animation: fadeHint 4s ease 2.5s forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeHint {
+      0%   { opacity: 0; transform: translateX(-50%) translateY(8px); }
+      15%  { opacity: 1; transform: translateX(-50%) translateY(0); }
+      80%  { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    .explore-btn, .ar-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 100px;
+      border: none;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+
+    .explore-btn {
+      background: var(--green);
+      color: white;
+      box-shadow: 0 6px 28px rgba(163,192,55,0.45);
+    }
+
+    .explore-btn:hover {
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 10px 36px rgba(163,192,55,0.6);
+    }
+
+    .explore-btn.active {
+      background: var(--blue);
+      box-shadow: 0 6px 28px rgba(85,176,210,0.5);
+    }
+
+    .ar-btn {
+      background: var(--purple);
+      color: white;
+      box-shadow: 0 6px 28px rgba(123,107,170,0.45);
+      display: none;
+    }
+
+    .ar-btn:hover {
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 10px 36px rgba(123,107,170,0.6);
+    }
+
+    /* Mobile: show AR, hide orbit */
+    @media (max-width: 900px) {
+      .ar-btn      { display: inline-flex; }
+      .explore-btn { display: none; }
+    }
+
+    /* Marquee */
+    .marquee-strip {
+      background: var(--dark);
+      padding: 14px 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .marquee-track {
+      display: inline-block;
+      animation: marquee 20s linear infinite;
+    }
+
+    .marquee-track span {
+      display: inline-block;
+      margin: 0 2rem;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--yellow);
+    }
+
+    .marquee-track span.dot {
+      color: var(--pink);
+      margin: 0 0.5rem;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ===== SECTION COMMONS ===== */
+    section { padding: 6rem 8%; }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .section-label::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 3px;
+      border-radius: 2px;
+      background: currentColor;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.05;
+      margin-bottom: 1.2rem;
+    }
+
+    .section-body {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #555;
+    }
+
+    /* ===== ABOUT ===== */
+    .about {
+      background: var(--white);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-image-wrapper {
+      position: relative;
+    }
+
+    .about-image-card {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 12px 12px 0 var(--green);
+      aspect-ratio: 4/3;
+    }
+
+    .about-image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--orange);
+      color: white;
+      font-weight: 900;
+      font-size: 0.85rem;
+      padding: 16px 20px;
+      border-radius: 16px;
+      text-align: center;
+      line-height: 1.2;
+      box-shadow: 0 6px 20px rgba(215,130,44,0.35);
+    }
+
+    .about-badge big {
+      display: block;
+      font-size: 2rem;
+    }
+
+    .about-text .section-label { color: var(--green); }
+    .about-text .section-title { color: var(--dark); }
+    .about-text .section-title span { color: var(--orange); }
+
+    .valores-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .valor-chip {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .valor-chip .dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .v1 { background: rgba(163,192,55,0.12); color: #5a7a0a; }
+    .v1 .dot { background: var(--green); }
+    .v2 { background: rgba(85,176,210,0.12); color: #1a6a88; }
+    .v2 .dot { background: var(--blue); }
+    .v3 { background: rgba(204,102,153,0.12); color: #8c2a5c; }
+    .v3 .dot { background: var(--pink); }
+    .v4 { background: rgba(215,130,44,0.12); color: #8c4800; }
+    .v4 .dot { background: var(--orange); }
+    .v5 { background: rgba(123,107,170,0.12); color: #3d2e7a; }
+    .v5 .dot { background: var(--purple); }
+    .v6 { background: rgba(245,200,66,0.2); color: #7a5c00; }
+    .v6 .dot { background: var(--yellow); }
+
+    /* ===== MISSION / VISION ===== */
+    .mission-vision {
+      background: var(--dark);
+      color: white;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    .mv-card {
+      padding: 3rem;
+      border-radius: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mv-card::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      opacity: 0.15;
+    }
+
+    .mv-card.mission { background: rgba(163,192,55,0.15); border: 1px solid rgba(163,192,55,0.3); }
+    .mv-card.mission::before { background: var(--green); }
+    .mv-card.vision { background: rgba(85,176,210,0.15); border: 1px solid rgba(85,176,210,0.3); }
+    .mv-card.vision::before { background: var(--blue); }
+
+    .mv-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .mv-card h3 {
+      font-size: 1.8rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+    }
+
+    .mv-card.mission h3 { color: var(--green); }
+    .mv-card.vision h3 { color: var(--blue); }
+
+    .mv-card p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* ===== CONCEPTO ===== */
+    .concepto {
+      background: var(--cream);
+    }
+
+    .concepto-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .concepto-headline {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .concepto-headline .section-label { color: var(--purple); justify-content: center; }
+    .concepto-headline .section-title span { color: var(--purple); }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .pillar-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-top: 5px solid;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+    }
+
+    .pillar-card:nth-child(1) { border-color: var(--blue); }
+    .pillar-card:nth-child(2) { border-color: var(--orange); }
+    .pillar-card:nth-child(3) { border-color: var(--pink); }
+    .pillar-card:nth-child(4) { border-color: var(--green); }
+
+    .pillar-icon { font-size: 3rem; margin-bottom: 1rem; display: block; }
+
+    .pillar-card h4 {
+      font-size: 1.1rem;
+      font-weight: 900;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+
+    .pillar-card p {
+      font-size: 0.88rem;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    /* ===== SECCIONES/CLASES ===== */
+    .secciones {
+      background: white;
+    }
+
+    .secciones-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .secciones-header .section-label { color: var(--orange); justify-content: center; }
+    .secciones-header .section-title span { color: var(--orange); }
+
+    .clases-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .clase-card {
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--cream);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .clase-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.14);
+    }
+
+    .clase-img {
+      height: 200px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .clase-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+
+    .clase-card:hover .clase-img img { transform: scale(1.08); }
+
+    .clase-num {
+      position: absolute;
+      top: 12px; left: 12px;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 100px;
+      backdrop-filter: blur(4px);
+    }
+
+    .clase-body { padding: 1.5rem; }
+
+    .clase-body h3 {
+      font-size: 1.2rem;
+      font-weight: 900;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+
+    .clase-body p {
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .clase-tag {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+    }
+
+    .tag-danza { background: rgba(204,102,153,0.15); color: var(--pink); }
+    .tag-artes { background: rgba(215,130,44,0.15); color: var(--orange); }
+    .tag-musica { background: rgba(85,176,210,0.15); color: var(--blue); }
+
+    /* ===== PODCAST ===== */
+    .podcast {
+      background: var(--dark);
+      color: white;
+    }
+
+    .podcast-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 3rem;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .podcast-header .section-label { color: var(--pink); }
+    .podcast-header .section-title span { color: var(--pink); }
+
+    .podcast-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .podcast-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+
+    .podcast-card:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-4px);
+      border-color: var(--pink);
+    }
+
+    .podcast-thumb {
+      height: 160px;
+      background: linear-gradient(135deg, var(--purple), var(--pink));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .podcast-thumb::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.3));
+    }
+
+    .podcast-info { padding: 1.5rem; }
+
+    .podcast-info h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+
+    .podcast-info p {
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 1rem;
+    }
+
+    .podcast-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--pink);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .podcast-btn:hover {
+      background: white;
+      color: var(--pink);
+    }
+
+    /* ===== EQUIPO ===== */
+    .equipo {
+      background: var(--cream);
+    }
+
+    .equipo-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .equipo-header .section-label { color: var(--blue); justify-content: center; }
+    .equipo-header .section-title span { color: var(--blue); }
+
+    .equipo-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .equipo-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      transition: transform 0.3s;
+    }
+
+    .equipo-card:hover { transform: translateY(-6px); }
+
+    .equipo-avatar {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+
+    .eq1 { background: rgba(163,192,55,0.2); }
+    .eq2 { background: rgba(85,176,210,0.2); }
+    .eq3 { background: rgba(204,102,153,0.2); }
+    .eq4 { background: rgba(215,130,44,0.2); }
+
+    .equipo-card h4 {
+      font-size: 0.95rem;
+      font-weight: 900;
+      color: var(--dark);
+      margin-bottom: 0.3rem;
+    }
+
+    .equipo-card p {
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    /* ===== MAPA ===== */
+    .mapa {
+      background: white;
+    }
+
+    .mapa-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .mapa-header .section-label { color: var(--green); justify-content: center; }
+    .mapa-header .section-title span { color: var(--green); }
+
+    .map-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .tab-btn {
+      padding: 10px 22px;
+      border-radius: 100px;
+      border: 2px solid var(--green);
+      background: transparent;
+      color: var(--green);
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .tab-btn:hover, .tab-btn.active {
+      background: var(--green);
+      color: white;
+    }
+
+    .map-frame {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+      height: 65vh;
+      min-height: 400px;
+      position: relative;
+    }
+
+    .map-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ===== CONTACTO ===== */
+    .contacto {
+      background: linear-gradient(135deg, var(--green) 0%, var(--blue) 100%);
+      color: white;
+      text-align: center;
+    }
+
+    .contacto .section-label { color: rgba(255,255,255,0.7); justify-content: center; }
+    .contacto .section-title { color: white; }
+    .contacto .section-body { color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto 2.5rem; }
+
+    .contacto-ctas {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-white {
+      background: white;
+      color: var(--dark);
+      padding: 14px 32px;
+      border-radius: 100px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    .btn-white:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+    }
+
+    .btn-outline-white {
+      background: transparent;
+      color: white;
+      padding: 14px 32px;
+      border-radius: 100px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border: 3px solid rgba(255,255,255,0.6);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-outline-white:hover {
+      border-color: white;
+      background: rgba(255,255,255,0.15);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.7);
+      padding: 3rem 8%;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .footer-brand h4 {
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      max-width: 300px;
+    }
+
+    .footer-brand .tagline {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--yellow);
+      letter-spacing: 0.05em;
+    }
+
+    .footer-col h5 {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: white;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.5rem; }
+
+    .footer-col ul a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col ul a:hover { color: var(--yellow); }
+
+    .footer-bottom {
+      background: rgba(255,255,255,0.05);
+      text-align: center;
+      padding: 1.2rem 8%;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 900px) {
+      .hero-text {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: none;
+        padding: 2rem 6% 4rem;
+        max-width: 100%;
+        background: linear-gradient(to top, rgba(13,13,26,0.92) 60%, transparent);
+      }
+      .about { grid-template-columns: 1fr; }
+      .about-image-wrapper { display: none; }
+      .mission-vision { grid-template-columns: 1fr; gap: 2rem; }
+      .pillars-grid { grid-template-columns: 1fr 1fr; }
+      .clases-grid { grid-template-columns: 1fr; }
+      .podcast-grid { grid-template-columns: 1fr; }
+      .equipo-grid { grid-template-columns: 1fr 1fr; }
+      footer { grid-template-columns: 1fr; gap: 2rem; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      section { padding: 4rem 6%; }
+    }
+
+    @media (max-width: 600px) {
+      .pillars-grid { grid-template-columns: 1fr; }
+      .equipo-grid { grid-template-columns: 1fr; }
+      .valores-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ===== SCROLL ANIMATIONS ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .fade-in:nth-child(2) { transition-delay: 0.1s; }
+    .fade-in:nth-child(3) { transition-delay: 0.2s; }
+    .fade-in:nth-child(4) { transition-delay: 0.3s; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav>
+    <a href="#" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="22" cy="30" rx="18" ry="6" fill="#a3c037" opacity="0.3"/>
+        <path d="M8 28 Q14 16 22 14 Q30 16 36 28" stroke="#a3c037" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M18 28 Q20 18 26 14" stroke="#d7822c" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <rect x="19" y="10" width="6" height="7" rx="1" fill="#d7822c"/>
+        <line x1="22" y1="6" x2="22" y2="10" stroke="#d7822c" stroke-width="2"/>
+        <rect x="20.5" y="12" width="3" height="2" rx="0.5" fill="white" opacity="0.6"/>
+      </svg>
+      <div class="nav-brand">Infancia que<br><span>Resiste</span></div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#about">Proyecto</a></li>
+      <li><a href="#secciones">Secciones</a></li>
+      <li><a href="#podcast">Podcast</a></li>
+      <li><a href="#mapa">Mapa</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+    <button class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio">
+    <div class="hero-text">
+      <div class="hero-eyebrow">
+        🎨 Story Lab · USB · Ciudad Bolívar
+      </div>
+      <h1 class="hero-title">
+        <span class="line1">Infancia que</span>
+        <span class="line2">Resiste</span>
+      </h1>
+      <p class="hero-subtitle">
+        Un oasis que protege y eleva. Arte, multimedia y educación para la paz 
+        en el corazón de Ciudad Bolívar. La infancia no solo es protegida — 
+        es escuchada, fortalecida y protagonista.
+      </p>
+      <div class="hero-ctas">
+        <a href="#secciones" class="btn-primary">Explorar el Proyecto</a>
+        <a href="#podcast" class="btn-secondary">Escuchar Podcast</a>
+        <button class="explore-btn" id="explore-btn">
+          <span class="explore-icon">✦</span> Explorar en 3D
+        </button>
+        <button class="ar-btn" id="ar-btn">
+          📱 Ver en AR
+        </button>
+      </div>
+    </div>
+
+    <div class="hero-visual" id="hero-visual">
+      <canvas id="three-canvas"></canvas>
+      <div class="banner-hint" id="banner-hint">
+        <span class="hint-icon">🖱️</span>
+        <span class="hint-text">Arrastra para explorar</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>Alegría</span><span class="dot">✦</span>
+      <span>Resistencia</span><span class="dot">✦</span>
+      <span>Creatividad</span><span class="dot">✦</span>
+      <span>Comunidad</span><span class="dot">✦</span>
+      <span>Esperanza</span><span class="dot">✦</span>
+      <span>Solidaridad</span><span class="dot">✦</span>
+      <span>Confianza</span><span class="dot">✦</span>
+      <span>Identidad</span><span class="dot">✦</span>
+      <span>Pasión</span><span class="dot">✦</span>
+      <span>Protección</span><span class="dot">✦</span>
+      <!-- repeat for seamless loop -->
+      <span>Alegría</span><span class="dot">✦</span>
+      <span>Resistencia</span><span class="dot">✦</span>
+      <span>Creatividad</span><span class="dot">✦</span>
+      <span>Comunidad</span><span class="dot">✦</span>
+      <span>Esperanza</span><span class="dot">✦</span>
+      <span>Solidaridad</span><span class="dot">✦</span>
+      <span>Confianza</span><span class="dot">✦</span>
+      <span>Identidad</span><span class="dot">✦</span>
+      <span>Pasión</span><span class="dot">✦</span>
+      <span>Protección</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="about-image-wrapper fade-in">
+      <div class="about-image-card">
+        <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=800&h=600&fit=crop" alt="Niñas y niños en actividad artística">
+      </div>
+      <div class="about-badge">
+        <big>2024</big>
+        Samaritanos<br>del Padre Pío
+      </div>
+    </div>
+
+    <div class="about-text fade-in">
+      <div class="section-label" style="color:var(--green)">Sobre el Proyecto</div>
+      <h2 class="section-title">Un refugio construido<br>sobre <span>piedra y arte</span></h2>
+      <p class="section-body">
+        <em>Infancia que Resiste</em> nace para fortalecer entornos protectores que permitan a niñas, niños 
+        y adolescentes en contextos de vulnerabilidad desarrollarse en espacios seguros, creativos y 
+        libres de juicio. Integra educación para la paz, arte y multimedia como herramientas de 
+        transformación social en el comedor comunitario Samaritanos del Padre Pío.
+      </p>
+
+      <div class="valores-grid" style="margin-top:2rem">
+        <div class="valor-chip v1"><div class="dot"></div>Protección</div>
+        <div class="valor-chip v2"><div class="dot"></div>Creatividad</div>
+        <div class="valor-chip v3"><div class="dot"></div>Participación Activa</div>
+        <div class="valor-chip v4"><div class="dot"></div>Innovación Social</div>
+        <div class="valor-chip v5"><div class="dot"></div>Comunidad</div>
+        <div class="valor-chip v6"><div class="dot"></div>Identidad Territorial</div>
+      </div>
+
+      <div style="margin-top:2.5rem">
+        <a href="#secciones" class="btn-primary">Conocer más</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MISIÓN / VISIÓN ===== -->
+  <section class="mission-vision">
+    <div class="mv-card mission fade-in">
+      <span class="mv-icon">🎯</span>
+      <h3>Misión</h3>
+      <p>
+        Diseñar e implementar una estrategia pedagógica interdisciplinar con enfoque de derechos, 
+        que utilice el arte, la creatividad y la multimedia para construir entornos protectores 
+        que fomenten la participación, la expresión libre y la educación para la paz en niñas, 
+        niños y adolescentes de Ciudad Bolívar.
+      </p>
+    </div>
+    <div class="mv-card vision fade-in">
+      <span class="mv-icon">🔭</span>
+      <h3>Visión</h3>
+      <p>
+        Para los próximos años, <em>Infancia que Resiste</em> se proyecta como un referente comunitario 
+        en la creación de entornos protectores que integren educación, territorio y tecnología. 
+        Un modelo replicable donde la multimedia sea el puente entre la memoria del barrio, 
+        la participación juvenil y la proyección digital del territorio.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== CONCEPTO ===== -->
+  <section class="concepto" id="concepto">
+    <div class="concepto-inner">
+      <div class="concepto-headline fade-in">
+        <div class="section-label" style="color:var(--purple);">Concepto de Marca</div>
+        <h2 class="section-title">"Un Oasis que <span style="color:var(--purple)">Protege y Eleva</span>"</h2>
+        <p class="section-body" style="max-width:600px;margin:0 auto">
+          Protegemos el presente, elevamos el futuro.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-card fade-in">
+          <span class="pillar-icon">🪨</span>
+          <h4>La Piedra</h4>
+          <p>Firmeza, historia y base comunitaria. La iglesia de piedra como símbolo de permanencia y memoria colectiva.</p>
+        </div>
+        <div class="pillar-card fade-in">
+          <span class="pillar-icon">⛰️</span>
+          <h4>La Altura</h4>
+          <p>Perspectiva, crecimiento y aspiración. Desde la montaña de Ciudad Bolívar se proyecta el futuro.</p>
+        </div>
+        <div class="pillar-card fade-in">
+          <span class="pillar-icon">🌿</span>
+          <h4>El Oasis</h4>
+          <p>Refugio, calma y protección. Un espacio seguro libre de juicio donde la infancia puede expresarse.</p>
+        </div>
+        <div class="pillar-card fade-in">
+          <span class="pillar-icon">📡</span>
+          <h4>La Multimedia</h4>
+          <p>Puente entre territorio y mundo digital. Voz, visibilidad y permanencia digital de las historias.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECCIONES ===== -->
+  <section class="secciones" id="secciones">
+    <div class="secciones-header fade-in">
+      <div class="section-label" style="color:var(--orange);justify-content:center">Disciplinas Artísticas</div>
+      <h2 class="section-title">Explora por <span style="color:var(--orange)">Sección</span></h2>
+      <p class="section-body" style="max-width:560px;margin:0 auto">
+        Tres disciplinas, una misma voz. El arte como herramienta de transformación y resistencia.
+      </p>
+    </div>
+
+    <div class="clases-grid">
+      <a href="clase_1.html" class="clase-card fade-in">
+        <div class="clase-img">
+          <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?w=600&h=300&fit=crop" alt="Danza expresiva">
+          <div class="clase-num">Sección 01</div>
+        </div>
+        <div class="clase-body">
+          <h3>Danza Expresiva</h3>
+          <p>El cuerpo como territorio de resistencia. Movimiento libre que expresa emociones y construye identidad comunitaria.</p>
+          <span class="clase-tag tag-danza">Danza</span>
+        </div>
+      </a>
+
+      <a href="#" class="clase-card fade-in">
+        <div class="clase-img">
+          <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=600&h=300&fit=crop" alt="Artes visuales">
+          <div class="clase-num">Sección 02</div>
+        </div>
+        <div class="clase-body">
+          <h3>Artes Visuales</h3>
+          <p>Pintura, dibujo y creación visual como puentes entre la emoción y la narrativa. El trazo como lenguaje propio.</p>
+          <span class="clase-tag tag-artes">Artes</span>
+        </div>
+      </a>
+
+      <a href="#" class="clase-card fade-in">
+        <div class="clase-img">
+          <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=300&fit=crop" alt="Música colaborativa">
+          <div class="clase-num">Sección 03</div>
+        </div>
+        <div class="clase-body">
+          <h3>Música Colaborativa</h3>
+          <p>La voz y el ritmo como herramientas de construcción colectiva. Sonidos que unen territorialidad y comunidad.</p>
+          <span class="clase-tag tag-musica">Música</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== PODCAST ===== -->
+  <section class="podcast" id="podcast">
+    <div class="podcast-header">
+      <div>
+        <div class="section-label" style="color:var(--pink)">Voces de Transformación</div>
+        <h2 class="section-title" style="color:white">Podcast <span style="color:var(--pink)">Capítulos</span></h2>
+      </div>
+      <a href="#" class="btn-secondary" style="white-space:nowrap;color:var(--pink);border-color:var(--pink)">Ver todos →</a>
+    </div>
+
+    <div class="podcast-grid">
+      <div class="podcast-card fade-in">
+        <div class="podcast-thumb">🎙️</div>
+        <div class="podcast-info">
+          <h3>Capítulo 1 — Mi Historia</h3>
+          <p>"Este proyecto me permitió descubrir mi voz y compartirla con otros. A través del arte pude contar mi historia sin miedo."</p>
+          <a href="https://open.spotify.com/track/3n3Ppam7vgaVa1iaRUc9Lp" target="_blank" class="podcast-btn">▶ Escuchar</a>
+        </div>
+      </div>
+
+      <div class="podcast-card fade-in">
+        <div class="podcast-thumb" style="background:linear-gradient(135deg,var(--blue),var(--green))">🎤</div>
+        <div class="podcast-info">
+          <h3>Capítulo 2 — Encontré Familia</h3>
+          <p>"Gracias al arte pude expresar mis emociones y sentirme acompañada. Encontré una familia en este espacio creativo."</p>
+          <a href="https://open.spotify.com/track/4uLU6hMCjMI75M1A2tKUQC" target="_blank" class="podcast-btn">▶ Escuchar</a>
+        </div>
+      </div>
+
+      <div class="podcast-card fade-in">
+        <div class="podcast-thumb" style="background:linear-gradient(135deg,var(--orange),var(--yellow))">🎵</div>
+        <div class="podcast-info">
+          <h3>Capítulo 3 — Mi Voz Vale</h3>
+          <p>"El proyecto me enseñó que mis experiencias son valiosas. Ahora ayudo a otros niños a encontrar su propia voz."</p>
+          <a href="https://open.spotify.com/track/6UelLqGlWMcVH1E5c4H7lY" target="_blank" class="podcast-btn">▶ Escuchar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EQUIPO ===== -->
+  <section class="equipo" id="equipo">
+    <div class="equipo-header fade-in">
+      <div class="section-label" style="color:var(--blue);justify-content:center">Personas del Proyecto</div>
+      <h2 class="section-title">El equipo que hace <span style="color:var(--blue)">posible el oasis</span></h2>
+    </div>
+
+    <div class="equipo-grid">
+      <div class="equipo-card fade-in">
+        <div class="equipo-avatar eq1">🎓</div>
+        <h4>Investigadora Principal</h4>
+        <p>Universidad de San Buenaventura</p>
+      </div>
+      <div class="equipo-card fade-in">
+        <div class="equipo-avatar eq2">🎨</div>
+        <h4>Diseñadora Visual</h4>
+        <p>Story Lab · Multimedia</p>
+      </div>
+      <div class="equipo-card fade-in">
+        <div class="equipo-avatar eq3">🎤</div>
+        <h4>Coordinadora Pedagógica</h4>
+        <p>Comedor Samaritanos</p>
+      </div>
+      <div class="equipo-card fade-in">
+        <div class="equipo-avatar eq4">🌱</div>
+        <h4>Líder Comunitaria</h4>
+        <p>Ciudad Bolívar · Territorio</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAPA ===== -->
+  <section class="mapa" id="mapa">
+    <div class="mapa-header fade-in">
+      <div class="section-label" style="color:var(--green);justify-content:center">Territorio</div>
+      <h2 class="section-title">Mapas <span style="color:var(--green)">Interactivos</span></h2>
+      <p class="section-body" style="max-width:560px;margin:0 auto">
+        Explora las capas geográficas y temáticas del territorio colombiano en tiempo real.
+      </p>
+    </div>
+
+    <div class="map-tabs">
+      <button class="tab-btn active" onclick="switchMap('zomac', this)">ZOMAC</button>
+      <button class="tab-btn" onclick="switchMap('parques', this)">Parques Naturales</button>
+      <button class="tab-btn" onclick="switchMap('proteccion', this)">Áreas de Protección</button>
+      <button class="tab-btn" onclick="switchMap('amazonas', this)">Violencia Amazonas</button>
+      <button class="tab-btn" onclick="switchMap('putumayo', this)">Violencia Putumayo</button>
+    </div>
+
+    <div class="map-frame" id="map-frame">
+      <iframe id="map-iframe"
+        src="//usb-ing-multi.maps.arcgis.com/apps/Embed/index.html?webmap=37dacfbbe7ee4d6b84119d50acfedf3f&extent=-85.8306,-5.5846,-62.8472,5.8878"
+        title="Mapa interactivo"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section class="contacto" id="contacto">
+    <div class="section-label">Únete al Oasis</div>
+    <h2 class="section-title" style="font-size:clamp(2rem,4vw,3.5rem);margin-bottom:1rem">
+      Protegemos el presente,<br>elevamos el futuro.
+    </h2>
+    <p class="section-body">
+      ¿Quieres ser parte de Infancia que Resiste? El territorio nos necesita. 
+      Juntos construimos entornos protectores donde la infancia florece.
+    </p>
+    <div class="contacto-ctas">
+      <a href="/cdn-cgi/l/email-protection#94fdfaf2f5faf7fdf5d4e1e7f6baf1f0e1baf7fb" class="btn-white">Contáctanos</a>
+      <a href="https://www.instagram.com" target="_blank" class="btn-outline-white">Seguir en Instagram</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-brand">
+      <h4>Infancia que Resiste</h4>
+      <p>Un proyecto de la Universidad de San Buenaventura para fortalecer entornos protectores en Ciudad Bolívar a través del arte, la multimedia y la educación para la paz.</p>
+      <span class="tagline">"Un Oasis que Protege y Eleva"</span>
+    </div>
+
+    <div class="footer-col">
+      <h5>Navegación</h5>
+      <ul>
+        <li><a href="#about">El Proyecto</a></li>
+        <li><a href="#concepto">Concepto</a></li>
+        <li><a href="#secciones">Secciones</a></li>
+        <li><a href="#podcast">Podcast</a></li>
+        <li><a href="#mapa">Territorio</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Contacto</h5>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#b2dbdcd4d3dcd1dbd3f2c7c1d09cd7d6c79cd1dd">Correo</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="footer-bottom">
+    © 2025 Infancia que Resiste · Universidad de San Buenaventura · Todos los derechos reservados
+  </div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // Map switching
+    const mapUrls = {
+      zomac: "//usb-ing-multi.maps.arcgis.com/apps/Embed/index.html?webmap=37dacfbbe7ee4d6b84119d50acfedf3f&extent=-85.8306,-5.5846,-62.8472,5.8878",
+      parques: "//usb-ing-multi.maps.arcgis.com/apps/Embed/index.html?webmap=29f4c6d2b6da444f878a91d7cd2dc99b&extent=-79.1677,-2.3881,-67.676,3.3552",
+      proteccion: "//usb-ing-multi.maps.arcgis.com/apps/Embed/index.html?webmap=75ee39ee619245408f2a9930b82f06e9&extent=-85.6935,-10.914,-39.7267,11.916",
+      amazonas: "//usb-ing-multi.maps.arcgis.com/apps/Embed/index.html?webmap=9a8e1fe5afdb4e7cb0729cdf871e8a5c&extent=-80.4749,-7.7664,-57.4915,2.4701",
+      putumayo: "//usb-ing-multi.maps.arcgis.com/apps/Embed/index.html?webmap=354a809af55648cbbe35527fbaccaf16&extent=-81.3153,-1.8378,-69.8236,3.2907"
+    };
+
+    function switchMap(key, btn) {
+      document.getElementById('map-iframe').src = mapUrls[key];
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    // Hamburger
+    function toggleMenu() {
+      const links = document.querySelector('.nav-links');
+      if (links.style.display === 'flex') {
+        links.style.display = '';
+      } else {
+        links.style.cssText = 'display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--white);padding:1rem 8%;border-bottom:3px solid var(--green);gap:1rem;z-index:999;';
+      }
+    }
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Nav scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 50) {
+        nav.style.boxShadow = '0 4px 30px rgba(0,0,0,0.12)';
+      } else {
+        nav.style.boxShadow = '0 4px 20px rgba(163,192,55,0.15)';
+      }
+    });
+  </script>
+
+  <!-- ===== THREE.JS BANNER ===== -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.158.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+    // ── Detect mobile ──────────────────────────────────────────────
+    const isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)
+      || (navigator.maxTouchPoints > 1 && /Macintosh/.test(navigator.userAgent))
+      || window.innerWidth < 900;
+
+    // ── DOM refs ───────────────────────────────────────────────────
+    const canvas     = document.getElementById('three-canvas');
+    const heroEl     = document.querySelector('.hero');
+    const exploreBtn = document.getElementById('explore-btn');
+    const arBtn      = document.getElementById('ar-btn');
+    const hintEl     = document.getElementById('banner-hint');
+
+    // ── SCENE ──────────────────────────────────────────────────────
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x04071a);
+    scene.fog = new THREE.FogExp2(0x04071a, 0.018);
+
+    // ── CAMERA ─────────────────────────────────────────────────────
+    const W = heroEl.clientWidth, H = heroEl.clientHeight;
+    const camera = new THREE.PerspectiveCamera(52, W / H, 0.1, 300);
+    camera.position.set(0, 5, 16);
+    camera.lookAt(0, 5, 0);
+
+    // ── RENDERER ───────────────────────────────────────────────────
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+    renderer.setSize(W, H);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.shadowMap.enabled   = true;
+    renderer.shadowMap.type      = THREE.PCFSoftShadowMap;
+    renderer.xr.enabled          = true;
+    renderer.toneMapping         = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.2;
+
+    // ── BRAND PALETTE ──────────────────────────────────────────────
+    const C = {
+      orange: 0xd7822c, blue:   0x55b0d2,
+      pink:   0xcc6699, green:  0xa3c037,
+      purple: 0x7b6baa, yellow: 0xf5c842,
+    };
+
+    // ── MATERIAL HELPER ────────────────────────────────────────────
+    const std = (color, rough = 0.85, metal = 0.05) =>
+      new THREE.MeshStandardMaterial({ color, roughness: rough, metalness: metal });
+
+    // ── LIGHTS ─────────────────────────────────────────────────────
+    scene.add(new THREE.AmbientLight(0x1a1040, 5));
+
+    const moon = new THREE.DirectionalLight(0xb8ccff, 3.5);
+    moon.position.set(-8, 18, 12);
+    moon.castShadow = true;
+    moon.shadow.mapSize.set(2048, 2048);
+    moon.shadow.camera.near = 1; moon.shadow.camera.far = 70;
+    moon.shadow.camera.left = moon.shadow.camera.bottom = -18;
+    moon.shadow.camera.right = moon.shadow.camera.top   =  18;
+    moon.shadow.bias = -0.0005;
+    scene.add(moon);
+
+    // Warm campfire glow from front-right
+    const warmLight = new THREE.PointLight(C.orange, 6, 30);
+    warmLight.position.set(7, 2, 9);
+    scene.add(warmLight);
+
+    // Cool blue from left
+    const coolLight = new THREE.PointLight(C.blue, 4, 28);
+    coolLight.position.set(-8, 5, 6);
+    scene.add(coolLight);
+
+    // Purple rim behind mountain
+    const rimLight = new THREE.PointLight(C.purple, 5, 22);
+    rimLight.position.set(0, 12, -10);
+    scene.add(rimLight);
+
+    // ── GROUND ─────────────────────────────────────────────────────
+    const gnd = new THREE.Mesh(
+      new THREE.PlaneGeometry(100, 100),
+      std(0x0b1a08, 0.96)
+    );
+    gnd.rotation.x = -Math.PI / 2;
+    gnd.receiveShadow = true;
+    scene.add(gnd);
+
+    // Lighter grass strip in front
+    const grass = new THREE.Mesh(new THREE.PlaneGeometry(40, 10), std(0x163510, 0.92));
+    grass.rotation.x = -Math.PI / 2;
+    grass.position.set(0, 0.01, 7);
+    grass.receiveShadow = true;
+    scene.add(grass);
+
+    // ── SKY SPHERE ─────────────────────────────────────────────────
+    const skyGeo  = new THREE.SphereGeometry(150, 32, 16);
+    const skyCols = new Float32Array(skyGeo.attributes.position.count * 3);
+    const cTop = new THREE.Color(0x020510), cHorz = new THREE.Color(0x0a1535);
+    for (let i = 0; i < skyGeo.attributes.position.count; i++) {
+      const y = skyGeo.attributes.position.getY(i);
+      const t = Math.max(0, Math.min(1, (y + 150) / 280));
+      const c = cTop.clone().lerp(cHorz, 1 - t);
+      skyCols[i*3] = c.r; skyCols[i*3+1] = c.g; skyCols[i*3+2] = c.b;
+    }
+    skyGeo.setAttribute('color', new THREE.BufferAttribute(skyCols, 3));
+    scene.add(new THREE.Mesh(skyGeo,
+      new THREE.MeshBasicMaterial({ side: THREE.BackSide, vertexColors: true })));
+
+    // ── STARS ──────────────────────────────────────────────────────
+    const N_STARS = 1400;
+    const sPts = new Float32Array(N_STARS * 3);
+    const sCols = new Float32Array(N_STARS * 3);
+    const starPal = [
+      new THREE.Color(0xffffff), new THREE.Color(0xaaccff),
+      new THREE.Color(0xffeeaa), new THREE.Color(C.purple),
+    ];
+    for (let i = 0; i < N_STARS; i++) {
+      const th = Math.random() * Math.PI * 2;
+      const ph = Math.random() * Math.PI * 0.5; // upper hemisphere only
+      const r  = 120 + Math.random() * 20;
+      sPts[i*3]   = r * Math.sin(ph) * Math.cos(th);
+      sPts[i*3+1] = r * Math.cos(ph) + 8;
+      sPts[i*3+2] = r * Math.sin(ph) * Math.sin(th);
+      const c = starPal[i % starPal.length];
+      sCols[i*3] = c.r; sCols[i*3+1] = c.g; sCols[i*3+2] = c.b;
+    }
+    const sGeo = new THREE.BufferGeometry();
+    sGeo.setAttribute('position', new THREE.BufferAttribute(sPts, 3));
+    sGeo.setAttribute('color',    new THREE.BufferAttribute(sCols, 3));
+    scene.add(new THREE.Points(sGeo,
+      new THREE.PointsMaterial({ size: 0.22, vertexColors: true, transparent: true, opacity: 0.95 })));
+
+    // ── MOUNTAINS ──────────────────────────────────────────────────
+    function peak(radius, height, px, pz, color, segs = 8) {
+      const m = new THREE.Mesh(
+        new THREE.ConeGeometry(radius, height, segs),
+        std(color, 0.92)
+      );
+      m.position.set(px, height / 2, pz);
+      m.rotation.y = Math.random() * Math.PI;
+      m.castShadow = m.receiveShadow = true;
+      scene.add(m);
+      return m;
+    }
+
+    // Distant bg range
+    peak(11, 14, -18, -22, 0x0a1808);
+    peak(10, 13,  18, -22, 0x091608);
+    peak( 9, 12,   2, -24, 0x081508);
+
+    // Mid range
+    peak(6.5, 10, -10, -14, 0x122210);
+    peak(6,    9,  11, -14, 0x112010);
+    peak(5.5,  8,   1, -16, 0x142812);
+
+    // ── MAIN MOUNTAIN ──────────────────────────────────────────────
+    const MAIN_H  = 12;
+    const MAIN_CX = 0, MAIN_CZ = -7;
+    peak(5.5, MAIN_H, MAIN_CX, MAIN_CZ, 0x1e4a1c, 9);
+
+    // Snow cap — sits exactly on the tip
+    const snowCap = new THREE.Mesh(
+      new THREE.ConeGeometry(1.6, 2.2, 9),
+      std(0xddeedd, 0.88)
+    );
+    snowCap.position.set(MAIN_CX, MAIN_H - 0.5, MAIN_CZ);
+    snowCap.castShadow = true;
+    scene.add(snowCap);
+
+    // Side ridges
+    peak(3.5, 7,  -5, -5.5, 0x183818, 7);
+    peak(3.2, 6.5, 5, -5.5, 0x163316, 7);
+
+    // ── CHURCH on mountain peak ────────────────────────────────────
+    const CHURCH_Y = MAIN_H + 0.15; // resting right on the snow cap
+    const cG = new THREE.Group();
+
+    // Stone plinth
+    const plinth = new THREE.Mesh(new THREE.BoxGeometry(2.0, 0.3, 1.6), std(0x8a7055, 0.94));
+    plinth.position.y = 0.15;
+    cG.add(plinth);
+    // Main body
+    const body = new THREE.Mesh(new THREE.BoxGeometry(1.55, 2.1, 1.15), std(0xa08050, 0.88));
+    body.position.y = 1.35;
+    body.castShadow = body.receiveShadow = true;
+    cG.add(body);
+    // Door
+    const door = new THREE.Mesh(new THREE.BoxGeometry(0.4, 0.65, 0.12), std(0x3d2410, 0.95));
+    door.position.set(0, 0.625, 0.59);
+    cG.add(door);
+    // Glowing window
+    const winMat = new THREE.MeshStandardMaterial({
+      color: 0xffe090, emissive: 0xffb820, emissiveIntensity: 2.0, roughness: 0.2
+    });
+    const win = new THREE.Mesh(new THREE.BoxGeometry(0.34, 0.34, 0.1), winMat);
+    win.position.set(0, 1.7, 0.59);
+    cG.add(win);
+    // Bell tower
+    const tower = new THREE.Mesh(new THREE.BoxGeometry(0.72, 1.2, 0.72), std(0x907040, 0.86));
+    tower.position.y = 2.85;
+    tower.castShadow = true;
+    cG.add(tower);
+    // Pyramid roof
+    const roofMesh = new THREE.Mesh(new THREE.ConeGeometry(0.6, 1.0, 4), std(0x6b4820, 0.84));
+    roofMesh.position.y = 3.9;
+    roofMesh.rotation.y = Math.PI / 4;
+    roofMesh.castShadow = true;
+    cG.add(roofMesh);
+    // Cross
+    const cMat = std(0xe8d8a0, 0.65);
+    const cV = new THREE.Mesh(new THREE.BoxGeometry(0.07, 0.52, 0.07), cMat);
+    const cH = new THREE.Mesh(new THREE.BoxGeometry(0.34, 0.07, 0.07), cMat);
+    cV.position.y = 4.45; cH.position.y = 4.58;
+    [cV, cH].forEach(m => { m.castShadow = true; cG.add(m); });
+    // Window light
+    const churchLight = new THREE.PointLight(0xffcc44, 5, 7);
+    churchLight.position.set(0, 1.6, 1.5);
+    cG.add(churchLight);
+
+    cG.position.set(MAIN_CX, CHURCH_Y, MAIN_CZ);
+    scene.add(cG);
+
+    // ── TREES ──────────────────────────────────────────────────────
+    function tree(px, pz, h = 1.8, baseY = 0) {
+      const g = new THREE.Group();
+      // trunk
+      const trunk = new THREE.Mesh(
+        new THREE.CylinderGeometry(0.07, 0.13, h * 0.45, 6),
+        std(0x4a2808, 0.95)
+      );
+      trunk.position.y = h * 0.225;
+      trunk.castShadow = true;
+      g.add(trunk);
+      // 3 foliage tiers
+      [[0x237023, 1.0], [0x2e8c2e, 0.72], [0x39a839, 0.48]].forEach(([col, s], i) => {
+        const cone = new THREE.Mesh(
+          new THREE.ConeGeometry(s * h * 0.44, s * h * 0.58, 7),
+          std(col, 0.88)
+        );
+        cone.position.y = h * (0.42 + i * 0.29 + s * 0.24);
+        cone.castShadow = true;
+        g.add(cone);
+      });
+      g.position.set(px, baseY, pz);
+      scene.add(g);
+    }
+
+    // Foreground trees
+    tree(-5.0,  5.5, 2.4);  tree( 5.2,  5.0, 2.6);
+    tree(-2.8,  6.2, 1.7);  tree( 3.0,  6.0, 1.9);
+    tree(-7.5,  3.5, 1.5);  tree( 7.8,  3.0, 1.6);
+    tree(-9.0,  1.0, 1.3);  tree( 9.2,  0.5, 1.4);
+    // Mid-slope trees
+    tree(-2.5, -2.0, 1.3, 2.0);
+    tree( 2.2, -2.5, 1.2, 2.4);
+    tree(-4.0, -3.5, 1.0, 3.0);
+    tree( 3.8, -3.0, 1.0, 2.8);
+
+    // ── ORBITING SPHERES (brand colours orbit the church) ──────────
+    const ORBIT_CENTER = new THREE.Vector3(MAIN_CX, CHURCH_Y + 2.5, MAIN_CZ);
+    const orbitData = [
+      { color: C.orange, r: 3.8, speed: 0.38, phase: 0,           size: 0.30, tx: 0.4,  tz: 0.2  },
+      { color: C.blue,   r: 4.5, speed: 0.25, phase: Math.PI*0.7, size: 0.24, tx:-0.3,  tz: 0.5  },
+      { color: C.pink,   r: 3.2, speed: 0.52, phase: Math.PI,     size: 0.22, tx: 0.6,  tz:-0.2  },
+      { color: C.green,  r: 5.0, speed: 0.20, phase: Math.PI*1.4, size: 0.32, tx:-0.2,  tz: 0.4  },
+      { color: C.purple, r: 3.5, speed: 0.44, phase: Math.PI*0.5, size: 0.20, tx: 0.5,  tz:-0.4  },
+      { color: C.yellow, r: 4.2, speed: 0.31, phase: Math.PI*1.8, size: 0.26, tx:-0.45, tz: 0.3  },
+    ];
+    const orbitPivots = orbitData.map(od => {
+      const pivot = new THREE.Object3D();
+      pivot.position.copy(ORBIT_CENTER);
+      pivot.rotation.x = od.tx;
+      pivot.rotation.z = od.tz;
+      scene.add(pivot);
+      const sphere = new THREE.Mesh(
+        new THREE.SphereGeometry(od.size, 22, 16),
+        new THREE.MeshStandardMaterial({
+          color: od.color, roughness: 0.22, metalness: 0.6,
+          emissive: od.color, emissiveIntensity: 0.4
+        })
+      );
+      sphere.position.set(od.r, 0, 0);
+      sphere.castShadow = true;
+      const glow = new THREE.PointLight(od.color, 3, 4);
+      glow.position.copy(sphere.position);
+      pivot.add(glow, sphere);
+      return { pivot, phase: od.phase, speed: od.speed };
+    });
+
+    // ── DUST PARTICLES ─────────────────────────────────────────────
+    const N_DUST = 400;
+    const dPos = new Float32Array(N_DUST * 3);
+    const dVel = new Float32Array(N_DUST * 3);
+    for (let i = 0; i < N_DUST; i++) {
+      dPos[i*3]   = (Math.random()-0.5)*20;
+      dPos[i*3+1] = Math.random()*14;
+      dPos[i*3+2] = (Math.random()-0.5)*16 - 4;
+      dVel[i*3]   = (Math.random()-0.5)*0.004;
+      dVel[i*3+1] = Math.random()*0.006+0.001;
+      dVel[i*3+2] = (Math.random()-0.5)*0.003;
+    }
+    const dustGeo = new THREE.BufferGeometry();
+    dustGeo.setAttribute('position', new THREE.BufferAttribute(dPos, 3));
+    const dust = new THREE.Points(dustGeo,
+      new THREE.PointsMaterial({ size: 0.065, color: C.yellow, transparent: true, opacity: 0.55 }));
+    scene.add(dust);
+
+    // ── ORBIT CONTROLS ─────────────────────────────────────────────
+    let controlsActive = false;
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping  = true;
+    controls.dampingFactor  = 0.07;
+    controls.minDistance    = 5;
+    controls.maxDistance    = 25;
+    controls.maxPolarAngle  = Math.PI / 2.05;
+    controls.target.set(MAIN_CX, MAIN_H * 0.5, MAIN_CZ);
+    controls.enabled        = false;
+
+    // ── AR SETUP ───────────────────────────────────────────────────
+    let arSession = null;
+
+    async function initAR() {
+      if (!isMobile) return;
+      hintEl.querySelector('.hint-icon').textContent = '👆';
+      hintEl.querySelector('.hint-text').textContent = 'Toca para ver en AR';
+      if (!('xr' in navigator)) return;
+      try {
+        const ok = await navigator.xr.isSessionSupported('immersive-ar');
+        if (!ok) { arBtn.innerHTML = '📱 AR no soportado'; arBtn.style.opacity = '0.6'; }
+      } catch(e) { /* may throw before user gesture, keep button active */ }
+    }
+    initAR();
+
+    async function startAR() {
+      if (arSession) { arSession.end(); return; }
+      if (!('xr' in navigator)) {
+        alert('WebXR no disponible.\nUsa Chrome en Android con HTTPS.'); return;
+      }
+      arBtn.innerHTML = '⏳ Iniciando AR…'; arBtn.disabled = true;
+      try {
+        arSession = await navigator.xr.requestSession('immersive-ar', {
+          requiredFeatures: ['local'],
+          optionalFeatures: ['dom-overlay','hit-test'],
+          domOverlay: { root: document.getElementById('hero-visual') }
+        });
+        renderer.xr.setReferenceSpaceType('local');
+        await renderer.xr.setSession(arSession);
+        scene.background = null; scene.fog = null;
+        renderer.setClearColor(0x000000, 0);
+        arBtn.innerHTML = '✕ Salir AR'; arBtn.disabled = false;
+        arBtn.style.background = 'rgba(204,102,153,0.9)';
+        arSession.addEventListener('end', exitAR);
+      } catch(e) {
+        let msg = '⚠ Error AR';
+        if (e.name === 'NotSupportedError') msg = '⚠ AR no soportado aquí';
+        if (e.name === 'SecurityError')     msg = '⚠ Requiere HTTPS + cámara';
+        arBtn.innerHTML = msg; arBtn.disabled = false;
+        setTimeout(() => { arBtn.innerHTML = '📱 Ver en AR'; }, 3500);
+      }
+    }
+
+    function exitAR() {
+      arSession = null;
+      scene.background = new THREE.Color(0x04071a);
+      scene.fog = new THREE.FogExp2(0x04071a, 0.018);
+      renderer.setClearColor(0x04071a, 1);
+      arBtn.innerHTML = '📱 Ver en AR'; arBtn.style.background = ''; arBtn.disabled = false;
+    }
+
+    arBtn.addEventListener('click', startAR);
+
+    // ── EXPLORE BUTTON ─────────────────────────────────────────────
+    exploreBtn.addEventListener('click', () => {
+      controlsActive   = !controlsActive;
+      controls.enabled = controlsActive;
+      if (controlsActive) {
+        exploreBtn.classList.add('active');
+        exploreBtn.innerHTML = '✓ Modo Libre';
+        renderer.domElement.style.cursor = 'grab';
+      } else {
+        exploreBtn.classList.remove('active');
+        exploreBtn.innerHTML = '<span class="explore-icon">✦</span> Explorar en 3D';
+        renderer.domElement.style.cursor = 'default';
+      }
+    });
+
+    // ── RESIZE ─────────────────────────────────────────────────────
+    window.addEventListener('resize', () => {
+      const w = heroEl.clientWidth, h = heroEl.clientHeight;
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+      renderer.setSize(w, h);
+    });
+
+    // ── ANIMATION LOOP ─────────────────────────────────────────────
+    let autoAngle = 0;
+    const clock   = new THREE.Clock();
+
+    renderer.setAnimationLoop(() => {
+      const t = clock.getElapsedTime();
+
+      // Orbit spheres
+      orbitPivots.forEach(({ pivot, phase, speed }) => {
+        pivot.rotation.y = t * speed + phase;
+      });
+
+      // Dust drift + wrap
+      const dp = dustGeo.attributes.position.array;
+      for (let i = 0; i < N_DUST; i++) {
+        dp[i*3]   += dVel[i*3];
+        dp[i*3+1] += dVel[i*3+1];
+        dp[i*3+2] += dVel[i*3+2];
+        if (dp[i*3+1] > 16) {
+          dp[i*3]   = (Math.random()-0.5)*20;
+          dp[i*3+1] = 0;
+          dp[i*3+2] = (Math.random()-0.5)*16 - 4;
+        }
+      }
+      dustGeo.attributes.position.needsUpdate = true;
+
+      // Church window pulse
+      win.material.emissiveIntensity = 1.6 + Math.sin(t * 2.1) * 0.6;
+      churchLight.intensity          = 4.0 + Math.sin(t * 2.1) * 1.2;
+
+      // Lights drift
+      warmLight.position.x = 7  + Math.sin(t * 0.33) * 2.5;
+      warmLight.position.z = 9  + Math.cos(t * 0.27) * 2.0;
+      coolLight.position.x = -8 + Math.cos(t * 0.28) * 2.5;
+
+      // Auto-orbit camera
+      if (!controlsActive && !renderer.xr.isPresenting) {
+        autoAngle += 0.0011;
+        camera.position.x = Math.sin(autoAngle) * 16;
+        camera.position.z = Math.cos(autoAngle) * 16;
+        camera.position.y = 5 + Math.sin(t * 0.17) * 0.8;
+        camera.lookAt(MAIN_CX, MAIN_H * 0.6, MAIN_CZ);
+      }
+
+      if (controlsActive) controls.update();
+      renderer.render(scene, camera);
+    });
+
+  </script>
+
+</body>
+</html>
