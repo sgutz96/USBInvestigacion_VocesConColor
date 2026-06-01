@@ -1,196 +1,315 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Secciones | Clases Emocionales</title>
 
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/clases.css" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secciones — Proyecto NNA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/clases.css">
 </head>
 
 <body>
 
-   <!-- NAVIGATION -->
-    <nav>
-        <div class="nav-container">
-            <img src="./assets/img/Logo.png" alt="Logo del proyecto" class="logo">
+  <!-- ===== NAV ===== -->
+  <nav>
+    <a href="#" class="nav-logo">
+      <img class="nav-logo-icon" src="./assets/img/logo.svg" alt="Infancia que Resiste logo">
+      <div class="nav-brand">Infancia que<br><span>Resiste</span></div>
+    </a>
 
-            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
-                ☰
-            </button>
+    <ul class="nav-links">
+      <li><a href="#about">Proyecto</a></li>
+      <li><a href="#secciones">Secciones</a></li>
+      <li><a href="#podcast">Podcast</a></li>
+      <li><a href="#mapa">Mapa</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
 
-            <ul class="nav-links" id="nav-links">
-                <li><a href="./index.html" class="active">Home</a></li>
-                <li><a href="./equipo.html">Personas del Proyecto</a></li>
-                <li><a href="./clases.html">Secciones</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
+    <button class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="clases-hero">
+    <div class="clases-hero-content">
+      <div class="clases-hero-eyebrow">Actividades · Intervención Infantes</div>
+      <h1 class="clases-hero-title">Nuestras<br><span>Secciones</span></h1>
+      <p class="clases-hero-sub">
+        Tres fases pedagógicas que conectan arte, cuerpo y comunidad para transformar
+        la experiencia emocional de niños, niñas y adolescentes.
+      </p>
+      <div class="clases-hero-stats">
+        <div class="hero-stat">
+          <strong>3</strong>
+          <span>Fases</span>
         </div>
-
-        <!-- Popup del menú móvil -->
-        <div class="menu-popup" id="menu-popup">
-            <ul>
-                <li><a href="./index.html" class="active">Home</a></li>
-                <li><a href="./equipo.html">Personas del Proyecto</a></li>
-                <li><a href="./clases.html">Secciones</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <strong>12</strong>
+          <span>Actividades</span>
         </div>
-    </nav>
-
-  <!-- HEADER -->
-  <header class="clases-header">
-    <h1>Secciones del Proyecto</h1>
-    <p>
-      16 experiencias artísticas diseñadas para explorar, expresar
-      y transformar las emociones a través del arte y la creación.
-    </p>
-  </header>
-
-  <!-- GRID DE CLASES -->
-  <section class="clases-grid">
-
-    <!-- CARD -->
-    <article class="clase-card">
-        
-      <span class="clase-num">01</span>
-      <h3>Alegría</h3>
-      <p>
-        Reconocer el gozo como una fuerza creativa que conecta
-        con el cuerpo, la música y el movimiento.
-      </p>
-      <a href="./clase_1.html"> <button>Explorar clase</button> </a>
-    </article>
-
-    <article class="clase-card">
-      <span class="clase-num">02</span>
-      <h3>Tristeza</h3>
-      <p>
-        Habitar la tristeza desde el arte como un espacio
-        de reflexión, cuidado y memoria.
-      </p>
-      <button>Explorar clase</button>
-    </article>
-
-    <article class="clase-card">
-      <span class="clase-num">03</span>
-      <h3>Miedo</h3>
-      <p>
-        Explorar el miedo y transformarlo en expresión
-        visual, sonido y relato personal.
-      </p>
-      <button>Explorar clase</button>
-    </article>
-
-    <article class="clase-card">
-      <span class="clase-num">04</span>
-      <h3>Ira</h3>
-      <p>
-        Canalizar la ira como energía creativa
-        a través del ritmo, el trazo y el cuerpo.
-      </p>
-      <button>Explorar clase</button>
-    </article>
-
-    <article class="clase-card">
-      <span class="clase-num">05</span>
-      <h3>Esperanza</h3>
-      <p>
-        Construir futuros posibles mediante
-        la imaginación y la creación colectiva.
-      </p>
-      <button>Explorar clase</button>
-    </article>
-
-    <article class="clase-card">
-      <span class="clase-num">06</span>
-      <h3>Confianza</h3>
-      <p>
-        Fortalecer vínculos y trabajo en equipo
-        desde dinámicas artísticas colaborativas.
-      </p>
-      <button>Explorar clase</button>
-    </article>
-
-    <!-- Duplica hasta llegar a 16 -->
-    <article class="clase-card">
-      <span class="clase-num">07</span>
-      <h3>Empatía</h3>
-      <p>Escuchar y sentir al otro a través del arte.</p>
-      <button>Explorar clase</button>
-    </article>
-
-    <article class="clase-card">
-      <span class="clase-num">08</span>
-      <h3>Creatividad</h3>
-      <p>Romper límites y explorar nuevas formas de expresión.</p>
-      <button>Explorar clase</button>
-    </article>
-
-    <article class="clase-card">
-      <span class="clase-num">09</span>
-      <h3>Identidad</h3>
-      <p>Reconocer quién soy y de dónde vengo.</p>
-      <button>Explorar clase</button>
-    </article>
-
-    <article class="clase-card">
-      <span class="clase-num">10</span>
-      <h3>Resiliencia</h3>
-      <p>Transformar la experiencia en aprendizaje.</p>
-      <button>Explorar clase</button>
-    </article>
-
-    <article class="clase-card">
-      <span class="clase-num">11</span>
-      <h3>Solidaridad</h3>
-      <p>Crear juntos para cuidarnos mutuamente.</p>
-      <button>Explorar clase</button>
-    </article>
-
-    <article class="clase-card">
-      <span class="clase-num">12</span>
-      <h3>Memoria</h3>
-      <p>Recordar para no repetir, crear para sanar.</p>
-      <button>Explorar clase</button>
-    </article>
-
-    <article class="clase-card">
-      <span class="clase-num">13</span>
-      <h3>Calma</h3>
-      <p>Explorar el silencio, la respiración y el sonido.</p>
-      <button>Explorar clase</button>
-    </article>
-
-    <article class="clase-card">
-      <span class="clase-num">14</span>
-      <h3>Valentía</h3>
-      <p>Atreverse a expresar lo que duele y lo que sana.</p>
-      <button>Explorar clase</button>
-    </article>
-
-    <article class="clase-card">
-      <span class="clase-num">15</span>
-      <h3>Amor</h3>
-      <p>El cuidado, el afecto y el respeto como creación.</p>
-      <button>Explorar clase</button>
-    </article>
-
-    <article class="clase-card">
-      <span class="clase-num">16</span>
-      <h3>Transformación</h3>
-      <p>Cerrar el proceso reconociendo el cambio vivido.</p>
-      <button>Explorar clase</button>
-    </article>
-
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <strong>∞</strong>
+          <span>Emociones</span>
+        </div>
+      </div>
+    </div>
+    <div class="clases-hero-deco">
+      <div class="deco-circle deco-c1"></div>
+      <div class="deco-circle deco-c2"></div>
+      <div class="deco-circle deco-c3"></div>
+      <div class="deco-number">01</div>
+    </div>
   </section>
 
+  <!-- ========== INTRO FASES ========== -->
+  <div class="fases-intro fade-in">
+    <div class="fases-intro-inner">
+      <span class="fases-intro-label">El recorrido</span>
+      <p>Cada fase construye sobre la anterior — de la percepción individual hacia la acción colectiva.</p>
+    </div>
+    <div class="fases-timeline">
+      <div class="fase-dot fase-dot--green"></div>
+      <div class="fase-line"></div>
+      <div class="fase-dot fase-dot--blue"></div>
+      <div class="fase-line"></div>
+      <div class="fase-dot fase-dot--pink"></div>
+    </div>
+  </div>
+
+  <!-- ========== FASE 1 ========== -->
+  <section class="fase-section fade-in" id="fase1">
+    <div class="fase-header fase-header--green">
+      <div class="fase-header-inner">
+        <div class="fase-number">Fase 1</div>
+        <div class="fase-header-text">
+          <h2>Reconocer · sentir · vincularse</h2>
+          <span>Cuidado y territorio</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="actividades-grid">
+
+      <a href="./clase-01.html" class="actividad-card fade-in">
+        <div class="actividad-num" style="background:rgba(163,192,55,0.15);color:#3B6D11">01</div>
+        <div class="actividad-body">
+          <h3>Bienvenidos a la ronda</h3>
+          <p>Mi lugar en el territorio</p>
+        </div>
+        <div class="actividad-tag" style="background:rgba(163,192,55,0.12);color:#3B6D11">Territorio</div>
+        <div class="actividad-arrow">→</div>
+      </a>
+
+      <a href="./clase-02.html" class="actividad-card fade-in">
+        <div class="actividad-num" style="background:rgba(163,192,55,0.15);color:#3B6D11">02</div>
+        <div class="actividad-body">
+          <h3>Así se siente mi mundo</h3>
+          <p>Colores, emociones y cuerpo</p>
+        </div>
+        <div class="actividad-tag" style="background:rgba(85,176,210,0.12);color:#1a6a88">Emoción</div>
+        <div class="actividad-arrow">→</div>
+      </a>
+
+      <a href="./clase-03.html" class="actividad-card fade-in">
+        <div class="actividad-num" style="background:rgba(163,192,55,0.15);color:#3B6D11">03</div>
+        <div class="actividad-body">
+          <h3>La palabra que nace</h3>
+          <p>Contar lo que vivimos</p>
+        </div>
+        <div class="actividad-tag" style="background:rgba(204,102,153,0.12);color:#8c2a5c">Lenguaje</div>
+        <div class="actividad-arrow">→</div>
+      </a>
+
+      <a href="./clase-04.html" class="actividad-card fade-in">
+        <div class="actividad-num" style="background:rgba(163,192,55,0.15);color:#3B6D11">04</div>
+        <div class="actividad-body">
+          <h3>Jugamos a cuidarnos</h3>
+          <p>Reglas que construimos juntos</p>
+        </div>
+        <div class="actividad-tag" style="background:rgba(245,200,66,0.2);color:#7a5c00">Cuidado</div>
+        <div class="actividad-arrow">→</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ========== FASE 2 ========== -->
+  <section class="fase-section fade-in" id="fase2">
+    <div class="fase-header fase-header--blue">
+      <div class="fase-header-inner">
+        <div class="fase-number">Fase 2</div>
+        <div class="fase-header-text">
+          <h2>Explorar · expresar · significar</h2>
+          <span>Lenguaje y experiencia</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="actividades-grid">
+
+      <a href="./clase-05.html" class="actividad-card fade-in">
+        <div class="actividad-num" style="background:rgba(85,176,210,0.15);color:#1a6a88">05</div>
+        <div class="actividad-body">
+          <h3>Exploradores del entorno</h3>
+          <p>Descubrir con los sentidos</p>
+        </div>
+        <div class="actividad-tag" style="background:rgba(85,176,210,0.12);color:#1a6a88">Sentidos</div>
+        <div class="actividad-arrow">→</div>
+      </a>
+
+      <a href="./clase-06.html" class="actividad-card fade-in">
+        <div class="actividad-num" style="background:rgba(85,176,210,0.15);color:#1a6a88">06</div>
+        <div class="actividad-body">
+          <h3>Mi barrio cuenta historias</h3>
+          <p>Relatos desde la vida cotidiana</p>
+        </div>
+        <div class="actividad-tag" style="background:rgba(215,130,44,0.12);color:#8c4800">Historia</div>
+        <div class="actividad-arrow">→</div>
+      </a>
+
+      <a href="./clase-07.html" class="actividad-card fade-in">
+        <div class="actividad-num" style="background:rgba(85,176,210,0.15);color:#1a6a88">07</div>
+        <div class="actividad-body">
+          <h3>Arte que habla</h3>
+          <p>Pintar lo que sentimos y vivimos</p>
+        </div>
+        <div class="actividad-tag" style="background:rgba(204,102,153,0.12);color:#8c2a5c">Arte</div>
+        <div class="actividad-arrow">→</div>
+      </a>
+
+      <a href="./clase-08.html" class="actividad-card fade-in">
+        <div class="actividad-num" style="background:rgba(85,176,210,0.15);color:#1a6a88">08</div>
+        <div class="actividad-body">
+          <h3>Personajes del cuidado</h3>
+          <p>Juego de roles para convivir</p>
+        </div>
+        <div class="actividad-tag" style="background:rgba(123,107,170,0.12);color:#3d2e7a">Juego</div>
+        <div class="actividad-arrow">→</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ========== FASE 3 ========== -->
+  <section class="fase-section fade-in" id="fase3">
+    <div class="fase-header fase-header--pink">
+      <div class="fase-header-inner">
+        <div class="fase-number">Fase 3</div>
+        <div class="fase-header-text">
+          <h2>Construir · participar · resignificar</h2>
+          <span>Autonomía y comunidad</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="actividades-grid">
+
+      <a href="./clase-09.html" class="actividad-card fade-in">
+        <div class="actividad-num" style="background:rgba(204,102,153,0.15);color:#8c2a5c">09</div>
+        <div class="actividad-body">
+          <h3>Tejiendo acuerdos</h3>
+          <p>Decisiones que cuidan la vida colectiva</p>
+        </div>
+        <div class="actividad-tag" style="background:rgba(163,192,55,0.12);color:#3B6D11">Acuerdos</div>
+        <div class="actividad-arrow">→</div>
+      </a>
+
+      <a href="./clase-10.html" class="actividad-card fade-in">
+        <div class="actividad-num" style="background:rgba(204,102,153,0.15);color:#8c2a5c">10</div>
+        <div class="actividad-body">
+          <h3>La voz de los niños</h3>
+          <p>Lo que queremos decir al mundo</p>
+        </div>
+        <div class="actividad-tag" style="background:rgba(85,176,210,0.12);color:#1a6a88">Voz</div>
+        <div class="actividad-arrow">→</div>
+      </a>
+
+      <a href="./clase-11.html" class="actividad-card fade-in">
+        <div class="actividad-num" style="background:rgba(204,102,153,0.15);color:#8c2a5c">11</div>
+        <div class="actividad-body">
+          <h3>Creadores de historias</h3>
+          <p>Nuestro libro comunitario</p>
+        </div>
+        <div class="actividad-tag" style="background:rgba(215,130,44,0.12);color:#8c4800">Creación</div>
+        <div class="actividad-arrow">→</div>
+      </a>
+
+      <a href="./clase-12.html" class="actividad-card fade-in">
+        <div class="actividad-num" style="background:rgba(204,102,153,0.15);color:#8c2a5c">12</div>
+        <div class="actividad-body">
+          <h3>La gran ronda de la palabra</h3>
+          <p>Compartir para tejer paz</p>
+        </div>
+        <div class="actividad-tag" style="background:rgba(245,200,66,0.2);color:#7a5c00">Paz</div>
+        <div class="actividad-arrow">→</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ========== CTA FINAL ========== -->
+  <section class="clases-cta fade-in">
+    <div class="clases-cta-inner">
+      <div class="section-label" style="color:var(--green); justify-content:center">¿Quieres saber más?</div>
+      <h2 class="section-title" style="text-align:center; color:white">
+        Conoce al <span style="color:var(--green)">equipo</span> detrás
+      </h2>
+      <p
+        style="text-align:center; color:rgba(255,255,255,0.7); font-size:1rem; line-height:1.7; max-width:520px; margin:0 auto 2rem">
+        Las personas que hacen posible cada actividad, cada ronda y cada historia compartida.
+      </p>
+      <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap">
+        <a href="./equipo.html" class="btn-primary">Ver equipo</a>
+        <a href="#" class="btn-secondary">Contáctanos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>© 2025 Proyecto NNA - USB</p>
+    <div class="footer-brand">
+      <h4>Proyecto NNA · USB</h4>
+      <p>Arte, danza y música como herramientas de expresión y desarrollo emocional para niños, niñas y adolescentes.
+      </p>
+      <span class="tagline">✦ Sentir es crear</span>
+    </div>
+    <div class="footer-col">
+      <h5>Secciones</h5>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Clases</a></li>
+        <li><a href="#">Equipo</a></li>
+        <li><a href="#">Podcast</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contacto</h5>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Correo</a></li>
+      </ul>
+    </div>
   </footer>
+  <div class="footer-bottom">© 2025 Proyecto NNA · USB — Todos los derechos reservados</div>
 
-<script type="module" src="./js/Nav.js"></script>
+  <script>
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
+    document.getElementById('hamburger')?.addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
 </body>
+
 </html>
