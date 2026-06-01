@@ -1,86 +1,325 @@
-/* ================= EQUIPO ================= */
+/* ============================================
+   EQUIPO — equipo.css
+   Importa global.css primero
+   ============================================ */
 
-.equipo-header {
-  padding: 6rem 10% 3rem;
-  text-align: center;
-  background-color: var(--bg-white-stone);
-}
-
-.equipo-header h1 {
-  font-size: 2.8rem;
-  color: var(--color-green);
-  margin-bottom: 1rem;
-}
-
-.equipo-header p {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-  color: #444;
-}
-
-/* GRID */
-.equipo-grid {
-  padding: 4rem 10%;
+/* ===== HERO ===== */
+.equipo-hero {
+  min-height: 85vh;
+  background: var(--dark);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2.5rem;
-  background-color: var(--bg-yellow-stone);
-}
-
-/* CARD */
-.persona-card {
-  background-color: var(--bg-white-stone);
-  border-radius: 1.2rem;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 8rem 8% 5rem;
+  gap: 4rem;
+  position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.persona-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+.equipo-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0; right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, var(--white));
+  pointer-events: none;
 }
 
-/* IMAGEN */
-.persona-card img {
-  width: 100%;
-  height: 280px;
+/* textura sutil igual que el home */
+.equipo-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+.equipo-hero-content { position: relative; z-index: 1; }
+
+.equipo-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(163,192,55,0.18);
+  border: 1px solid rgba(163,192,55,0.35);
+  color: var(--green);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 1.5rem;
+}
+
+.equipo-hero-title {
+  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  font-weight: 900;
+  line-height: 0.95;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.equipo-hero-title span { color: var(--green); }
+
+.equipo-hero-sub {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.62);
+  max-width: 460px;
+  margin-bottom: 2rem;
+}
+
+.equipo-hero-count {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.equipo-hero-count strong {
+  font-size: 3rem;
+  font-weight: 900;
+  color: white;
+  line-height: 1;
+}
+
+.equipo-hero-count span {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+
+/* Avatares decorativos del hero */
+.equipo-hero-deco {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.deco-avatars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.deco-avatars img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.15);
   object-fit: cover;
+  transition: transform 0.3s;
 }
 
-/* INFO */
-.persona-info {
-  padding: 1.5rem;
+.deco-avatars img:nth-child(1) { transform: translateX(-20px); border-color: rgba(163,192,55,0.5); }
+.deco-avatars img:nth-child(2) { transform: translateX(20px);  border-color: rgba(85,176,210,0.5); }
+.deco-avatars img:nth-child(3) { transform: translateX(-10px); border-color: rgba(215,130,44,0.5); }
+
+/* ===== CONTENEDOR COMPARTIDO ===== */
+.equipo-inner {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.persona-info h3 {
-  font-size: 1.4rem;
-  color: var(--color-green);
-  margin-bottom: 0.3rem;
+/* ===== GRUPO / SECCIÓN ===== */
+.equipo-grupo {
+  padding: 5rem 8%;
+  background: var(--white);
 }
 
-.persona-info span {
+.equipo-grupo--dark {
+  background: var(--dark);
+}
+
+.grupo-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color, var(--green));
+  margin-bottom: 2.5rem;
+}
+
+.grupo-label::before {
+  content: '';
+  width: 28px; height: 3px;
+  border-radius: 2px;
+  background: currentColor;
+  display: inline-block;
+}
+
+/* ===== GRIDS ===== */
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.equipo-grid--featured {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* ===== TARJETA MIEMBRO ===== */
+.miembro-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.equipo-grupo--dark .miembro-card {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.1);
+}
+
+.miembro-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.14);
+}
+
+.equipo-grupo--dark .miembro-card:hover {
+  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+}
+
+/* Foto */
+.miembro-photo {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.miembro-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s ease;
   display: block;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #777;
-  margin-bottom: 0.8rem;
 }
 
-.persona-info p {
+.miembro-card:hover .miembro-photo img {
+  transform: scale(1.06);
+}
+
+/* Barra de color inferior de la foto */
+.miembro-color-bar {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 4px;
+}
+
+/* Tarjeta featured: foto más alta */
+.miembro-card--featured .miembro-photo {
+  aspect-ratio: 4/5;
+}
+
+/* Info */
+.miembro-info {
+  padding: 1.1rem 1.2rem 1.3rem;
+}
+
+.miembro-info h3 {
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: var(--dark);
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.equipo-grupo--dark .miembro-info h3 {
+  color: white;
+}
+
+.miembro-rol {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.miembro-card--featured .miembro-info {
+  padding: 1.3rem 1.4rem 1.5rem;
+}
+
+.miembro-card--featured .miembro-info h3 {
+  font-size: 1.05rem;
+}
+
+/* ===== CTA ===== */
+.equipo-cta {
+  background: var(--dark);
+  padding: 6rem 8%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.equipo-cta::before {
+  content: '';
+  position: absolute;
+  top: -120px; left: 50%;
+  transform: translateX(-50%);
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: rgba(163,192,55,0.07);
+  pointer-events: none;
+}
+
+.equipo-cta-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.equipo-cta-inner p {
   font-size: 1rem;
-  color: #333;
-  line-height: 1.5;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.7;
+  max-width: 480px;
+  margin-bottom: 1.5rem;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .equipo-header {
-    padding: 4rem 1.5rem 2rem;
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1100px) {
+  .equipo-grid          { grid-template-columns: repeat(3, 1fr); }
+  .equipo-grid--featured { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .equipo-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 7rem 6% 4rem;
   }
 
-  .equipo-grid {
-    padding: 3rem 1.5rem;
-  }
+  .equipo-hero-deco { display: none; }
+
+  .equipo-grupo,
+  .equipo-cta { padding: 4rem 6%; }
+
+  .equipo-grid          { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .equipo-grid--featured { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+}
+
+@media (max-width: 600px) {
+  .equipo-grid          { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+  .equipo-grid--featured { grid-template-columns: 1fr 1fr; }
+
+  .miembro-info         { padding: 0.8rem; }
+  .miembro-info h3      { font-size: 0.85rem; }
+  .miembro-rol          { font-size: 0.7rem; }
 }

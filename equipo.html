@@ -1,140 +1,323 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Personas del Proyecto</title>
 
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/equipo.css" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipo — Proyecto NNA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/equipo.css">
 </head>
 
 <body>
 
-     <!-- NAVIGATION -->
-    <nav>
-        <div class="nav-container">
-            <img src="./assets/img/Logo.png" alt="Logo del proyecto" class="logo">
+  <!-- ===== NAV ===== -->
+  <nav>
+    <a href="#" class="nav-logo">
+      <img class="nav-logo-icon" src="./assets/img/logo.svg" alt="Infancia que Resiste logo">
+      <div class="nav-brand">Infancia que<br><span>Resiste</span></div>
+    </a>
 
-            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
-                ☰
-            </button>
+    <ul class="nav-links">
+      <li><a href="#about">Proyecto</a></li>
+      <li><a href="#secciones">Secciones</a></li>
+      <li><a href="#podcast">Podcast</a></li>
+      <li><a href="#mapa">Mapa</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
 
-            <ul class="nav-links" id="nav-links">
-                <li><a href="./index.html" class="active">Home</a></li>
-                <li><a href="./equipo.html">Personas del Proyecto</a></li>
-                <li><a href="./clases.html">Secciones</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </div>
+    <button class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-        <!-- Popup del menú móvil -->
-        <div class="menu-popup" id="menu-popup">
-            <ul>
-                <li><a href="./index.html" class="active">Home</a></li>
-                <li><a href="./equipo.html">Personas del Proyecto</a></li>
-                <li><a href="./clases.html">Secciones</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </div>
-    </nav>
-
-  <!-- HEADER -->
-  <header class="equipo-header">
-    <h1>Personas del Proyecto</h1>
-    <p>Un equipo interdisciplinario que construye experiencias desde el arte, la tecnología y la memoria.</p>
-  </header>
-
-  <!-- GRID DE PERSONAS -->
-  <section class="equipo-grid">
-
-    <article class="persona-card">
-      <img src="./assets/img/personas/persona1.jpg" alt="Nombre Persona">
-      <div class="persona-info">
-        <h3>Nombre Apellido</h3>
-        <span>Rol / Disciplina</span>
-        <p>
-          Breve descripción de la persona, su enfoque dentro del proyecto
-          y cómo contribuye a la experiencia.
-        </p>
+  <!-- ===== HERO ===== -->
+  <section class="equipo-hero">
+    <div class="equipo-hero-content">
+      <div class="equipo-eyebrow">Las personas detrás del proyecto</div>
+      <h1 class="equipo-hero-title">Nuestro<br><span>Equipo</span></h1>
+      <p class="equipo-hero-sub">
+        Docentes, artistas, investigadores y gestores que creen en el poder
+        del arte para transformar la infancia.
+      </p>
+      <div class="equipo-hero-count">
+        <strong>+12</strong>
+        <span>integrantes activos</span>
       </div>
-    </article>
-
-    <article class="persona-card">
-      <img src="./assets/img/personas/persona2.jpg" alt="Nombre Persona">
-      <div class="persona-info">
-        <h3>Nombre Apellido</h3>
-        <span>Rol / Disciplina</span>
-        <p>
-          Texto corto, humano y claro. No CV, más bien aporte y visión.
-        </p>
+    </div>
+    <div class="equipo-hero-deco" aria-hidden="true">
+      <div class="deco-avatars">
+        <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=120&h=120&fit=crop&crop=face&q=80"
+          alt="">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&h=120&fit=crop&crop=face&q=80"
+          alt="">
+        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=120&h=120&fit=crop&crop=face&q=80"
+          alt="">
       </div>
-    </article>
+    </div>
+  </section>
 
-    <article class="persona-card">
-      <img src="./assets/img/personas/persona3.jpg" alt="Nombre Persona">
-      <div class="persona-info">
-        <h3>Nombre Apellido</h3>
-        <span>Rol / Disciplina</span>
-        <p>
-          Puede ser arte, pedagogía, tecnología, gestión o comunidad.
-        </p>
-      </div>
-    </article>
-    
-    <article class="persona-card">
-      <img src="./assets/img/personas/persona3.jpg" alt="Nombre Persona">
-      <div class="persona-info">
-        <h3>Nombre Apellido</h3>
-        <span>Rol / Disciplina</span>
-        <p>
-          Puede ser arte, pedagogía, tecnología, gestión o comunidad.
-        </p>
-      </div>
-    </article>
+  <!-- ===== COORDINACIÓN ===== -->
+  <section class="equipo-grupo fade-in">
+    <div class="equipo-inner">
+      <div class="grupo-label" style="--color:var(--green)">Coordinación</div>
+      <div class="equipo-grid equipo-grid--featured">
 
-    <article class="persona-card">
-      <img src="./assets/img/personas/persona3.jpg" alt="Nombre Persona">
-      <div class="persona-info">
-        <h3>Nombre Apellido</h3>
-        <span>Rol / Disciplina</span>
-        <p>
-          Puede ser arte, pedagogía, tecnología, gestión o comunidad.
-        </p>
-      </div>
-    </article>
+        <article class="miembro-card miembro-card--featured">
+          <div class="miembro-photo">
+            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=500&h=500&fit=crop&crop=face&q=80"
+              alt="Directora del proyecto">
+            <div class="miembro-color-bar" style="background:var(--green)"></div>
+          </div>
+          <div class="miembro-info">
+            <h3>Nombre Apellido</h3>
+            <span class="miembro-rol" style="color:var(--green)">Directora del Proyecto</span>
+          </div>
+        </article>
 
-    <article class="persona-card">
-      <img src="./assets/img/personas/persona3.jpg" alt="Nombre Persona">
-      <div class="persona-info">
-        <h3>Nombre Apellido</h3>
-        <span>Rol / Disciplina</span>
-        <p>
-          Puede ser arte, pedagogía, tecnología, gestión o comunidad.
-        </p>
-      </div>
-    </article>
+        <article class="miembro-card miembro-card--featured">
+          <div class="miembro-photo">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=500&fit=crop&crop=face&q=80"
+              alt="Coordinador pedagógico">
+            <div class="miembro-color-bar" style="background:var(--blue)"></div>
+          </div>
+          <div class="miembro-info">
+            <h3>Nombre Apellido</h3>
+            <span class="miembro-rol" style="color:var(--blue)">Coordinador Pedagógico</span>
+          </div>
+        </article>
 
-    <article class="persona-card">
-      <img src="./assets/img/personas/persona3.jpg" alt="Nombre Persona">
-      <div class="persona-info">
-        <h3>Nombre Apellido</h3>
-        <span>Rol / Disciplina</span>
-        <p>
-          Puede ser arte, pedagogía, tecnología, gestión o comunidad.
-        </p>
-      </div>
-    </article>
+        <article class="miembro-card miembro-card--featured">
+          <div class="miembro-photo">
+            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=500&h=500&fit=crop&crop=face&q=80"
+              alt="Coordinadora de arte">
+            <div class="miembro-color-bar" style="background:var(--orange)"></div>
+          </div>
+          <div class="miembro-info">
+            <h3>Nombre Apellido</h3>
+            <span class="miembro-rol" style="color:var(--orange)">Coordinadora de Arte</span>
+          </div>
+        </article>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DOCENTES ===== -->
+  <section class="equipo-grupo equipo-grupo--dark fade-in">
+    <div class="equipo-inner">
+      <div class="grupo-label" style="--color:var(--pink)">Docentes e investigadores</div>
+      <div class="equipo-grid">
+
+        <article class="miembro-card">
+          <div class="miembro-photo">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face&q=80"
+              alt="Docente de danza">
+            <div class="miembro-color-bar" style="background:var(--pink)"></div>
+          </div>
+          <div class="miembro-info">
+            <h3>Nombre Apellido</h3>
+            <span class="miembro-rol" style="color:var(--pink)">Docente de Danza</span>
+          </div>
+        </article>
+
+        <article class="miembro-card">
+          <div class="miembro-photo">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face&q=80"
+              alt="Investigador pedagógico">
+            <div class="miembro-color-bar" style="background:var(--purple)"></div>
+          </div>
+          <div class="miembro-info">
+            <h3>Nombre Apellido</h3>
+            <span class="miembro-rol" style="color:var(--purple)">Investigador Pedagógico</span>
+          </div>
+        </article>
+
+        <article class="miembro-card">
+          <div class="miembro-photo">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face&q=80"
+              alt="Docente de artes plásticas">
+            <div class="miembro-color-bar" style="background:var(--orange)"></div>
+          </div>
+          <div class="miembro-info">
+            <h3>Nombre Apellido</h3>
+            <span class="miembro-rol" style="color:var(--orange)">Docente de Artes Plásticas</span>
+          </div>
+        </article>
+
+        <article class="miembro-card">
+          <div class="miembro-photo">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face&q=80"
+              alt="Investigador comunitario">
+            <div class="miembro-color-bar" style="background:var(--green)"></div>
+          </div>
+          <div class="miembro-info">
+            <h3>Nombre Apellido</h3>
+            <span class="miembro-rol" style="color:var(--green)">Investigador Comunitario</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ARTISTAS Y TALLERISTAS ===== -->
+  <section class="equipo-grupo fade-in">
+    <div class="equipo-inner">
+      <div class="grupo-label" style="--color:var(--blue)">Artistas y talleristas</div>
+      <div class="equipo-grid">
+
+        <article class="miembro-card">
+          <div class="miembro-photo">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face&q=80"
+              alt="Artista plástica">
+            <div class="miembro-color-bar" style="background:var(--yellow)"></div>
+          </div>
+          <div class="miembro-info">
+            <h3>Nombre Apellido</h3>
+            <span class="miembro-rol" style="color:#8a6a00">Artista Plástica</span>
+          </div>
+        </article>
+
+        <article class="miembro-card">
+          <div class="miembro-photo">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face&q=80"
+              alt="Músico tallerista">
+            <div class="miembro-color-bar" style="background:var(--blue)"></div>
+          </div>
+          <div class="miembro-info">
+            <h3>Nombre Apellido</h3>
+            <span class="miembro-rol" style="color:var(--blue)">Músico Tallerista</span>
+          </div>
+        </article>
+
+        <article class="miembro-card">
+          <div class="miembro-photo">
+            <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=400&h=400&fit=crop&crop=face&q=80"
+              alt="Tallerista de teatro">
+            <div class="miembro-color-bar" style="background:var(--pink)"></div>
+          </div>
+          <div class="miembro-info">
+            <h3>Nombre Apellido</h3>
+            <span class="miembro-rol" style="color:var(--pink)">Tallerista de Teatro</span>
+          </div>
+        </article>
+
+        <article class="miembro-card">
+          <div class="miembro-photo">
+            <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=400&h=400&fit=crop&crop=face&q=80"
+              alt="Fotógrafo documental">
+            <div class="miembro-color-bar" style="background:var(--purple)"></div>
+          </div>
+          <div class="miembro-info">
+            <h3>Nombre Apellido</h3>
+            <span class="miembro-rol" style="color:var(--purple)">Fotógrafo Documental</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GESTIÓN Y APOYO ===== -->
+  <section class="equipo-grupo equipo-grupo--dark fade-in">
+    <div class="equipo-inner">
+      <div class="grupo-label" style="--color:var(--orange)">Gestión y apoyo</div>
+      <div class="equipo-grid">
+
+        <article class="miembro-card">
+          <div class="miembro-photo">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face&q=80"
+              alt="Gestora cultural">
+            <div class="miembro-color-bar" style="background:var(--orange)"></div>
+          </div>
+          <div class="miembro-info">
+            <h3>Nombre Apellido</h3>
+            <span class="miembro-rol" style="color:var(--orange)">Gestora Cultural</span>
+          </div>
+        </article>
+
+        <article class="miembro-card">
+          <div class="miembro-photo">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face&q=80"
+              alt="Comunicaciones">
+            <div class="miembro-color-bar" style="background:var(--green)"></div>
+          </div>
+          <div class="miembro-info">
+            <h3>Nombre Apellido</h3>
+            <span class="miembro-rol" style="color:var(--green)">Comunicaciones</span>
+          </div>
+        </article>
+
+        <article class="miembro-card">
+          <div class="miembro-photo">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face&q=80"
+              alt="Apoyo logístico">
+            <div class="miembro-color-bar" style="background:var(--blue)"></div>
+          </div>
+          <div class="miembro-info">
+            <h3>Nombre Apellido</h3>
+            <span class="miembro-rol" style="color:var(--blue)">Apoyo Logístico</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="equipo-cta fade-in">
+    <div class="equipo-inner equipo-cta-inner">
+      <div class="section-label" style="color:var(--green); justify-content:center">¿Quieres ser parte?</div>
+      <h2 class="section-title" style="text-align:center; color:white">
+        Únete al <span style="color:var(--green)">proyecto</span>
+      </h2>
+      <p>¿Eres artista, docente o investigador y quieres sumarte? Escríbenos.</p>
+      <a href="mailto:contacto@proyectonna.org" class="btn-primary">Contáctanos</a>
+    </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2025 Proyecto NNA - USB</p>
+    <div class="footer-brand">
+      <h4>Proyecto NNA · USB</h4>
+      <p>Arte, danza y música como herramientas de expresión y desarrollo emocional para niños, niñas y adolescentes.
+      </p>
+      <span class="tagline">✦ Sentir es crear</span>
+    </div>
+    <div class="footer-col">
+      <h5>Secciones</h5>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Clases</a></li>
+        <li><a href="#">Equipo</a></li>
+        <li><a href="#">Podcast</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contacto</h5>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Correo</a></li>
+      </ul>
+    </div>
   </footer>
+  <div class="footer-bottom">© 2025 Proyecto NNA · USB — Todos los derechos reservados</div>
 
-<script type="module" src="./js/Nav.js"></script>
+  <script>
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
-
+    document.getElementById('hamburger')?.addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
 </body>
+
 </html>
