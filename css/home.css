@@ -1075,3 +1075,34 @@
     .fade-in:nth-child(2) { transition-delay: 0.1s; }
     .fade-in:nth-child(3) { transition-delay: 0.2s; }
     .fade-in:nth-child(4) { transition-delay: 0.3s; }
+
+
+    /* ===== VIDEO ===== */
+.clase-video {
+  padding: 6rem 8%;
+  background: var(--dark);
+}
+
+.clase-video .clase-section-label { color: var(--pink); }
+.clase-video .clase-section-title { color: white; }
+
+.video-wrapper {
+  margin-top: 2.5rem;
+}
+
+.video-frame {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.video-frame iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
