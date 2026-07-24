@@ -254,53 +254,45 @@
     </div>
   </section>
 
-  <!-- ========== CTA FINAL ========== -->
-  <section class="clases-cta fade-in">
-    <div class="clases-cta-inner">
-      <div class="section-label" style="color:var(--green); justify-content:center">¿Quieres saber más?</div>
-      <h2 class="section-title" style="text-align:center; color:white">
-        Conoce al <span style="color:var(--green)">equipo</span> detrás
-      </h2>
-      <p
-        style="text-align:center; color:rgba(255,255,255,0.7); font-size:1rem; line-height:1.7; max-width:520px; margin:0 auto 2rem">
-        Las personas que hacen posible cada actividad, cada ronda y cada historia compartida.
-      </p>
-      <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap">
-        <a href="./equipo.html" class="btn-primary">Ver equipo</a>
-        <a href="#" class="btn-secondary">Contáctanos</a>
-      </div>
-    </div>
-  </section>
 
-  <!-- FOOTER -->
+
+  <!-- ===== FOOTER ===== -->
   <footer>
     <div class="footer-brand">
-      <h4>Proyecto NNA · USB</h4>
-      <p>Arte, danza y música como herramientas de expresión y desarrollo emocional para niños, niñas y adolescentes.
-      </p>
-      <span class="tagline">✦ Sentir es crear</span>
+      <h4>Infancia que Resiste</h4>
+      <p>Un proyecto de la Universidad de San Buenaventura para fortalecer entornos protectores en Ciudad Bolívar a
+        través del arte, la multimedia y la educación para la paz.</p>
+      <span class="tagline">"Un Oasis que Protege y Eleva"</span>
     </div>
+
     <div class="footer-col">
-      <h5>Secciones</h5>
+      <h5>Navegación</h5>
       <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Clases</a></li>
-        <li><a href="#">Equipo</a></li>
-        <li><a href="#">Podcast</a></li>
+        <li><a href="#about">El Proyecto</a></li>
+        <li><a href="#concepto">Concepto</a></li>
+        <li><a href="#secciones">Secciones</a></li>
+        <li><a href="#podcast">Podcast</a></li>
+        <li><a href="#mapa">Territorio</a></li>
       </ul>
     </div>
+
     <div class="footer-col">
       <h5>Contacto</h5>
       <ul>
         <li><a href="#">Instagram</a></li>
         <li><a href="#">YouTube</a></li>
-        <li><a href="#">Correo</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#b2dbdcd4d3dcd1dbd3f2c7c1d09cd7d6c79cd1dd">Correo</a></li>
       </ul>
     </div>
   </footer>
-  <div class="footer-bottom">© 2025 Proyecto NNA · USB — Todos los derechos reservados</div>
 
-  <script>
+  <div class="footer-bottom" style="color: rgb(0, 0, 0);">
+    © 2025 Infancia que Resiste · Universidad de San Buenaventura · Todos los derechos reservados
+  </div>
+
+
+<script>
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.08 });
