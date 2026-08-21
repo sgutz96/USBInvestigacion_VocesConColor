@@ -864,6 +864,69 @@
 }
 
 /* =============================================================
+   MAPA
+   ============================================================= */
+
+.mapa {
+  background: white;
+}
+
+.mapa-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.mapa-header .section-label {
+  color: var(--green);
+  justify-content: center;
+}
+
+.mapa-header .section-title span {
+  color: var(--green);
+}
+
+.map-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.tab-btn {
+  padding: 10px 22px;
+  border-radius: 100px;
+  border: 2px solid var(--green);
+  background: transparent;
+  color: var(--green);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+  background: var(--green);
+  color: white;
+}
+
+.map-frame {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  height: 65vh;
+  min-height: 400px;
+  position: relative;
+}
+
+.map-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* =============================================================
    CONTACTO
    ============================================================= */
 

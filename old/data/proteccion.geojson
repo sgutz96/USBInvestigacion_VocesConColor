@@ -1,0 +1,177 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Reserva Forestal Central",
+        "categoria": "Área de Protección",
+        "tipo_manejo": "Reserva Forestal"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -74.5166,
+              6.3
+            ],
+            [
+              -74.6702,
+              6.6981
+            ],
+            [
+              -75.0783,
+              6.6088
+            ],
+            [
+              -75.2992,
+              6.3
+            ],
+            [
+              -75.1153,
+              5.927
+            ],
+            [
+              -74.6783,
+              5.9161
+            ],
+            [
+              -74.5166,
+              6.3
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Reserva Forestal Pacífico",
+        "categoria": "Área de Protección",
+        "tipo_manejo": "Área de Reserva Campesina"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.9847,
+              3.9
+            ],
+            [
+              -76.1825,
+              4.2768
+            ],
+            [
+              -76.5953,
+              4.2383
+            ],
+            [
+              -76.7476,
+              3.9
+            ],
+            [
+              -76.5929,
+              3.5659
+            ],
+            [
+              -76.1702,
+              3.502
+            ],
+            [
+              -75.9847,
+              3.9
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Reserva Forestal Amazonía Norte",
+        "categoria": "Área de Protección",
+        "tipo_manejo": "Distrito de Manejo Integrado"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.1298,
+              3.5
+            ],
+            [
+              -71.2968,
+              3.8519
+            ],
+            [
+              -71.7265,
+              3.8924
+            ],
+            [
+              -71.9216,
+              3.5
+            ],
+            [
+              -71.6769,
+              3.1936
+            ],
+            [
+              -71.2769,
+              3.1136
+            ],
+            [
+              -71.1298,
+              3.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Área de Manejo Especial La Macarena",
+        "categoria": "Área de Protección",
+        "tipo_manejo": "Área de Reserva Campesina"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -72.7678,
+              9.0
+            ],
+            [
+              -73.0096,
+              9.3298
+            ],
+            [
+              -73.3876,
+              9.325
+            ],
+            [
+              -73.559,
+              9.0
+            ],
+            [
+              -73.3702,
+              8.7052
+            ],
+            [
+              -72.9867,
+              8.6305
+            ],
+            [
+              -72.7678,
+              9.0
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

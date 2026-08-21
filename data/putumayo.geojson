@@ -1,0 +1,230 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Mocoa - Zona 1",
+        "categoria": "Registro de Violencia",
+        "eventos_reportados": 32,
+        "periodo": "2023-2025",
+        "nivel_alerta": "Alto"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.4045,
+              0.8
+            ],
+            [
+              -76.4908,
+              0.9891
+            ],
+            [
+              -76.7116,
+              0.9934
+            ],
+            [
+              -76.8045,
+              0.8
+            ],
+            [
+              -76.7223,
+              0.5882
+            ],
+            [
+              -76.4925,
+              0.6139
+            ],
+            [
+              -76.4045,
+              0.8
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Puerto Asís - Zona 2",
+        "categoria": "Registro de Violencia",
+        "eventos_reportados": 71,
+        "periodo": "2023-2025",
+        "nivel_alerta": "Medio"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.6632,
+              0.5
+            ],
+            [
+              -76.7837,
+              0.7014
+            ],
+            [
+              -77.017,
+              0.7027
+            ],
+            [
+              -77.1133,
+              0.5
+            ],
+            [
+              -77.0157,
+              0.2997
+            ],
+            [
+              -76.7942,
+              0.3167
+            ],
+            [
+              -76.6632,
+              0.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Orito - Zona 3",
+        "categoria": "Registro de Violencia",
+        "eventos_reportados": 14,
+        "periodo": "2023-2025",
+        "nivel_alerta": "Alto"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.805,
+              1.1
+            ],
+            [
+              -76.8991,
+              1.2748
+            ],
+            [
+              -77.1047,
+              1.2813
+            ],
+            [
+              -77.2258,
+              1.1
+            ],
+            [
+              -77.1011,
+              0.9249
+            ],
+            [
+              -76.8992,
+              0.9255
+            ],
+            [
+              -76.805,
+              1.1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Puerto Guzmán - Zona 4",
+        "categoria": "Registro de Violencia",
+        "eventos_reportados": 67,
+        "periodo": "2023-2025",
+        "nivel_alerta": "Bajo"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.1713,
+              0.3
+            ],
+            [
+              -76.2989,
+              0.475
+            ],
+            [
+              -76.5234,
+              0.5137
+            ],
+            [
+              -76.6437,
+              0.3
+            ],
+            [
+              -76.4958,
+              0.134
+            ],
+            [
+              -76.2986,
+              0.1244
+            ],
+            [
+              -76.1713,
+              0.3
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Valle del Guamuez - Zona 5",
+        "categoria": "Registro de Violencia",
+        "eventos_reportados": 57,
+        "periodo": "2023-2025",
+        "nivel_alerta": "Bajo"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.9774,
+              0.9
+            ],
+            [
+              -77.0826,
+              1.1033
+            ],
+            [
+              -77.3226,
+              1.1124
+            ],
+            [
+              -77.425,
+              0.9
+            ],
+            [
+              -77.3015,
+              0.7242
+            ],
+            [
+              -77.0909,
+              0.711
+            ],
+            [
+              -76.9774,
+              0.9
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Leticia - Zona 1",
+        "categoria": "Registro de Violencia",
+        "eventos_reportados": 45,
+        "periodo": "2023-2025",
+        "nivel_alerta": "Alto"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -69.7213,
+              -3.5
+            ],
+            [
+              -69.85,
+              -3.2401
+            ],
+            [
+              -70.1355,
+              -3.2652
+            ],
+            [
+              -70.3371,
+              -3.5
+            ],
+            [
+              -70.1667,
+              -3.7887
+            ],
+            [
+              -69.8591,
+              -3.7441
+            ],
+            [
+              -69.7213,
+              -3.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Puerto Nariño - Zona 2",
+        "categoria": "Registro de Violencia",
+        "eventos_reportados": 5,
+        "periodo": "2023-2025",
+        "nivel_alerta": "Alto"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -70.8902,
+              -3.0
+            ],
+            [
+              -71.0656,
+              -2.7673
+            ],
+            [
+              -71.3618,
+              -2.7197
+            ],
+            [
+              -71.5035,
+              -3.0
+            ],
+            [
+              -71.3625,
+              -3.2815
+            ],
+            [
+              -71.0486,
+              -3.2622
+            ],
+            [
+              -70.8902,
+              -3.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Tarapacá - Zona 3",
+        "categoria": "Registro de Violencia",
+        "eventos_reportados": 8,
+        "periodo": "2023-2025",
+        "nivel_alerta": "Bajo"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -69.2158,
+              -2.5
+            ],
+            [
+              -69.3716,
+              -2.2776
+            ],
+            [
+              -69.6693,
+              -2.2067
+            ],
+            [
+              -69.8341,
+              -2.5
+            ],
+            [
+              -69.6649,
+              -2.7857
+            ],
+            [
+              -69.3587,
+              -2.7448
+            ],
+            [
+              -69.2158,
+              -2.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "La Chorrera - Zona 4",
+        "categoria": "Registro de Violencia",
+        "eventos_reportados": 54,
+        "periodo": "2023-2025",
+        "nivel_alerta": "Bajo"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -71.666,
+              -1.8
+            ],
+            [
+              -71.8299,
+              -1.5054
+            ],
+            [
+              -72.1314,
+              -1.5725
+            ],
+            [
+              -72.2987,
+              -1.8
+            ],
+            [
+              -72.1306,
+              -2.0262
+            ],
+            [
+              -71.8383,
+              -2.0801
+            ],
+            [
+              -71.666,
+              -1.8
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

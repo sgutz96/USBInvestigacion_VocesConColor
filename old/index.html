@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Mapas Interactivos — Territorio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infancia que Resiste — Voces con Color</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/home.css">
 
-<!-- Leaflet -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-<!-- Sistema de diseño -->
-<link rel="stylesheet" href="css/global.css">
-<link rel="stylesheet" href="./css/home.css">
-<link rel="stylesheet" href="css/mapa.css">
 </head>
+
 <body>
 
   <!-- ===== NAV ===== -->
@@ -39,24 +35,7 @@
     </button>
   </nav>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- ===== HERO ===== -->
+  <!-- ===== HERO ===== -->
   <section class="hero" id="inicio">
     <div class="hero-text">
       <div class="hero-eyebrow">
@@ -92,44 +71,6 @@
     </div>
   </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <!-- MARQUEE -->
   <div class="marquee-strip">
     <div class="marquee-track">
@@ -157,22 +98,7 @@
     </div>
   </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   <!-- ===== ABOUT ===== -->
+  <!-- ===== ABOUT ===== -->
   <section class="about" id="about">
     <div class="about-image-wrapper fade-in">
       <div class="about-image-card">
@@ -387,41 +313,34 @@
 
   </section>
 
-
-
-
-
-
- <!-- ===== Map ===== -->
-<section class="mapa" id="mapa">
-  <div class="mapa-header fade-in">
-    <div class="section-label" style="color:var(--green)">Territorio</div>
-    <h2 class="section-title">Mapas <span style="color:var(--green)">Interactivos</span></h2>
-    <p class="section-body">
-      Explora las capas geográficas y temáticas del territorio colombiano en tiempo real.
-    </p>
-  </div>
-
-  <div class="map-tabs fade-in">
-    <button class="tab-btn active" data-accent="green" onclick="switchMap('Manzanas', this)">Manzanas</button>
-    <button class="tab-btn" data-accent="orange" onclick="switchMap('parques', this)">Parques Naturales</button>
-    <button class="tab-btn" data-accent="blue" onclick="switchMap('proteccion', this)">Áreas de Protección</button>
-    <button class="tab-btn" data-accent="pink" onclick="switchMap('amazonas', this)">Violencia Amazonas</button>
-    <button class="tab-btn" data-accent="purple" onclick="switchMap('putumayo', this)">Violencia Putumayo</button>
-  </div>
-
-  <div class="map-frame fade-in" id="map-frame">
-    <div id="map"></div>
-    <div class="map-loading" id="map-loading">Cargando capa…</div>
-    <div class="map-error" id="map-error">
-      <span>No se pudo cargar esta capa.</span>
-      <span style="font-weight:400;font-size:0.8rem">Revisa que el archivo GeoJSON exista en /data.</span>
+  <!-- ===== MAPA ===== -->
+  <section class="mapa" id="mapa">
+    <div class="mapa-header fade-in">
+      <div class="section-label" style="color:var(--green);justify-content:center">Territorio</div>
+      <h2 class="section-title">Mapas <span style="color:var(--green)">Interactivos</span></h2>
+      <p class="section-body" style="max-width:560px;margin:0 auto">
+        Explora las capas geográficas y temáticas del territorio colombiano en tiempo real.
+      </p>
     </div>
-  </div>
 
-  <div class="map-legend fade-in" id="map-legend"></div>
-</section>
-<!-- ===== EQUIPO ===== -->
+    <div class="map-tabs">
+      <button class="tab-btn active" onclick="switchMap('zomac', this)">ZOMAC</button>
+      <button class="tab-btn" onclick="switchMap('parques', this)">Parques Naturales</button>
+      <button class="tab-btn" onclick="switchMap('proteccion', this)">Áreas de Protección</button>
+      <button class="tab-btn" onclick="switchMap('amazonas', this)">Violencia Amazonas</button>
+      <button class="tab-btn" onclick="switchMap('putumayo', this)">Violencia Putumayo</button>
+    </div>
+
+    <div class="map-frame" id="map-frame">
+      <iframe id="map-iframe"
+        src="//usb-ing-multi.maps.arcgis.com/apps/Embed/index.html?webmap=37dacfbbe7ee4d6b84119d50acfedf3f&extent=-85.8306,-5.5846,-62.8472,5.8878"
+        title="Mapa interactivo" allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+
+  <!-- ===== EQUIPO ===== -->
   <section class="equipo" id="equipo">
     <div class="equipo-header fade-in">
       <div class="section-label" style="color:var(--blue);justify-content:center">Personas del Proyecto</div>
@@ -515,12 +434,16 @@
     </div>
   </footer>
 
+  <div class="footer-bottom" style="color: rgb(0, 0, 0);">
+    © 2025 Infancia que Resiste · Universidad de San Buenaventura · Todos los derechos reservados
+  </div>
 
-   <!-- ===== .....JS Mapa ===== -->
-<script src="./js/map.js"></script>
+  <!-- ===== Mapa ===== -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script type="module" src="./js/map.js"></script>
 
 
- <!-- ===== THREE.JS BANNER ===== -->
+  <!-- ===== THREE.JS BANNER ===== -->
   <script type="importmap">
   {
     "imports": {
@@ -529,7 +452,8 @@
     }
   }
   </script>
-  <script type="module" src="./js/banner.js"></script>
+  <script type="module" src="./js/Banner.js"></script>
 
 </body>
+
 </html>

@@ -1,0 +1,196 @@
+/* =============================================================
+   MAPA.CSS
+   Estilos específicos de la sección de Mapas Interactivos.
+   Depende de las variables definidas en global.css
+   ============================================================= */
+
+.mapa {
+  padding-top: calc(6rem + 72px); /* compensa la nav fija */
+  text-align: center;
+}
+
+.mapa-header {
+  max-width: 620px;
+  margin: 0 auto 3rem;
+}
+
+.mapa-header .section-label {
+  justify-content: center;
+  width: 100%;
+}
+
+.mapa-header .section-title {
+  text-align: center;
+}
+
+/* ===== TABS ===== */
+.map-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.tab-btn {
+  background: var(--cream);
+  border: 2px solid transparent;
+  color: #555;
+  padding: 10px 22px;
+  border-radius: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.tab-btn:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+  transform: translateY(-2px);
+}
+
+.tab-btn.active {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+  box-shadow: 0 6px 18px rgba(163, 192, 55, 0.4);
+}
+
+/* Cada tab puede tener su propio acento al estar activo */
+.tab-btn[data-accent="orange"].active { background: var(--orange); border-color: var(--orange); box-shadow: 0 6px 18px rgba(215,130,44,0.4); }
+.tab-btn[data-accent="blue"].active   { background: var(--blue);   border-color: var(--blue);   box-shadow: 0 6px 18px rgba(85,176,210,0.4); }
+.tab-btn[data-accent="pink"].active   { background: var(--pink);   border-color: var(--pink);   box-shadow: 0 6px 18px rgba(204,102,153,0.4); }
+.tab-btn[data-accent="purple"].active { background: var(--purple); border-color: var(--purple); box-shadow: 0 6px 18px rgba(123,107,170,0.4); }
+
+/* ===== MARCO DEL MAPA ===== */
+.map-frame {
+  width: 100%;
+  max-width: 1100px;
+  height: 560px;
+  margin: 0 auto;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 4px solid var(--white);
+  outline: 3px solid var(--dark);
+  outline-offset: -1px;
+  box-shadow: 0 20px 50px rgba(26, 26, 46, 0.15);
+  position: relative;
+  background: var(--cream);
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.map-loading,
+.map-error {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  background: var(--cream);
+  z-index: 500;
+}
+
+.map-loading {
+  color: var(--dark);
+}
+
+.map-error {
+  display: none;
+  color: var(--pink);
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ===== LEYENDA ===== */
+.map-legend {
+  max-width: 1100px;
+  margin: 1.5rem auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #555;
+}
+
+.map-legend .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.map-legend .legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* ===== Leaflet + tema claro/crayón ===== */
+.leaflet-control-attribution {
+  background: rgba(255, 253, 247, 0.85) !important;
+  color: #666 !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 0.7rem !important;
+}
+
+.leaflet-control-attribution a {
+  color: var(--orange) !important;
+}
+
+.leaflet-control-zoom a {
+  color: var(--dark) !important;
+  font-weight: 900 !important;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 14px !important;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.leaflet-popup-content {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.leaflet-popup-tip {
+  background: var(--white) !important;
+}
+
+@media (max-width: 900px) {
+  .map-frame {
+    height: 440px;
+    border-radius: 20px;
+  }
+}
+
+/* ===== MENÚ MÓVIL (complemento a global.css) ===== */
+@media (max-width: 900px) {
+  .nav-links.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    padding: 1.5rem 8%;
+    gap: 1.2rem;
+    border-bottom: 3px solid var(--green);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  }
+}

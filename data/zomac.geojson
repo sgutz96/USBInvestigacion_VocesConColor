@@ -1,0 +1,269 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Antioquia - Zona ZOMAC Norte",
+        "categoria": "ZOMAC",
+        "municipios": 11,
+        "poblacion_aprox": 37790
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -74.8354,
+              7.9
+            ],
+            [
+              -75.0499,
+              8.1599
+            ],
+            [
+              -75.3632,
+              8.1827
+            ],
+            [
+              -75.5209,
+              7.9
+            ],
+            [
+              -75.3874,
+              7.5754
+            ],
+            [
+              -75.0157,
+              7.5808
+            ],
+            [
+              -74.8354,
+              7.9
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Meta - Zona ZOMAC Llanos",
+        "categoria": "ZOMAC",
+        "municipios": 11,
+        "poblacion_aprox": 124974
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.2405,
+              4.1
+            ],
+            [
+              -73.4496,
+              4.3605
+            ],
+            [
+              -73.7537,
+              4.3662
+            ],
+            [
+              -73.9219,
+              4.1
+            ],
+            [
+              -73.7804,
+              3.7876
+            ],
+            [
+              -73.4218,
+              3.7913
+            ],
+            [
+              -73.2405,
+              4.1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Cauca - Zona ZOMAC Pacífico",
+        "categoria": "ZOMAC",
+        "municipios": 8,
+        "poblacion_aprox": 87842
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -76.2794,
+              2.4
+            ],
+            [
+              -76.4203,
+              2.7112
+            ],
+            [
+              -76.7912,
+              2.7312
+            ],
+            [
+              -76.8982,
+              2.4
+            ],
+            [
+              -76.7911,
+              2.0691
+            ],
+            [
+              -76.4146,
+              2.0789
+            ],
+            [
+              -76.2794,
+              2.4
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Cesar - Zona ZOMAC Caribe",
+        "categoria": "ZOMAC",
+        "municipios": 12,
+        "poblacion_aprox": 84342
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -72.7862,
+              8.1
+            ],
+            [
+              -72.901,
+              8.4447
+            ],
+            [
+              -73.2664,
+              8.3883
+            ],
+            [
+              -73.4072,
+              8.1
+            ],
+            [
+              -73.2538,
+              7.8336
+            ],
+            [
+              -72.9068,
+              7.7653
+            ],
+            [
+              -72.7862,
+              8.1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Putumayo - Zona ZOMAC Sur",
+        "categoria": "ZOMAC",
+        "municipios": 12,
+        "poblacion_aprox": 109800
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.4178,
+              1.6
+            ],
+            [
+              -75.6129,
+              1.924
+            ],
+            [
+              -75.9769,
+              1.9064
+            ],
+            [
+              -76.1997,
+              1.6
+            ],
+            [
+              -75.9686,
+              1.3079
+            ],
+            [
+              -75.6223,
+              1.2922
+            ],
+            [
+              -75.4178,
+              1.6
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Norte de Santander - Zona ZOMAC Frontera",
+        "categoria": "ZOMAC",
+        "municipios": 6,
+        "poblacion_aprox": 41476
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -72.5419,
+              6.9
+            ],
+            [
+              -72.7143,
+              7.2217
+            ],
+            [
+              -73.0512,
+              7.1618
+            ],
+            [
+              -73.2214,
+              6.9
+            ],
+            [
+              -73.0639,
+              6.616
+            ],
+            [
+              -72.7471,
+              6.6351
+            ],
+            [
+              -72.5419,
+              6.9
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

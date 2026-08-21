@@ -1,0 +1,69 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Manzana del Cuidado - Ciudad Bolívar - Arborizadora - CDC Ecoparque",
+        "categoria": "Entorno Protector",
+        "tipo_entorno": "Manzana del Cuidado/Institucional",
+        "direccion": "Diagonal 73C #57-17 Sur - Barrio Sierra Morena",
+        "servicios": "Servicios gratuitos para aliviar la carga de cuidado a mujeres cuidadoras",
+        "telefono": "305 801 2747",
+        "contacto": "scangrejo@sdmujer.gov.co"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.1650, 4.5590]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Manzana del Cuidado - Ciudad Bolívar - Arborizadora Alta",
+        "categoria": "Entorno Protector",
+        "tipo_entorno": "Manzana del Cuidado/Institucional",
+        "direccion": "Calle 70 Sur # 34-05",
+        "servicios": "Servicios gratuitos para aliviar la carga de cuidado a mujeres cuidadoras",
+        "telefono": "322 370 0523",
+        "contacto": "scherrera@sdmujer.gov.co"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.1615, 4.5662]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Manzana del Cuidado - Ciudad Bolívar (El Mochuelo)",
+        "categoria": "Entorno Protector",
+        "tipo_entorno": "Manzana del Cuidado/Institucional",
+        "direccion": "Calle 91c Sur # 18h-14 - Mochuelo Bajo",
+        "servicios": "Servicios gratuitos para aliviar la carga de cuidado a mujeres cuidadoras",
+        "telefono": "310 560 0906",
+        "contacto": "dtovar@sdmujer.gov.co"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.1506, 4.5085]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Manzana del Cuidado - Ciudad Bolívar (Villa Gloria)",
+        "categoria": "Entorno Protector",
+        "tipo_entorno": "Manzana del Cuidado/Institucional",
+        "direccion": "Carrera 18L #70b-50 Sur",
+        "servicios": "Servicios gratuitos para aliviar la carga de cuidado a mujeres cuidadoras",
+        "telefono": "305 801 2556",
+        "contacto": "icarvajal@sdmujer.gov.co"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.1590, 4.5720]
+      }
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "PNN Sumapaz",
+        "categoria": "Parque Nacional Natural",
+        "hectareas_aprox": 57435
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.559,
+              4.1
+            ],
+            [
+              -73.6767,
+              4.3135
+            ],
+            [
+              -73.9375,
+              4.3382
+            ],
+            [
+              -74.0247,
+              4.1
+            ],
+            [
+              -73.9196,
+              3.8929
+            ],
+            [
+              -73.6686,
+              3.8724
+            ],
+            [
+              -73.559,
+              4.1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "PNN Sierra Nevada de Santa Marta",
+        "categoria": "Parque Nacional Natural",
+        "hectareas_aprox": 135141
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.3418,
+              10.9
+            ],
+            [
+              -73.4873,
+              11.0951
+            ],
+            [
+              -73.7336,
+              11.1314
+            ],
+            [
+              -73.8248,
+              10.9
+            ],
+            [
+              -73.7205,
+              10.6913
+            ],
+            [
+              -73.4566,
+              10.6517
+            ],
+            [
+              -73.3418,
+              10.9
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "PNN Amacayacu",
+        "categoria": "Parque Nacional Natural",
+        "hectareas_aprox": 160373
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -70.0362,
+              -2.9
+            ],
+            [
+              -70.1621,
+              -2.6612
+            ],
+            [
+              -70.4353,
+              -2.6656
+            ],
+            [
+              -70.5297,
+              -2.9
+            ],
+            [
+              -70.4075,
+              -3.0861
+            ],
+            [
+              -70.1819,
+              -3.1045
+            ],
+            [
+              -70.0362,
+              -2.9
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "PNN Puracé",
+        "categoria": "Parque Nacional Natural",
+        "hectareas_aprox": 260570
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.8825,
+              1.8
+            ],
+            [
+              -75.9595,
+              2.0433
+            ],
+            [
+              -76.2275,
+              2.0209
+            ],
+            [
+              -76.3663,
+              1.8
+            ],
+            [
+              -76.2142,
+              1.6022
+            ],
+            [
+              -75.975,
+              1.5835
+            ],
+            [
+              -75.8825,
+              1.8
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "PNN Los Nevados",
+        "categoria": "Parque Nacional Natural",
+        "hectareas_aprox": 229400
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -74.3768,
+              5.6
+            ],
+            [
+              -74.4885,
+              5.7931
+            ],
+            [
+              -74.7342,
+              5.8324
+            ],
+            [
+              -74.8529,
+              5.6
+            ],
+            [
+              -74.7343,
+              5.3675
+            ],
+            [
+              -74.4777,
+              5.3881
+            ],
+            [
+              -74.3768,
+              5.6
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

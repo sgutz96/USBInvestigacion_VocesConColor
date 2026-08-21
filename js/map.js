@@ -1,79 +1,119 @@
-// MAPAS INTERACTIVOS - CAMBIO DE PESTAÑAS
-const tabButtons = document.querySelectorAll('.tab-button');
-const mapContents = document.querySelectorAll('.map-content');
+  /* ===== DATOS DE CAPAS ===== */
+  const files = {
+    Manzanas:   'data/Manzanas.geojson',
+    zomac:      'data/zomac.geojson',
+    parques:    'data/parques.geojson',
+    proteccion: 'data/proteccion.geojson',
+    amazonas:   'data/amazonas.geojson',
+    putumayo:   'data/putumayo.geojson'
+  };
 
-tabButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    // Desactivar todos los botones y mapas
-    tabButtons.forEach(btn => {
-      btn.classList.remove('active');
-      btn.setAttribute('aria-selected', 'false');
+  const styles = {
+    Manzanas:   { color: '#4b37c0', weight: 2, fillColor: '#4b37c0', fillOpacity: 0.25 }, // purple
+    zomac:      { color: '#a3c037', weight: 2, fillColor: '#a3c037', fillOpacity: 0.25 }, // green
+    parques:    { color: '#d7822c', weight: 2, fillColor: '#d7822c', fillOpacity: 0.25 }, // orange
+    proteccion: { color: '#55b0d2', weight: 2, fillColor: '#55b0d2', fillOpacity: 0.25 }, // blue
+    amazonas:   { color: '#cc6699', weight: 2, fillColor: '#cc6699', fillOpacity: 0.25 }, // pink
+    putumayo:   { color: '#7b6baa', weight: 2, fillColor: '#7b6baa', fillOpacity: 0.25 }  // purple
+  };
+
+  const labels = {
+    Manzanas: 'Manzanas',
+    zomac: 'ZOMAC',
+    parques: 'Parques Naturales',
+    proteccion: 'Áreas de Protección',
+    amazonas: 'Violencia Amazonas',
+    putumayo: 'Violencia Putumayo'
+  };
+
+  let map, currentLayer;
+  const cache = {};
+
+  function initMap(){
+    map = L.map('map', { scrollWheelZoom: true }).setView([4.5, -74], 6);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      attribution: '© OpenStreetMap contributors © CARTO',
+      maxZoom: 18
+    }).addTo(map);
+  }
+
+  function setLoading(isLoading){
+    document.getElementById('map-loading').style.display = isLoading ? 'flex' : 'none';
+  }
+
+  function setError(hasError){
+    document.getElementById('map-error').style.display = hasError ? 'flex' : 'none';
+  }
+
+  function updateLegend(name){
+    const legend = document.getElementById('map-legend');
+    const color = styles[name]?.color || '#a3c037';
+    legend.innerHTML = `
+      <div class="legend-item">
+        <span class="legend-dot" style="background:${color}"></span>
+        <span>${labels[name]}</span>
+      </div>`;
+  }
+
+  async function switchMap(name, btnEl){
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    if (btnEl) {
+      btnEl.classList.add('active');
+    } else {
+      document.querySelectorAll('.tab-btn').forEach(b => {
+        if (b.getAttribute('onclick')?.includes(`'${name}'`)) b.classList.add('active');
+      });
+    }
+
+    setError(false);
+    setLoading(true);
+    updateLegend(name);
+
+    try {
+      if (!cache[name]) {
+        const res = await fetch(files[name]);
+        if (!res.ok) throw new Error(`HTTP ${res.status} al cargar ${files[name]}`);
+        cache[name] = await res.json();
+      }
+
+      if (currentLayer) map.removeLayer(currentLayer);
+
+      currentLayer = L.geoJSON(cache[name], {
+        style: styles[name] || {},
+        onEachFeature: (feature, layer) => {
+          if (feature.properties) {
+            const rows = Object.entries(feature.properties)
+              .slice(0, 8)
+              .map(([k, v]) => `<strong>${k}:</strong> ${v}`)
+              .join('<br/>');
+            if (rows) layer.bindPopup(rows);
+          }
+        }
+      }).addTo(map);
+
+      const bounds = currentLayer.getBounds();
+      if (bounds.isValid()) map.fitBounds(bounds, { padding: [20, 20] });
+
+    } catch (err) {
+      console.error(err);
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  /* ===== SCROLL FADE-IN (coherente con global.css) ===== */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
     });
-    
-    mapContents.forEach(map => {
-      map.classList.remove('active');
-      map.setAttribute('hidden', '');
-    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    // Activar el botón actual
-    button.classList.add('active');
-    button.setAttribute('aria-selected', 'true');
-
-    // Obtener el mapa correspondiente
-    const mapId = button.dataset.map;
-    const selectedMap = document.getElementById(mapId);
-
-    // Si aún no se ha cargado el iframe, lo inyecta con atributos de accesibilidad
-    if (!selectedMap.querySelector('iframe')) {
-      const src = selectedMap.dataset.src;
-      const iframe = document.createElement('iframe');
-      iframe.src = src;
-      iframe.allowFullscreen = true;
-      
-      // Añadir título descriptivo según el mapa
-      const mapTitles = {
-        'zomac': 'Mapa interactivo de Zonas Más Afectadas por el Conflicto (ZOMAC) en Colombia',
-        'parques': 'Mapa interactivo de Parques Naturales de Colombia',
-        'proteccion': 'Mapa interactivo de Áreas de Protección en Colombia',
-        'amazonas': 'Mapa interactivo de violencia en la región del Amazonas',
-        'putumayo': 'Mapa interactivo de violencia en la región de Putumayo'
-      };
-      
-      iframe.title = mapTitles[mapId] || 'Mapa interactivo de Colombia';
-      iframe.setAttribute('aria-label', mapTitles[mapId] || 'Mapa interactivo de Colombia');
-      
-      selectedMap.appendChild(iframe);
-    }
-
-    // Mostrar el mapa seleccionado
-    selectedMap.classList.add('active');
-    selectedMap.removeAttribute('hidden');
-    selectedMap.focus(); // Mejorar accesibilidad al cambiar de tab
+  /* ===== HAMBURGUESA (mobile) ===== */
+  document.querySelector('.hamburger')?.addEventListener('click', () => {
+    document.querySelector('.nav-links')?.classList.toggle('mobile-open');
   });
-  
-  // Añadir soporte de teclado para las pestañas
-  button.addEventListener('keydown', (e) => {
-    let targetButton = null;
-    
-    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-      e.preventDefault();
-      const nextButton = button.nextElementSibling || tabButtons[0];
-      targetButton = nextButton;
-    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-      e.preventDefault();
-      const prevButton = button.previousElementSibling || tabButtons[tabButtons.length - 1];
-      targetButton = prevButton;
-    } else if (e.key === 'Home') {
-      e.preventDefault();
-      targetButton = tabButtons[0];
-    } else if (e.key === 'End') {
-      e.preventDefault();
-      targetButton = tabButtons[tabButtons.length - 1];
-    }
-    
-    if (targetButton) {
-      targetButton.focus();
-      targetButton.click();
-    }
-  });
-});
+
+  initMap();
+  switchMap('Manzanas');
