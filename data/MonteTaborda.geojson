@@ -1,13 +1,17 @@
 {
-  "type": "Feature",
-  "properties": {
-    "nombre": "Monte Taborda"
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      -74.1634293,
-      4.5493727
-    ]
-  }
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Monte Taborda",
+        "tipo_entorno": "Área de Protección / Reserva",
+        "servicios": "Conservación ambiental"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.1634293, 4.5493727]
+      }
+    }
+  ]
 }
