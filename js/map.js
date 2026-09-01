@@ -143,7 +143,7 @@ const pointIcons = {
   // =====================================================
 
   monteTaborda: {
-    color: '#a3c037',
+    color: '#e67e22',
     image: 'assets/img/logo.svg'
   }
 
@@ -168,8 +168,6 @@ const labels = {
   Sin_lucro: 'Sin Ánimo de Lucro',
   Recreacionales: 'Entornos Recreacionales',
   Techo_Verde: 'Techos Verdes',
-
-  // NUEVA CAPA
   monteTaborda: 'Monte Taborda'
 
 };
@@ -2127,7 +2125,7 @@ document.addEventListener(
 
     switchMap(
 
-      'Biblioteca'
+      'monteTaborda'
 
     );
 
