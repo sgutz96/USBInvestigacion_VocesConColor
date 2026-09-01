@@ -1,0 +1,69 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.14812, 4.57210]
+      },
+      "properties": {
+        "no": 1,
+        "nombre": "CAPS Candelaria II",
+        "tipo_entorno": "Salud",
+        "direccion": "Transversal 36 # 59B-59 Sur",
+        "servicios": "Salud y atención prioritaria",
+        "telefono": "No registra",
+        "contacto": "No registra"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.16212, 4.58510]
+      },
+      "properties": {
+        "no": 2,
+        "nombre": "CAPS Ismael Perdomo",
+        "tipo_entorno": "Salud",
+        "direccion": "Calle 60A Sur # 71F-59",
+        "servicios": "Salud y atención prioritaria",
+        "telefono": "No registra",
+        "contacto": "No registra"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.13112, 4.57682]
+      },
+      "properties": {
+        "no": 3,
+        "nombre": "CAPS Meissen",
+        "tipo_entorno": "Salud",
+        "direccion": "Calle 60G # 18B-36 Sur",
+        "servicios": "Salud y atención prioritaria",
+        "telefono": "No registra",
+        "contacto": "No registra"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.12981, 4.55820]
+      },
+      "properties": {
+        "no": 4,
+        "nombre": "CAPS Vista Hermosa",
+        "tipo_entorno": "Salud",
+        "direccion": "Carrera 18 C # 66A-55 Sur",
+        "servicios": "Salud y atención prioritaria",
+        "telefono": "No registra",
+        "contacto": "No registra"
+      }
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.12902, 4.51521] },
+      "properties": {
+        "no": 1,
+        "nombre": "Colegio Jose Celestino Mutis",
+        "tipo_entorno": "Educativo",
+        "direccion": "KR 18N 89 09 S",
+        "servicios": "Educación",
+        "telefono": "No registra",
+        "contacto": "No registra"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.12981, 4.55820] },
+      "properties": {
+        "no": 2,
+        "nombre": "HOSPITAL DE VISTA HERMOSA I",
+        "tipo_entorno": "Salud",
+        "direccion": "KR 18 C No. 66 A - 55 SUR",
+        "servicios": "Servicios de salud",
+        "telefono": "No registra",
+        "contacto": "No registra"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13112, 4.57682] },
+      "properties": {
+        "no": 3,
+        "nombre": "Hospital Meissen ESE",
+        "tipo_entorno": "Salud",
+        "direccion": "AC 61 S 18A 30",
+        "servicios": "Servicios de salud",
+        "telefono": "No registra",
+        "contacto": "No registra"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.12981, 4.55820] },
+      "properties": {
+        "no": 4,
+        "nombre": "Hospital Vista hermosa ESE I Nivel",
+        "tipo_entorno": "Salud",
+        "direccion": "KR 18C 66A 55 S",
+        "servicios": "Servicios de salud",
+        "telefono": "No registra",
+        "contacto": "No registra"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13010, 4.56810] },
+      "properties": {
+        "no": 5,
+        "nombre": "JARDIN BOTANICO REAL DE COLOMBIA TECHOS",
+        "tipo_entorno": "Social y ambiental",
+        "direccion": "KR 17N 65A 41 SUR",
+        "servicios": "Turístico",
+        "telefono": "No registra",
+        "contacto": "No registra"
+      }
+    }
+  ]
+}

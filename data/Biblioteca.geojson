@@ -1,0 +1,677 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 1,
+        "nombre": "Biblioteca Comunitaria Ágora",
+        "tipo_entorno": "Educativo",
+        "direccion": "DG 62a Sur 71i - 96",
+        "servicios": "Educativos y sociales",
+        "telefono": "3107557985",
+        "contacto": "bibloagora@gmail.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.16788, 4.58789]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 2,
+        "nombre": "Biblioteca Comunitaria Asomumevir",
+        "tipo_entorno": "Educativo",
+        "direccion": "CL 79 Sur 16p - 48",
+        "servicios": "Educativos y sociales",
+        "telefono": "3105790821",
+        "contacto": "No registra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.11651, 4.52622]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 3,
+        "nombre": "Biblioteca Comunitaria Aula ambiental itinerante Piwam",
+        "tipo_entorno": "Educativo",
+        "direccion": "KR 74i 57z - 60 Sur / CL 57z Sur 75b -12",
+        "servicios": "Educativos y sociales",
+        "telefono": "3132434230",
+        "contacto": "asociacionpiwan@gmail.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.17512, 4.59508]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 4,
+        "nombre": "Biblioteca Comunitaria Aula Viva Semillas de la Esperanza",
+        "tipo_entorno": "Educativo",
+        "direccion": "KR 46a 1B Sur-22",
+        "servicios": "Educativos y sociales",
+        "telefono": "318 4089983",
+        "contacto": "huertasemillasesperanza@gmail.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.11438, 4.61482]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 5,
+        "nombre": "Biblioteca Comunitaria Baúl de letras",
+        "tipo_entorno": "Educativo",
+        "direccion": "CL 64a 71f - 32 Sur",
+        "servicios": "Educativos y sociales",
+        "telefono": "3143942388",
+        "contacto": "bauldeletras2014@gmail.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.16703, 4.58814]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 6,
+        "nombre": "Biblioteca Comunitaria Candelaria",
+        "tipo_entorno": "Educativo",
+        "direccion": "KR 29 66 - 10 Sur",
+        "servicios": "Educativos y sociales",
+        "telefono": "7171415",
+        "contacto": "No registra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.13531, 4.56821]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 7,
+        "nombre": "Biblioteca Comunitaria Cardenal Anibal Muñoz",
+        "tipo_entorno": "Educativo",
+        "direccion": "DG 62 Sur 17 - 38",
+        "servicios": "Educativos y sociales",
+        "telefono": "7653796",
+        "contacto": "No registra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.13098, 4.55831]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 8,
+        "nombre": "Biblioteca Comunitaria Carolina Santofimio Delgado",
+        "tipo_entorno": "Educativo",
+        "direccion": "TV 70d bis a 68 - 75 Sur",
+        "servicios": "Educativos y sociales",
+        "telefono": "3192512951",
+        "contacto": "No registra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.16612, 4.57791]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 9,
+        "nombre": "Biblioteca Comunitaria Casa de Poesía Waldino Fosca",
+        "tipo_entorno": "Educativo",
+        "direccion": "KR 75b 75c - 17 Sur",
+        "servicios": "Educativos y sociales",
+        "telefono": "3143684721-3142684721",
+        "contacto": "salifosca28@gmail.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.17931, 4.58284]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 10,
+        "nombre": "Biblioteca Comunitaria Casa Museo Sutatenza",
+        "tipo_entorno": "Educativo",
+        "direccion": "KR 42 79 -12 Sur",
+        "servicios": "Educativos y sociales",
+        "telefono": "3008411619",
+        "contacto": "programasocialpoliciacomunidad@gmail.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.15682, 4.56012]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 11,
+        "nombre": "Biblioteca Comunitaria Cerros del Sur (verificar cambio de nombre: Ices Potosí)",
+        "tipo_entorno": "Educativo",
+        "direccion": "CL 81 Sur 42 - 09",
+        "servicios": "Educativos y sociales",
+        "telefono": "7172495 – 7187781",
+        "contacto": "No registra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.15843, 4.55711]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 12,
+        "nombre": "Biblioteca Comunitaria Colectivo Artístico y literario \"Ojo de Gato\"",
+        "tipo_entorno": "Educativo",
+        "direccion": "DG 62g Sur 71f - 21 Sur",
+        "servicios": "Educativos y sociales",
+        "telefono": "3168413009",
+        "contacto": "No registra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.16812, 4.58861]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 13,
+        "nombre": "Biblioteca Comunitaria de la Creatividad",
+        "tipo_entorno": "Educativo",
+        "direccion": "Km 24 vía Quiba Alta, sector la Gran Bretaña / vía Mochuelo Quiba",
+        "servicios": "Educativos y sociales",
+        "telefono": "3112974359",
+        "contacto": "ivan.triana@biblioseo.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.16315, 4.49822]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 14,
+        "nombre": "Biblioteca Comunitaria EncontrArte",
+        "tipo_entorno": "Educativo",
+        "direccion": "TV 21A 19-54 sur",
+        "servicios": "Educativos y sociales",
+        "telefono": "3227010603",
+        "contacto": "No registra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.10382, 4.58231]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 15,
+        "nombre": "Biblioteca Comunitaria Fundación Blanca Luz y Biblioteca Senderos de Progreso F",
+        "tipo_entorno": "Educativo",
+        "direccion": "TV 36 80 - 50 Sur",
+        "servicios": "Educativos y sociales",
+        "telefono": "3113435635-304248664",
+        "contacto": "monteslorena067@gmail.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.15012, 4.56102]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 16,
+        "nombre": "Biblioteca Comunitaria Fundación Niños con Futuro",
+        "tipo_entorno": "Educativo",
+        "direccion": "CL 73d bis 27b - 81 Sur",
+        "servicios": "Educativos y sociales",
+        "telefono": "3102845807",
+        "contacto": "No registra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.13781, 4.54921]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 17,
+        "nombre": "Biblioteca Comunitaria IAP Cuyejeyeca Jocchogüe (Corporación Comunitaria Cuyeca A Obsun)",
+        "tipo_entorno": "Educativo",
+        "direccion": "TV 73d bis a 68 - 36 Sur",
+        "servicios": "Educativos y sociales",
+        "telefono": "3142302744",
+        "contacto": "cuyeka@gmail.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.16782, 4.57912]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 18,
+        "nombre": "Biblioteca Comunitaria ICES Potosí",
+        "tipo_entorno": "Educativo",
+        "direccion": "CL 81 Sur 42 - 09 / CL 81 Sur 42 - 14",
+        "servicios": "Educativos y sociales",
+        "telefono": "3003248159",
+        "contacto": "artista127@hotmail.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.15843, 4.55711]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 19,
+        "nombre": "Biblioteca Comunitaria Inti Tekoa",
+        "tipo_entorno": "Educativo",
+        "direccion": "CL 76a Sur 68 - 27",
+        "servicios": "Educativos y sociales",
+        "telefono": "3196075057",
+        "contacto": "intitekoa@gmail.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.16521, 4.57102]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 20,
+        "nombre": "Biblioteca Comunitaria Javier de Nicoló",
+        "tipo_entorno": "Educativo",
+        "direccion": "KR 33 Sur 74b - 32",
+        "servicios": "Educativos y sociales",
+        "telefono": "7156852",
+        "contacto": "No registra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.14512, 4.55521]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 21,
+        "nombre": "Biblioteca Comunitaria Juan Bosco Obrero",
+        "tipo_entorno": "Educativo",
+        "direccion": "KR 18g 74a - 59 Sur",
+        "servicios": "Educativos y sociales",
+        "telefono": "5687306",
+        "contacto": "No registra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.12812, 4.53812]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 22,
+        "nombre": "Biblioteca Comunitaria Juan Pablo II",
+        "tipo_entorno": "Educativo",
+        "direccion": "KR 18q 68b - 10",
+        "servicios": "Educativos y sociales",
+        "telefono": "7909644",
+        "contacto": "No registra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.12932, 4.54981]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 23,
+        "nombre": "Biblioteca Comunitaria Letras del Sur",
+        "tipo_entorno": "Educativo",
+        "direccion": "TV 70d bis a 68 - 75 Sur",
+        "servicios": "Educativos y sociales",
+        "telefono": "3192512951-3213417862",
+        "contacto": "letrasdelsur.escritores@gmail.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.16612, 4.57791]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 24,
+        "nombre": "Biblioteca Comunitaria LIGA DE LA LECTURA",
+        "tipo_entorno": "Educativo",
+        "direccion": "KR 49c 68d - 84 Sur",
+        "servicios": "Educativos y sociales",
+        "telefono": "3133804559",
+        "contacto": "No registra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.15981, 4.57682]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 25,
+        "nombre": "Biblioteca Comunitaria Los Mohanes",
+        "tipo_entorno": "Educativo",
+        "direccion": "CL 69f Sur 72b - 08",
+        "servicios": "Educativos y sociales",
+        "telefono": "3125562341",
+        "contacto": "jealcamir2@gmail.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.16982, 4.58102]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 26,
+        "nombre": "Biblioteca Comunitaria Los Nadie",
+        "tipo_entorno": "Educativo",
+        "direccion": "KR 18g 78 Sur - 46 / DG 76 Sur 17n - 02",
+        "servicios": "Educativos y sociales",
+        "telefono": "3212114702 7-3203061451",
+        "contacto": "colectivocultural.n.n@gmail.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.12681, 4.53218]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 27,
+        "nombre": "Biblioteca Comunitaria Ludoteca Niños del Paraíso",
+        "tipo_entorno": "Educativo",
+        "direccion": "CL 71h 27a - 21 Sur",
+        "servicios": "Educativos y sociales",
+        "telefono": "6017650827",
+        "contacto": "No registra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.13621, 4.55122]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 28,
+        "nombre": "Biblioteca Comunitaria Nuestra Señora del Lucero",
+        "tipo_entorno": "Educativo",
+        "direccion": "DG 69c Sur 17f - 41",
+        "servicios": "Educativos y sociales",
+        "telefono": "7901810",
+        "contacto": "No registra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.12891, 4.54611]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 29,
+        "nombre": "Biblioteca Comunitaria Perro que Ladra Editorial",
+        "tipo_entorno": "Educativo",
+        "direccion": "CL 68b Sur 69 - 62",
+        "servicios": "Educativos y sociales",
+        "telefono": "3204156332",
+        "contacto": "No registra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.16582, 4.58210]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 30,
+        "nombre": "Biblioteca Comunitaria Popular Carlos Alberto Pedraza Salcedo",
+        "tipo_entorno": "Educativo",
+        "direccion": "KR 40 79 - 20 Sur",
+        "servicios": "Educativos y sociales",
+        "telefono": "311 2008882-311 3328452",
+        "contacto": "bpcarlozpedraza@gmail.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.15321, 4.56112]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 31,
+        "nombre": "Biblioteca Comunitaria Rural Itinerante Integrando Huellas",
+        "tipo_entorno": "Educativo",
+        "direccion": "CL 91b bis Sur 18h -14",
+        "servicios": "Educativos y sociales",
+        "telefono": "3133992991-3054167378",
+        "contacto": "emochuelobajo@gmail.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.12902, 4.51521]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 32,
+        "nombre": "Biblioteca Comunitaria Semillas Creativas",
+        "tipo_entorno": "Educativo",
+        "direccion": "KR18q 69b -10 Sur",
+        "servicios": "Educativos y sociales",
+        "telefono": "315 320 2807",
+        "contacto": "No registra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.12952, 4.54821]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 33,
+        "nombre": "Biblioteca Comunitaria Unidos por los Libros",
+        "tipo_entorno": "Educativo",
+        "direccion": "KR 74a bis Sur 63 - 15",
+        "servicios": "Educativos y sociales",
+        "telefono": "3227310695",
+        "contacto": "milenamedina94@gmail.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.17202, 4.59012]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 34,
+        "nombre": "Biblioteca Comunitaria Violetta",
+        "tipo_entorno": "Educativo",
+        "direccion": "KR 27h 71i - 22 Sur",
+        "servicios": "Educativos y sociales",
+        "telefono": "3118722976",
+        "contacto": "bcvioletta@gmail.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.13702, 4.55018]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 35,
+        "nombre": "Biblioteca Comunitaria Wayra del Sur",
+        "tipo_entorno": "Educativo",
+        "direccion": "KR 49c bis a 68a",
+        "servicios": "Educativos y sociales",
+        "telefono": "3212283726",
+        "contacto": "No registra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.16012, 4.57710]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 36,
+        "nombre": "Biblioteca Comunitaria y Ambiental Simon Rodríguez",
+        "tipo_entorno": "Educativo",
+        "direccion": "KR 77a 63a - 79 Sur",
+        "servicios": "Educativos y sociales",
+        "telefono": "312 4753391",
+        "contacto": "No registra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.17812, 4.58981]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 37,
+        "nombre": "Biblioteca Comunitaria y Rural Santa Rosa",
+        "tipo_entorno": "Educativo",
+        "direccion": "Vereda Santa Rosa / KR 70c 102 - 40",
+        "servicios": "Educativos y sociales",
+        "telefono": "3133427116-3118266962",
+        "contacto": "bibl.santarosa09@gmail.com / florsilvadesotelo@hotmail.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.17582, 4.53812]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 38,
+        "nombre": "Casa de la cultura de Ciudad Bolívar",
+        "tipo_entorno": "Cultural",
+        "direccion": "CL 61 Sur No. 38 - 20 - UPZ65",
+        "servicios": "Servicios sociales y culturales",
+        "telefono": "No registra",
+        "contacto": "No registra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.15091, 4.57682]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 39,
+        "nombre": "Casa Cultural comunitaria de Arabia",
+        "tipo_entorno": "Cultural",
+        "direccion": "CL 82 B BIS No. 18 H - 10 sur - UPR3",
+        "servicios": "Servicios sociales y culturales",
+        "telefono": "No registra",
+        "contacto": "No registra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.12981, 4.52410]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 40,
+        "nombre": "Casa Cultural Semillas Creativas",
+        "tipo_entorno": "Cultural",
+        "direccion": "KR 18 No. 68 B - 10 sur - UPZ67",
+        "servicios": "Servicios sociales y culturales",
+        "telefono": "No registra",
+        "contacto": "No registra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.12911, 4.54990]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 41,
+        "nombre": "Casa de la Cultura Celodije",
+        "tipo_entorno": "Cultural",
+        "direccion": "KR 46 C 70 - 59 Sur - UPZ70",
+        "servicios": "Servicios sociales y culturales",
+        "telefono": "No registra",
+        "contacto": "No registra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.15812, 4.57210]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 42,
+        "nombre": "Casa de la cultura San Joaquin Imago",
+        "tipo_entorno": "Cultural",
+        "direccion": "DG 81 A bis sur No. 17 D - 15 - UPZ68",
+        "servicios": "Servicios sociales y culturales",
+        "telefono": "No registra",
+        "contacto": "No registra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.12651, 4.52812]
+      }
+    }
+  ]
+}

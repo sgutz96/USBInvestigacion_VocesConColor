@@ -1,0 +1,85 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.1545, 4.5621] },
+      "properties": { "id": 1, "nombre": "2022", "tipo": "Social y ambiental", "direccion": "CL 62A SUR 18M 33", "servicio": "Acceso a la alimentación y el autoconsumo" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.1560, 4.5610] },
+      "properties": { "id": 2, "nombre": "ABANDONADA", "tipo": "Social y ambiental", "direccion": "KR20BIS 68H 57SUR", "servicio": "Acceso a la alimentación y el autoconsumo" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.1510, 4.5680] },
+      "properties": { "id": 3, "nombre": "ACTOS DE AMOR", "tipo": "Social y ambiental", "direccion": "LOTE 16 MZ 14", "servicio": "Acceso a la alimentación y el autoconsumo" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.1522, 4.5598] },
+      "properties": { "id": 4, "nombre": "ADELA", "tipo": "Social y ambiental", "direccion": "CL 70 G SUR 18 N 43", "servicio": "Acceso a la alimentación y el autoconsumo" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.1580, 4.5490] },
+      "properties": { "id": 5, "nombre": "ADELINA GAVIRIA", "tipo": "Social y ambiental", "direccion": "CL 81D SUR 22 71", "servicio": "Acceso a la alimentación y el autoconsumo" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.1530, 4.5605] },
+      "properties": { "id": 6, "nombre": "ADICTA A LA ELEN", "tipo": "Social y ambiental", "direccion": "TV 18 P BIS 68 T SUR 50", "servicio": "Acceso a la alimentación y el autoconsumo" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.1540, 4.5612] },
+      "properties": { "id": 7, "nombre": "ADICTA A LAS PLANTAS", "tipo": "Social y ambiental", "direccion": "CL 69Q 18P 31 S", "servicio": "Acceso a la alimentación y el autoconsumo" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.1620, 4.5530] },
+      "properties": { "id": 8, "nombre": "ADRIÁN STIVEN", "tipo": "Social y ambiental", "direccion": "KR 44 A 77 16 SUR", "servicio": "Acceso a la alimentación y el autoconsumo" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.1520, 4.5640] },
+      "properties": { "id": 9, "nombre": "AGROSALO", "tipo": "Social y ambiental", "direccion": "CL 18B 18V 18 SUR", "servicio": "Acceso a la alimentación y el autoconsumo" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.1680, 4.5690] },
+      "properties": { "id": 10, "nombre": "AIRE LIMPIO", "tipo": "Social y ambiental", "direccion": "KR71 62A 25 SUR", "servicio": "Acceso a la alimentación y el autoconsumo" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.1515, 4.5710] },
+      "properties": { "id": 53, "nombre": "CAPS MANUELA BELTRAN", "tipo": "Social y ambiental", "direccion": "KR 45 69 G 02 SUR", "servicio": "Acceso a la alimentación y el autoconsumo" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.1500, 4.5650] },
+      "properties": { "id": 60, "nombre": "CENTRO DIA BELLA FLOR", "tipo": "Social y ambiental", "direccion": "DG 73 B SUR 27 A 25", "servicio": "Acceso a la alimentación y el autoconsumo" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.1534, 4.5601] },
+      "properties": { "id": 65, "nombre": "COLEGIO BRISAS DEL DIAMANTE", "tipo": "Social y ambiental", "direccion": "KR 18I 69D 35 S", "servicio": "Acceso a la alimentación y el autoconsumo" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.1710, 4.5750] },
+      "properties": { "id": 72, "nombre": "COLEGIO SIERRA MORENA SEDE A", "tipo": "Social y ambiental", "direccion": "CL77A SUR KR 65", "servicio": "Acceso a la alimentación y el autoconsumo" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.1530, 4.5645] },
+      "properties": { "id": 169, "nombre": "HOSPITAL MEISSEN", "tipo": "Social y ambiental", "direccion": "DG 69 R SUR 18 N 06", "servicio": "Acceso a la alimentación y el autoconsumo" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.1200, 4.4700] },
+      "properties": { "id": 252, "nombre": "JARDIN PASQUILLA", "tipo": "Social y ambiental", "direccion": "VEREDA PASQUILLA", "servicio": "Acceso a la alimentación y el autoconsumo" }
+    }
+  ]
+}

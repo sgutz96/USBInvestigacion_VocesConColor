@@ -1,0 +1,577 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.16212, 4.58891] },
+      "properties": {
+        "no": 1,
+        "nombre": "Casa de Igualdad de Oportunidades para las Mujeres",
+        "tipo_entorno": "Institucional",
+        "direccion": "Calle 64 Sur# 70- 61, Barrio Perdomo",
+        "servicios": "Orientación psicosocial y asesoría e intervención jurídica",
+        "telefono": "3599544",
+        "contacto": "ciociudadbolivar@sdmujer.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13682, 4.56812] },
+      "properties": {
+        "no": 2,
+        "nombre": "Casa de Justicia Ciudad Bolívar",
+        "tipo_entorno": "Institucional",
+        "direccion": "DG 62 SUR 20F 20",
+        "servicios": "Centro multiagencial de información, orientación, referencia y prestación de servicios para la resolución de conflictos",
+        "telefono": "+(571) 601 3779595",
+        "contacto": "atencionalciudadano@scj.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13710, 4.54980] },
+      "properties": {
+        "no": 3,
+        "nombre": "CASA DE LA SABIDURIA BELLA FLOR",
+        "tipo_entorno": "Institucional",
+        "direccion": "KR 27 A BIS 73 14 SUR",
+        "servicios": "PERSONAS MAYORES DE 60 AÑOS QUE REALICEN SUS ACTIVIDADES DE MANERA AUTÓNOMA E INDEPENDIENTE",
+        "telefono": "6013808330",
+        "contacto": "OSANTANDER@SDIS.GOV.CO"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13015, 4.54890] },
+      "properties": {
+        "no": 4,
+        "nombre": "CASA DE LA SABIDURIA CARLOS GAVIRIA",
+        "tipo_entorno": "Institucional",
+        "direccion": "CL 69 SUR 18 B 36",
+        "servicios": "PERSONAS MAYORES DE 60 AÑOS QUE REALICEN SUS ACTIVIDADES DE MANERA AUTÓNOMA E INDEPENDIENTE",
+        "telefono": "6013808330",
+        "contacto": "LCAREVALO@SDIS.GOV.CO"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13540, 4.56910] },
+      "properties": {
+        "no": 5,
+        "nombre": "CASA DE LA SABIDURIA LAS ACACIAS",
+        "tipo_entorno": "Institucional",
+        "direccion": "TV 19 C 62 D 45 SUR",
+        "servicios": "PERSONAS MAYORES DE 60 AÑOS QUE REALICEN SUS ACTIVIDADES DE MANERA AUTÓNOMA E INDEPENDIENTE",
+        "telefono": "6013808330",
+        "contacto": "NCIPAGAUTA@SDIS.GOV.CO"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.15980, 4.57512] },
+      "properties": {
+        "no": 6,
+        "nombre": "CASA DE LA SABIDURIA SIERRA MORENA",
+        "tipo_entorno": "Institucional",
+        "direccion": "TV 60 73 C 07 SUR",
+        "servicios": "PERSONAS MAYORES DE 60 AÑOS QUE REALICEN SUS ACTIVIDADES DE MANERA AUTÓNOMA E INDEPENDIENTE",
+        "telefono": "601 3808331",
+        "contacto": "LCADENAA@SDIS.GOV.CO"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.14920, 4.55110] },
+      "properties": {
+        "no": 7,
+        "nombre": "CASA DE LA SABIDURIA TEJEDORES DE SUEÑOS",
+        "tipo_entorno": "Institucional",
+        "direccion": "TV 35 69 M 85 SUR",
+        "servicios": "PERSONAS MAYORES DE 60 AÑOS QUE REALICEN SUS ACTIVIDADES DE MANERA AUTÓNOMA E INDEPENDIENTE",
+        "telefono": "6013808330",
+        "contacto": "ARODRÍGUEZAL@SDIS.GOV.CO"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.12810, 4.53850] },
+      "properties": {
+        "no": 8,
+        "nombre": "Casa de Pensamiento Intercultural",
+        "tipo_entorno": "Institucional",
+        "direccion": "TV 17 B 77 A 74 SUR",
+        "servicios": "CASA DE PENSAMIENTO INTERCULTURAL PARA NIÑAS Y NIÑOS MENORES DE 5 AÑOS",
+        "telefono": "601 2050742",
+        "contacto": "CPIYANACONASDIS@GMAIL.COM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.12910, 4.54280] },
+      "properties": {
+        "no": 9,
+        "nombre": "Casa de Pensamiento Intercultural",
+        "tipo_entorno": "Institucional",
+        "direccion": "KR 18 G 72 D 15 SUR",
+        "servicios": "CASA DE PENSAMIENTO INTERCULTURAL PARA NIÑAS Y NIÑOS MENORES DE 5 AÑOS",
+        "telefono": "601 2056292",
+        "contacto": "CPIWOUNAAHCHAAIN@SDIS.GOV.CO"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.16102, 4.58210] },
+      "properties": {
+        "no": 10,
+        "nombre": "COMISARIA DE FAMILIA CIUDAD BOLIVAR 1",
+        "tipo_entorno": "Institucional",
+        "direccion": "TV 66 68 H 09 SUR",
+        "servicios": "ACCESO A LA JUSTICIA - COMISARIAS DE FAMILIA",
+        "telefono": "601 3808330 OPC 4 EXT 67800-67804",
+        "contacto": "COMISARIA_CIUDADBOLIVAR1@SDIS.GOV.CO"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.16012, 4.59102] },
+      "properties": {
+        "no": 11,
+        "nombre": "Unidad de Protección Integral",
+        "tipo_entorno": "Institucional",
+        "direccion": "Avenida Carrera 70C # 60B-05",
+        "servicios": "Atención a adolescentes con alta permanencia en calle y en fragilidad social",
+        "telefono": "No registra",
+        "contacto": "No registra"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13010, 4.56810] },
+      "properties": {
+        "no": 12,
+        "nombre": "Unidad Operativa de Integración Social - Creciendo en Familia",
+        "tipo_entorno": "Institucional",
+        "direccion": "KR 16 C 65 A 50 SUR",
+        "servicios": "ATENCIÓN INTEGRAL A MUJERES GESTANTES, NIÑAS Y NIÑOS MENORES DE DOS AÑOS",
+        "telefono": "3808330",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.12910, 4.54280] },
+      "properties": {
+        "no": 13,
+        "nombre": "Unidad Operativa de Integración Social - Casa de Pensamiento",
+        "tipo_entorno": "Institucional",
+        "direccion": "CARRERA 18 G NO. 72-15 SUR",
+        "servicios": "CASA DE PENSAMIENTO INTERCULTURAL",
+        "telefono": "7921406",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13102, 4.56890] },
+      "properties": {
+        "no": 14,
+        "nombre": "Unidad Operativa de Integración Social - Casa de la Juventud",
+        "tipo_entorno": "Institucional",
+        "direccion": "CL 65 A SUR 17 C 30",
+        "servicios": "CASAS DE LA JUVENTUD",
+        "telefono": "7928678",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13110, 4.56780] },
+      "properties": {
+        "no": 15,
+        "nombre": "Unidad Operativa de Integración Social - Centro Amar",
+        "tipo_entorno": "Institucional",
+        "direccion": "KR 17 D 65 72 SUR",
+        "servicios": "CENTROS AMAR",
+        "telefono": "7650644",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13780, 4.57102] },
+      "properties": {
+        "no": 16,
+        "nombre": "Unidad Operativa de Integración Social - Centro Crecer",
+        "tipo_entorno": "Institucional",
+        "direccion": "KR 21 63 08 SUR",
+        "servicios": "CENTROS CRECER",
+        "telefono": "2334605",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.12950, 4.54910] },
+      "properties": {
+        "no": 17,
+        "nombre": "Unidad Operativa de Integración Social - Centro Crecer",
+        "tipo_entorno": "Institucional",
+        "direccion": "CL 69K 18H 19 SUR",
+        "servicios": "CENTROS CRECER",
+        "telefono": "7651256",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.14810, 4.55010] },
+      "properties": {
+        "no": 18,
+        "nombre": "Unidad Operativa de Integración Social - CDC",
+        "tipo_entorno": "Institucional",
+        "direccion": "CL 70 SUR 34 05",
+        "servicios": "CENTROS DE DESARROLLO COMUNITARIO",
+        "telefono": "3279797 EXT 3919",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13015, 4.54890] },
+      "properties": {
+        "no": 19,
+        "nombre": "Unidad Operativa de Integración Social - Centro Día",
+        "tipo_entorno": "Institucional",
+        "direccion": "CL 69 SUR 18 B 36",
+        "servicios": "CENTROS DIA",
+        "telefono": "3808330",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.14810, 4.55010] },
+      "properties": {
+        "no": 20,
+        "nombre": "Unidad Operativa de Integración Social - Centro Día",
+        "tipo_entorno": "Institucional",
+        "direccion": "CL 70 SUR 34 05",
+        "servicios": "CENTROS DIA",
+        "telefono": "3808330",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.15980, 4.57512] },
+      "properties": {
+        "no": 21,
+        "nombre": "Unidad Operativa de Integración Social - Centro Día",
+        "tipo_entorno": "Institucional",
+        "direccion": "TRANSV 60 NO. 73 C 07 SUR",
+        "servicios": "CENTROS DIA",
+        "telefono": "3808330",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.16120, 4.57810] },
+      "properties": {
+        "no": 22,
+        "nombre": "Unidad Operativa de Integración Social - Centro Forjar",
+        "tipo_entorno": "Institucional",
+        "direccion": "KR 44 58 C 90 SUR",
+        "servicios": "CENTROS FORJAR",
+        "telefono": "7177848",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13712, 4.55180] },
+      "properties": {
+        "no": 23,
+        "nombre": "Unidad Operativa de Integración Social - Comedor",
+        "tipo_entorno": "Institucional",
+        "direccion": "KR 27 M 71 I 09 SUR",
+        "servicios": "COMEDOR",
+        "telefono": "7619046",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13750, 4.54920] },
+      "properties": {
+        "no": 24,
+        "nombre": "Unidad Operativa de Integración Social - Comedor",
+        "tipo_entorno": "Institucional",
+        "direccion": "KR 27 BIS A 73 C 45 SUR",
+        "servicios": "COMEDOR",
+        "telefono": "2023887",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.17510, 4.58820] },
+      "properties": {
+        "no": 25,
+        "nombre": "Unidad Operativa de Integración Social - Comedor",
+        "tipo_entorno": "Institucional",
+        "direccion": "KR 75 K 62 D 48 SUR",
+        "servicios": "COMEDOR",
+        "telefono": "8023038",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.17620, 4.58310] },
+      "properties": {
+        "no": 26,
+        "nombre": "Unidad Operativa de Integración Social - Comedor",
+        "tipo_entorno": "Institucional",
+        "direccion": "CL 75 D SUR 75 C 17",
+        "servicios": "COMEDOR",
+        "telefono": "7358818",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "no": 27,
+        "nombre": "Unidad Operativa de Integración Social - Comedor",
+        "tipo_entorno": "Institucional",
+        "direccion": "KR 24 B 76 41 SUR",
+        "servicios": "COMEDOR",
+        "telefono": "7902299",
+        "contacto": "integracion@sdis.gov.co"
+      },
+      "geometry": { "type": "Point", "coordinates": [-74.13510, 4.54410] }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13110, 4.54580] },
+      "properties": {
+        "no": 28,
+        "nombre": "Unidad Operativa de Integración Social - Comedor",
+        "tipo_entorno": "Institucional",
+        "direccion": "CL 73 SUR 20 06",
+        "servicios": "COMEDOR",
+        "telefono": "7912951",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13010, 4.55120] },
+      "properties": {
+        "no": 29,
+        "nombre": "Unidad Operativa de Integración Social - Comedor",
+        "tipo_entorno": "Institucional",
+        "direccion": "DG 68 B SUR 18 P 40",
+        "servicios": "COMEDOR",
+        "telefono": "7925261",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.12980, 4.54850] },
+      "properties": {
+        "no": 30,
+        "nombre": "Unidad Operativa de Integración Social - Comedor",
+        "tipo_entorno": "Institucional",
+        "direccion": "KR 18 C 70 10 SUR",
+        "servicios": "COMEDOR",
+        "telefono": "7914189",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.17580, 4.58290] },
+      "properties": {
+        "no": 31,
+        "nombre": "Unidad Operativa de Integración Social - Comedor",
+        "tipo_entorno": "Institucional",
+        "direccion": "CL 76 A SUR 74 B 05",
+        "servicios": "COMEDOR",
+        "telefono": "2462797",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.12850, 4.53980] },
+      "properties": {
+        "no": 32,
+        "nombre": "Unidad Operativa de Integración Social - Comedor",
+        "tipo_entorno": "Institucional",
+        "direccion": "KR 18 D BIS 74 A 87 SUR",
+        "servicios": "COMEDOR",
+        "telefono": "7923701",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.14510, 4.55210] },
+      "properties": {
+        "no": 33,
+        "nombre": "Unidad Operativa de Integración Social - Comedor",
+        "tipo_entorno": "Institucional",
+        "direccion": "DG 68 J BIS SUR 31 05",
+        "servicios": "COMEDOR",
+        "telefono": "3087145",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.12780, 4.53610] },
+      "properties": {
+        "no": 34,
+        "nombre": "Unidad Operativa de Integración Social - Comedor",
+        "tipo_entorno": "Institucional",
+        "direccion": "KR 18 R 77 A 27 SUR",
+        "servicios": "COMEDOR",
+        "telefono": "7720790",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.12650, 4.52980] },
+      "properties": {
+        "no": 35,
+        "nombre": "Unidad Operativa de Integración Social - Comedor",
+        "tipo_entorno": "Institucional",
+        "direccion": "KR 18 D 81 28 SUR",
+        "servicios": "COMEDOR",
+        "telefono": "7925303",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.15980, 4.57780] },
+      "properties": {
+        "no": 36,
+        "nombre": "Unidad Operativa de Integración Social - Comedor",
+        "tipo_entorno": "Institucional",
+        "direccion": "KR 49 D 68 G 08 SUR",
+        "servicios": "COMEDOR",
+        "telefono": "7173852",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.12590, 4.53380] },
+      "properties": {
+        "no": 37,
+        "nombre": "Unidad Operativa de Integración Social - Comedor",
+        "tipo_entorno": "Institucional",
+        "direccion": "CL 78 C SUR 16 29",
+        "servicios": "COMEDOR",
+        "telefono": "7618161",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13310, 4.56980] },
+      "properties": {
+        "no": 38,
+        "nombre": "Unidad Operativa de Integración Social - Comedor",
+        "tipo_entorno": "Institucional",
+        "direccion": "DG 64 B SUR 19 21",
+        "servicios": "COMEDOR",
+        "telefono": "7166406",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.15610, 4.57210] },
+      "properties": {
+        "no": 39,
+        "nombre": "Unidad Operativa de Integración Social - Comedor",
+        "tipo_entorno": "Institucional",
+        "direccion": "KR 43 65 I 25 SUR",
+        "servicios": "COMEDOR",
+        "telefono": "7157085",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.16010, 4.59080] },
+      "properties": {
+        "no": 40,
+        "nombre": "Unidad Operativa de Integración Social - Comedor",
+        "tipo_entorno": "Institucional",
+        "direccion": "AK 70 C 60 B 03 SUR",
+        "servicios": "COMEDOR",
+        "telefono": "7795453-7795454",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.15850, 4.55680] },
+      "properties": {
+        "no": 41,
+        "nombre": "Unidad Operativa de Integración Social - Comedor Potosí",
+        "tipo_entorno": "Institucional",
+        "direccion": "CL 81 SUR 42 76",
+        "servicios": "COMEDOR",
+        "telefono": "7186244",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.16210, 4.58102] },
+      "properties": {
+        "no": 42,
+        "nombre": "Unidad Operativa de Integración Social - Comisaría de Familia",
+        "tipo_entorno": "Institucional",
+        "direccion": "TV 73 70 A 04 SUR",
+        "servicios": "COMISARIAS DE FAMILIA",
+        "telefono": "3808330 OPCION 4",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13682, 4.56812] },
+      "properties": {
+        "no": 43,
+        "nombre": "Unidad Operativa de Integración Social - Comisaría de Familia",
+        "tipo_entorno": "Institucional",
+        "direccion": "DG 62 SUR 20 F 20 PI 2",
+        "servicios": "COMISARIAS DE FAMILIA",
+        "telefono": "3808330 OPCION 4",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.15580, 4.56810] },
+      "properties": {
+        "no": 44,
+        "nombre": "Subdirección Local para la Integración Social",
+        "tipo_entorno": "Institucional",
+        "direccion": "KR 42 70 A 50 SUR",
+        "servicios": "SUBDIRECCION LOCAL PARA LA INTEGRACION SOCIAL",
+        "telefono": "3808330 OPCION 4 EXT 19",
+        "contacto": "integracion@sdis.gov.co"
+      }
+    }
+  ]
+}

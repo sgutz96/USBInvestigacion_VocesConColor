@@ -1,0 +1,538 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13092, 4.56812] },
+      "properties": {
+        "no": 1,
+        "nombre": "APPEE",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "CALLE 66A SUR Nro. 17 G-15",
+        "servicios": "Servicios sociales",
+        "telefono": "7909071",
+        "contacto": "Sin información"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13620, 4.57102] },
+      "properties": {
+        "no": 2,
+        "nombre": "ASOCIACION CRISTIANA PARA LA EDUCACION POPULAR INTEGRAL Y EL SERVICIO SOCIAL EL REDENTOR",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "CARRERA 20B Nro. 65-89SUR",
+        "servicios": "Servicios sociales",
+        "telefono": "6871743",
+        "contacto": "Sin información"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13210, 4.56580] },
+      "properties": {
+        "no": 3,
+        "nombre": "ASOCIACION DE CONSTRUCTORES INDEPENDIENTES ACOI",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "CR 19 F NO. 67 87 SUR",
+        "servicios": "Servicios sociales",
+        "telefono": "7159077",
+        "contacto": "jairoaguirrevelez@hotmail.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13010, 4.53280] },
+      "properties": {
+        "no": 4,
+        "nombre": "ASOCIACION DE MUJERES PROGRESISTAS LA CUMBRE",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "Sector La Cumbre, Ciudad Bolívar",
+        "servicios": "Servicios sociales",
+        "telefono": "Sin información",
+        "contacto": "amuproc@yahoo.es"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.12850, 4.53310] },
+      "properties": {
+        "no": 5,
+        "nombre": "ASOCIACION DE PADRES DE FAMILIA CENTRO EDUCATIVO DISTRITAL DON BOSCO I",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "Calle 80A Sur Carrera 18",
+        "servicios": "Servicios sociales",
+        "telefono": "7923846",
+        "contacto": "aragonyurgaki@hotmail.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.16102, 4.59682] },
+      "properties": {
+        "no": 6,
+        "nombre": "ASOCIACION DE PADRES DE FAMILIA DEL COLEGIO NUESTRA SEÑORA DE FATIMA DE LA POLICIA NACIONAL ASOPAFAM",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "DG 49 NO. 48 71 SUR",
+        "servicios": "Servicios sociales",
+        "telefono": "7101993",
+        "contacto": "asopafam2013@hotmail.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.15210, 4.62102] },
+      "properties": {
+        "no": 7,
+        "nombre": "ASOCIACION DE PADRES DE FAMILIA DEL GIMNASIO MILITAR DE LA FUERZA AEREA COLOMBIANA ASOGIMFA",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "CL 26 SUR no. 78 H - 70",
+        "servicios": "Servicios sociales",
+        "telefono": "Sin información",
+        "contacto": "asogimfa315@hotmail.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.12680, 4.53810] },
+      "properties": {
+        "no": 8,
+        "nombre": "ASOCIACION DE RECICLADORES UNIDAS POR UN FUTURO ASORFUTURO",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "CL 74C SUR No. 16H - 49",
+        "servicios": "Servicios sociales",
+        "telefono": "3143323461",
+        "contacto": "asociacionasorfuturo@gmail.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.16812, 4.58812] },
+      "properties": {
+        "no": 9,
+        "nombre": "ASOCIACIÓN FUERZA CAMIONERA DE COLOMBIA",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "CL 63 SUR 72 27",
+        "servicios": "Servicios sociales",
+        "telefono": "3202157195",
+        "contacto": "COMERCIAL@FUERZACAMIONERA.COM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13012, 4.55120] },
+      "properties": {
+        "no": 10,
+        "nombre": "ASOCIACION SOLIDARIA DE RECICLADORES DEL SERVICIO DE APROVECHAMIENTO ASSORSA",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "TV 18 R NO. 69 H 19 SUR",
+        "servicios": "Servicios sociales",
+        "telefono": "3134982098",
+        "contacto": "ECHEVERRYANTONIO@OUTLOOK.ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.15980, 4.57780] },
+      "properties": {
+        "no": 11,
+        "nombre": "CENTRO DE DESARROLLO EDUCATIVO FUNDACION UNA ESPERANZA",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "Transversal 49D No. 68G-57 Sur",
+        "servicios": "Servicios sociales",
+        "telefono": "7158957",
+        "contacto": "jerusalen1esperanza@gmail.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.16102, 4.56012] },
+      "properties": {
+        "no": 12,
+        "nombre": "CLUB DEPORTIVO DE FUTBOL Y SUS MODALIDADES REAL CARACOLI F.C.",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "Carrera 44A No. 72 - 22 Sur",
+        "servicios": "Servicios sociales",
+        "telefono": "6364032 / 3045306249",
+        "contacto": "realcaracolifc@gmail.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13110, 4.56810] },
+      "properties": {
+        "no": 13,
+        "nombre": "CORPORACION BECALISTHENICS BECALISTHENICS",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "CR 18 V NO. 66 B 11 SUR CIUDAD BOLIVAR",
+        "servicios": "Servicios sociales",
+        "telefono": "3016378795",
+        "contacto": "becalisthenics@gmaill.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.16120, 4.55820] },
+      "properties": {
+        "no": 14,
+        "nombre": "CORPORACION CENTRO AUTONOMO SOCIAL ACTIVISTA DE TACTICAS HERMENEUTICAS EMANCIPADORAS ORGANIZADAS CASA THEO",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "TV 53 NO. 74 39 S",
+        "servicios": "Servicios sociales",
+        "telefono": "7184332 / 3046827524",
+        "contacto": "existiryresistir@gmail.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13682, 4.55310] },
+      "properties": {
+        "no": 15,
+        "nombre": "CORPORACION COLEGIO COMUNITARIO EL MIRADOR",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "CALLE 68 G Nro. 25-63 SUR",
+        "servicios": "Servicios sociales",
+        "telefono": "7656004",
+        "contacto": "Sin información"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.17512, 4.58210] },
+      "properties": {
+        "no": 16,
+        "nombre": "CORPORACION EDUCATIVA Y SOCIAL WALDORF CES WALDORF",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "Transv 73 H Bis # 75 B 46 Sur",
+        "servicios": "Servicios sociales",
+        "telefono": "7187094 / 7189019",
+        "contacto": "ceswaldorf@ceswaldorf.org"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.16120, 4.58102] },
+      "properties": {
+        "no": 17,
+        "nombre": "CORPORACION MADRES Y PADRES EN ACCION CORMAPAC",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "TV 64 NO. 68 H 22 SUR",
+        "servicios": "Servicios sociales",
+        "telefono": "3125551889",
+        "contacto": "soltlacasona@gmail.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.15980, 4.57710] },
+      "properties": {
+        "no": 18,
+        "nombre": "FUNDACION BELLINY",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "CR 48 D NO. 68 C SUR 16",
+        "servicios": "Servicios sociales",
+        "telefono": "3202010393",
+        "contacto": "fundacionbelliny@hotmail.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13781, 4.54921] },
+      "properties": {
+        "no": 19,
+        "nombre": "FUNDACION CIGARRA",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "Cl. 71 Q Sur No. 27-60",
+        "servicios": "Servicios sociales",
+        "telefono": "7907238",
+        "contacto": "fundacioncigarra02@yahoo.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13012, 4.56810] },
+      "properties": {
+        "no": 20,
+        "nombre": "FUNDACION COLOMBIA NUEVA VIDA F.C.N.V.",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "Carrera 19 D No 63 – 18 Sur",
+        "servicios": "Servicios sociales",
+        "telefono": "7183399",
+        "contacto": "Sin información"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.16102, 4.58981] },
+      "properties": {
+        "no": 21,
+        "nombre": "FUNDACION CRISTIANA DEJANDO HUELLAS",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "CR 68 C NO. 65 60 MADELENA 8 IN 13",
+        "servicios": "Servicios sociales",
+        "telefono": "Sin información",
+        "contacto": "LJOHANNAM0417@GMAIL.COM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13010, 4.56890] },
+      "properties": {
+        "no": 22,
+        "nombre": "FUNDACION DE DESARROLLO Y EMPRENDIMIENTO MEXICO FUNDEME",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "CR 16 C NO. 63 18 SUR",
+        "servicios": "Servicios sociales",
+        "telefono": "3208406399",
+        "contacto": "APRG45@HOTMAIL.COM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.16212, 4.58810] },
+      "properties": {
+        "no": 23,
+        "nombre": "FUNDACION EDUCATIVA CLICK",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "CR 68 G BIS NO. 26 SUR 15",
+        "servicios": "Servicios sociales",
+        "telefono": "Sin información",
+        "contacto": "FUNDACIONCLIC1@GMAIL.COM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.15000, 4.56000] },
+      "properties": {
+        "no": 24,
+        "nombre": "FUNDACION H I V ELISA EN LIQUIDACION",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "Ciudad Bolívar, Bogotá",
+        "servicios": "Servicios sociales",
+        "telefono": "Sin información",
+        "contacto": "Sin información"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.14810, 4.54980] },
+      "properties": {
+        "no": 25,
+        "nombre": "FUNDACION HUELLAS DE ALEGRIA Y SABIDURIA",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "TV 36 A NO. 72 F 92 SUR",
+        "servicios": "Servicios sociales",
+        "telefono": "3046130156 / 7315814",
+        "contacto": "funhuellasalegsa012@yahoo.es"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.16102, 4.57810] },
+      "properties": {
+        "no": 26,
+        "nombre": "FUNDACION JARDIN JOHAN SNEIDER",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "CL 58 BIS NO. 43 64 SUR",
+        "servicios": "Servicios sociales",
+        "telefono": "3158393262",
+        "contacto": "bsrtrodriguez@hotmail.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.16120, 4.55820] },
+      "properties": {
+        "no": 27,
+        "nombre": "FUNDACION JESUS ESTA AQUI",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "TV 55 NO. 74 39 SUR",
+        "servicios": "Servicios sociales",
+        "telefono": "7175184",
+        "contacto": "chentevim@hotmail.es"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.17812, 4.60102] },
+      "properties": {
+        "no": 28,
+        "nombre": "FUNDACION MARTHA CHACON CRECIENDO PARA EL MAÑANA",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "KR 80 H NO 52 - 17 SUR",
+        "servicios": "Servicios sociales",
+        "telefono": "9260379 / 3134488266",
+        "contacto": "funcreciendoparaelmanana@hotmail.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.17202, 4.58981] },
+      "properties": {
+        "no": 29,
+        "nombre": "FUNDACION NACIONAL DE EDUCACION AMBIENTAL Y CIENTIFICA",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "Carrera 74H No. 62D-30 Sur",
+        "servicios": "Servicios sociales",
+        "telefono": "5759892",
+        "contacto": "fundaneotropico@gmail.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.12902, 4.51521] },
+      "properties": {
+        "no": 30,
+        "nombre": "FUNDACION PALAGUS SEMBRADORES DE ESPERANZA",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "CL 93 A NO. 18 B 36 S",
+        "servicios": "Servicios sociales",
+        "telefono": "3144212922 / 3142868098",
+        "contacto": "fundacionpalagus@gmail.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.16812, 4.59612] },
+      "properties": {
+        "no": 31,
+        "nombre": "FUNDACION PLANETA AMOR",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "carrera 73 N° 55-69",
+        "servicios": "Servicios sociales",
+        "telefono": "2958432",
+        "contacto": "direccionejecutiva@planetaamor.org"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13780, 4.57682] },
+      "properties": {
+        "no": 32,
+        "nombre": "FUNDACION PRO DESARROLLO EN TEMAS SOCIALES Y PERSONAS CON DISCAPACIDAD LOCALIDAD 19 Y D C",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "CL 58 A SUR NO. 22 G 09",
+        "servicios": "Servicios sociales",
+        "telefono": "4591425",
+        "contacto": "fundacionprodesarrollo19@hotmail.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.12812, 4.53280] },
+      "properties": {
+        "no": 33,
+        "nombre": "FUNDACION SEMILLITAS DE AMOR",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "CRA 18 D NO. 80 A - 24 SUR",
+        "servicios": "Servicios sociales",
+        "telefono": "9011538",
+        "contacto": "fsdeamor@yahoo.es"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.12810, 4.53850] },
+      "properties": {
+        "no": 34,
+        "nombre": "FUNDACION SOCIAL CALASANZ",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "CARRERA 17 F 77-75 Sur",
+        "servicios": "Servicios sociales",
+        "telefono": "7920388 / 7920390",
+        "contacto": "connyrod@hotmail.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13012, 4.56810] },
+      "properties": {
+        "no": 35,
+        "nombre": "FUNDACION SOCIAL EDUCATIVA LIDERES EN ACCION SIGLO XXI",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "carrera 18 m bis a No 64f 23 sur",
+        "servicios": "Servicios sociales",
+        "telefono": "7618931 / 3132187113",
+        "contacto": "fundaliders21@yahoo.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.17512, 4.59508] },
+      "properties": {
+        "no": 36,
+        "nombre": "FUNDACION TALLER DEL MAESTRO (F.T.M.1)",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "CR 74 H NO. 57 Z 36 SUR",
+        "servicios": "Servicios sociales",
+        "telefono": "7797994",
+        "contacto": "MONA-H-C@HOTMAIL.COM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.12850, 4.53610] },
+      "properties": {
+        "no": 37,
+        "nombre": "FUNDACION UN NUEVO AMANECER",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "Diagonal 77 A Sur 18 G 21",
+        "servicios": "Servicios sociales",
+        "telefono": "7152290 / 3012373416",
+        "contacto": "Sub.Contratacion@sdis.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13098, 4.55831] },
+      "properties": {
+        "no": 38,
+        "nombre": "FUNDACION VALORES SEMILLAS DEL FUTURO VASEFUT",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "CARRERA 17 A BIS # 62 - 37 SUR",
+        "servicios": "Servicios sociales",
+        "telefono": "7650896 / 3167532555",
+        "contacto": "jose.mi33@hotmail.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.17512, 4.58812] },
+      "properties": {
+        "no": 39,
+        "nombre": "FUNDACION VOZ HUMANITARIA FUNDVOZHUMA",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "CR 75 C NO. 62 F 36 SUR",
+        "servicios": "Servicios sociales",
+        "telefono": "3144579051 / 3124983616",
+        "contacto": "fundacionvozhumanitaria@gmail.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.06812, 4.62812] },
+      "properties": {
+        "no": 40,
+        "nombre": "LIGA DE CANOTAJE DE BOGOTA D.C. CANOTAJE D.C.",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "Avenida Caracas No. 39 - 18 Apto 610",
+        "servicios": "Servicios sociales",
+        "telefono": "2129785 / 3194115479",
+        "contacto": "canotaje.bogotadc@gmail.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.16582, 4.58210] },
+      "properties": {
+        "no": 41,
+        "nombre": "LIGA DE MOTOCICLISMO DE BOGOTA LIMOBOG",
+        "tipo_entorno": "Sin ánimo de lucro",
+        "direccion": "Carrera 71 D No. 68B - 19 Barrio La Europa",
+        "servicios": "Servicios sociales",
+        "telefono": "3014885368",
+        "contacto": "limobog@yahoo.com.mx"
+      }
+    }
+  ]
+}

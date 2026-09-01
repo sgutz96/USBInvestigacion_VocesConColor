@@ -1,0 +1,165 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.15682, 4.56112]
+      },
+      "properties": {
+        "no": 1,
+        "nombre": "CAI Arborizadora Alta - UPZ 70",
+        "tipo_entorno": "Institucional",
+        "direccion": "KR 42 CL 73 SUR",
+        "servicios": "Atención policial inmediata 24/7",
+        "telefono": "3177094092",
+        "contacto": "mebog.e19@policia.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.15580, 4.57120]
+      },
+      "properties": {
+        "no": 2,
+        "nombre": "CAI Candelaria - UPZ 66",
+        "tipo_entorno": "Institucional",
+        "direccion": "AV CIUDAD DE VILLAVICENCIO KR 43C",
+        "servicios": "Atención policial inmediata 24/7",
+        "telefono": "3008085957",
+        "contacto": "mebog.e19@policia.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.13010, 4.55120]
+      },
+      "properties": {
+        "no": 3,
+        "nombre": "CAI Compartir - UPZ 67",
+        "tipo_entorno": "Institucional",
+        "direccion": "CL 66 BIS SUR 18T 14",
+        "servicios": "Atención policial inmediata 24/7",
+        "telefono": "3505922233",
+        "contacto": "mebog.e19@policia.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.12980, 4.53280]
+      },
+      "properties": {
+        "no": 4,
+        "nombre": "CAI La Joya - UPZ 68",
+        "tipo_entorno": "Institucional",
+        "direccion": "CL 80A SUR TV 18B BIS B",
+        "servicios": "Atención policial inmediata 24/7",
+        "telefono": "3174301725",
+        "contacto": "mebog.e19@policia.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.13110, 4.55820]
+      },
+      "properties": {
+        "no": 5,
+        "nombre": "CAI Lucero - UPZ 67",
+        "tipo_entorno": "Institucional",
+        "direccion": "DG 64A BIS SUR 17G 68",
+        "servicios": "Atención policial inmediata 24/7",
+        "telefono": "3106139297",
+        "contacto": "mebog.e19@policia.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.13812, 4.54890]
+      },
+      "properties": {
+        "no": 6,
+        "nombre": "CAI Paraíso - UPZ 67",
+        "tipo_entorno": "Institucional",
+        "direccion": "CL 71P SUR 27L 15",
+        "servicios": "Atención policial inmediata 24/7",
+        "telefono": "3155446711",
+        "contacto": "mebog.e19@policia.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.16812, 4.58891]
+      },
+      "properties": {
+        "no": 7,
+        "nombre": "CAI Perdomo - UPZ 69",
+        "tipo_entorno": "Institucional",
+        "direccion": "DG 62A SUR KR 72",
+        "servicios": "Atención policial inmediata 24/7",
+        "telefono": "3504910683",
+        "contacto": "mebog.e19@policia.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.13702, 4.56810]
+      },
+      "properties": {
+        "no": 8,
+        "nombre": "CAI San Francisco - UPZ 66",
+        "tipo_entorno": "Institucional",
+        "direccion": "KR 20C CL 67 SUR",
+        "servicios": "Atención policial inmediata 24/7",
+        "telefono": "3227216919",
+        "contacto": "mebog.e19@policia.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.17512, 4.58102]
+      },
+      "properties": {
+        "no": 9,
+        "nombre": "CAI Santo Domingo - UPZ 69",
+        "tipo_entorno": "Institucional",
+        "direccion": "CL 69A SUR KR 77C",
+        "servicios": "Atención policial inmediata 24/7",
+        "telefono": "3007865927",
+        "contacto": "mebog.e19@policia.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.13012, 4.54980]
+      },
+      "properties": {
+        "no": 10,
+        "nombre": "CAI Vista Hermosa - UPZ 67",
+        "tipo_entorno": "Institucional",
+        "direccion": "DG 71B SUR 18I 60",
+        "servicios": "Atención policial inmediata 24/7",
+        "telefono": "3208315146",
+        "contacto": "mebog.e19@policia.gov.co"
+      }
+    }
+  ]
+}

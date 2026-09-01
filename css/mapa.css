@@ -171,6 +171,9 @@
   background: var(--white) !important;
 }
 
+
+
+
 @media (max-width: 900px) {
   .map-frame {
     height: 440px;

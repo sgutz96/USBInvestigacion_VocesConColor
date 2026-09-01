@@ -1,0 +1,226 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.16850, 4.58210] },
+      "properties": {
+        "no": 1,
+        "nombre": "ALTOS DE LA ESTANCIA - ZONAL",
+        "tipo_entorno": "Recreacional, cuidado y deportivo",
+        "direccion": "Carrera 76c con Diagonal 67a Sur",
+        "servicios": "Recreación, cuidado y deporte",
+        "telefono": "No registra",
+        "contacto": "altosdelaestancia@idrd.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.15682, 4.56112] },
+      "properties": {
+        "no": 2,
+        "nombre": "ARBORIZADORA ALTA - ZONAL",
+        "tipo_entorno": "Recreacional, cuidado y deportivo",
+        "direccion": "Carrera 42 #73A Sur-1",
+        "servicios": "Recreación, cuidado y deporte",
+        "telefono": "(601)7178771",
+        "contacto": "arborizadoraalta@idrd.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.14850, 4.55812] },
+      "properties": {
+        "no": 3,
+        "nombre": "ARBORIZADORA ALTA METROPOLITANO - METROPOLITANO",
+        "tipo_entorno": "Recreacional, cuidado y deportivo",
+        "direccion": "Calle 77 Sur #33-1",
+        "servicios": "Recreación, cuidado y deporte",
+        "telefono": "No registra",
+        "contacto": "pmarborizadoraalta@idrd.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.12810, 4.53850] },
+      "properties": {
+        "no": 4,
+        "nombre": "BUENA VISTA PORVENIR - ZONAL",
+        "tipo_entorno": "Recreacional, cuidado y deportivo",
+        "direccion": "Carrera 17f con Calle 76 Sur",
+        "servicios": "Recreación, cuidado y deporte",
+        "telefono": "No registra",
+        "contacto": "buenavistaporvenir@idrd.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13812, 4.57102] },
+      "properties": {
+        "no": 5,
+        "nombre": "CANDELARIA LA NUEVA - ZONAL",
+        "tipo_entorno": "Recreacional, cuidado y deportivo",
+        "direccion": "Calle 62 Sur #22i-47",
+        "servicios": "Recreación, cuidado y deporte",
+        "telefono": "(601)7151078",
+        "contacto": "candelaria@idrd.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.15102, 4.56102] },
+      "properties": {
+        "no": 6,
+        "nombre": "DESARROLLO ARBORIZADORA ALTA - VECINAL",
+        "tipo_entorno": "Recreacional, cuidado y deportivo",
+        "direccion": "Diagonal 73A Sur #36-46",
+        "servicios": "Recreación, cuidado y deporte",
+        "telefono": "(601)6477503",
+        "contacto": "reservascanchas.alcaldiamayor@idrd.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.17512, 4.58102] },
+      "properties": {
+        "no": 7,
+        "nombre": "DESARROLLO CARACOLI - VECINAL",
+        "tipo_entorno": "Recreacional, cuidado y deportivo",
+        "direccion": "Carrera 74b con Calle 77 Sur",
+        "servicios": "Recreación, cuidado y deporte",
+        "telefono": "(601)6477503",
+        "contacto": "reservascanchas.alcaldiamayor@idrd.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13110, 4.55820] },
+      "properties": {
+        "no": 8,
+        "nombre": "DESARROLLO DOMINGO LAIN II - VECINAL",
+        "tipo_entorno": "Recreacional, cuidado y deportivo",
+        "direccion": "Diagonal 64ABIS Sur #17G-68",
+        "servicios": "Recreación, cuidado y deporte",
+        "telefono": "(601)6477503",
+        "contacto": "reservascanchas.alcaldiamayor@idrd.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13781, 4.54921] },
+      "properties": {
+        "no": 9,
+        "nombre": "DESARROLLO EL PARAISO - VECINAL",
+        "tipo_entorno": "Recreacional, cuidado y deportivo",
+        "direccion": "Carrera 27q con Calle 71m Sur",
+        "servicios": "Recreación, cuidado y deporte",
+        "telefono": "(601)6477503",
+        "contacto": "reservascanchas.alcaldiamayor@idrd.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.16582, 4.58210] },
+      "properties": {
+        "no": 10,
+        "nombre": "EL TALLER EL ENSUEÑO - ZONAL",
+        "tipo_entorno": "Recreacional, cuidado y deportivo",
+        "direccion": "Calle 68 Sur #70d-11",
+        "servicios": "Recreación, cuidado y deporte",
+        "telefono": "No registra",
+        "contacto": "parqueelensueno@idrd.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13812, 4.54890] },
+      "properties": {
+        "no": 11,
+        "nombre": "ILLIMANI (PARAISO) - ZONAL",
+        "tipo_entorno": "Recreacional, cuidado y deportivo",
+        "direccion": "Carrera 27b con Calle 72c Sur",
+        "servicios": "Recreación, cuidado y deporte",
+        "telefono": "(601)7653116",
+        "contacto": "parqueilimani@idrd.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.16812, 4.58891] },
+      "properties": {
+        "no": 12,
+        "nombre": "LA ESTANCIA - ZONAL",
+        "tipo_entorno": "Recreacional, cuidado y deportivo",
+        "direccion": "Carrera 74c con Calle 59 Sur",
+        "servicios": "Recreación, cuidado y deporte",
+        "telefono": "(601)7653116",
+        "contacto": "estancia@idrd.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.12980, 4.53280] },
+      "properties": {
+        "no": 13,
+        "nombre": "LA JOYA - ZONAL",
+        "tipo_entorno": "Recreacional, cuidado y deportivo",
+        "direccion": "Transversal 18i con Calle 80b sur",
+        "servicios": "Recreación, cuidado y deporte",
+        "telefono": "No registra",
+        "contacto": "lajoya@idrd.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.13010, 4.57682] },
+      "properties": {
+        "no": 14,
+        "nombre": "MEISSEN - ZONAL",
+        "tipo_entorno": "Recreacional, cuidado y deportivo",
+        "direccion": "Calle 62 BIS Sur #16C-40",
+        "servicios": "Recreación, cuidado y deporte",
+        "telefono": "No registra",
+        "contacto": "meissen@idrd.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.16120, 4.57810] },
+      "properties": {
+        "no": 15,
+        "nombre": "SIERRA MORENA - ZONAL",
+        "tipo_entorno": "Recreacional, cuidado y deportivo",
+        "direccion": "Diagonal 73c Sur #55-40",
+        "servicios": "Recreación, cuidado y deporte",
+        "telefono": "(601)7650034",
+        "contacto": "sierramorena@idrd.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.16212, 4.58810] },
+      "properties": {
+        "no": 16,
+        "nombre": "URBANIZACIÓN BALMORAL CESIÓN GUADALUPE - VECINAL",
+        "tipo_entorno": "Recreacional, cuidado y deportivo",
+        "direccion": "Carrera 71 con Calle 57r Sur",
+        "servicios": "Recreación, cuidado y deporte",
+        "telefono": "(601)6477503",
+        "contacto": "reservascanchas.alcaldiamayor@idrd.gov.co"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-74.15980, 4.57780] },
+      "properties": {
+        "no": 17,
+        "nombre": "URBANIZACIÓN LA CORUÑA - VECINAL",
+        "tipo_entorno": "Recreacional, cuidado y deportivo",
+        "direccion": "Calle 58C Sur #47-06",
+        "servicios": "Recreación, cuidado y deporte",
+        "telefono": "(601)6477503",
+        "contacto": "reservascanchas.alcaldiamayor@idrd.gov.co"
+      }
+    }
+  ]
+}
