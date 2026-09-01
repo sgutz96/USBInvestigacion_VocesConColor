@@ -1,9 +1,11 @@
+
 /* =========================================================================
    MAPA INTERACTIVO — ENTORNOS PROTECTORES BOGOTÁ
    -------------------------------------------------------------------------
    - Mapa base claro estilo CARTO/Positron
    - Sin API KEY
    - Iconos propios SVG
+   - Logo PNG para Monte Taborda
    - Clustering opcional
    - Popups personalizados
    - Leyenda con conteo
@@ -15,6 +17,7 @@
 /* ===== DATOS DE CAPAS ===== */
 
 const files = {
+
   Manzanas:        'data/Manzanas.geojson',
   zomac:           'data/zomac.geojson',
   parques:         'data/parques.geojson',
@@ -28,7 +31,9 @@ const files = {
   CAPS:            'data/CAPS.geojson',
   Sin_lucro:       'data/Sin_lucro.geojson',
   Recreacionales:  'data/Recreacionales.geojson',
-  Techo_Verde:     'data/Techo_Verde.geojson'
+  Techo_Verde:     'data/Techo_Verde.geojson',
+  monteTaborda:    'data/monteTaborda.geojson'
+
 };
 
 
@@ -76,6 +81,14 @@ const styles = {
     weight: 1.5,
     fillColor: '#a3c037',
     fillOpacity: 0.25
+  },
+
+  // Color de Monte Taborda
+  monteTaborda: {
+    color: '#a3c037',
+    weight: 2,
+    fillColor: '#a3c037',
+    fillOpacity: 0.3
   }
 
 };
@@ -123,6 +136,15 @@ const pointIcons = {
   Techo_Verde: {
     color: '#2ecc71',
     path: 'M3 20l9-15 9 15zM12 20v-6'
+  },
+
+  // =====================================================
+  // Utiliza Logo.png
+  // =====================================================
+
+  monteTaborda: {
+    color: '#a3c037',
+    image: 'assets/img/logo.svg'
   }
 
 };
@@ -145,7 +167,10 @@ const labels = {
   CAPS: 'CAPS',
   Sin_lucro: 'Sin Ánimo de Lucro',
   Recreacionales: 'Entornos Recreacionales',
-  Techo_Verde: 'Techos Verdes'
+  Techo_Verde: 'Techos Verdes',
+
+  // NUEVA CAPA
+  monteTaborda: 'Monte Taborda'
 
 };
 
@@ -219,11 +244,59 @@ function injectStyles() {
     }
 
 
+    /* =========================================================
+       LOGO MONTE TABORDA
+       ========================================================= */
+
+    .map-point-logo {
+
+      width: 40px;
+      height: 40px;
+
+      border-radius: 50%;
+
+      background: #fff;
+
+      border: 2px solid #fff;
+
+      box-shadow:
+        0 2px 8px rgba(0,0,0,.3);
+
+      overflow: hidden;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transform: scale(0.6);
+
+      opacity: 0;
+
+      animation:
+        mapPinPop .28s ease-out forwards;
+
+      animation-delay:
+        var(--pin-delay, 0ms);
+    }
+
+
+    .map-point-logo img {
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+
+      display: block;
+    }
+
+
     @keyframes mapPinPop {
 
       to {
 
         transform: scale(1);
+
         opacity: 1;
 
       }
@@ -279,11 +352,15 @@ function injectStyles() {
     @keyframes mapPopupFade {
 
       from {
+
         opacity: 0;
+
       }
 
       to {
+
         opacity: 1;
+
       }
 
     }
@@ -315,6 +392,17 @@ function injectStyles() {
 
       flex-shrink: 0;
 
+    }
+
+
+    .map-popup__header img {
+
+      width: 20px;
+      height: 20px;
+
+      object-fit: contain;
+
+      flex-shrink: 0;
     }
 
 
@@ -559,12 +647,14 @@ function initMap() {
      MAPA BASE
 
      OpenStreetMap + filtro visual claro.
-     
+
      No requiere API KEY.
      ========================================================= */
 
   L.tileLayer(
+
     'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+
     {
 
       attribution:
@@ -578,6 +668,7 @@ function initMap() {
         'mapa-base-claro'
 
     }
+
   ).addTo(map);
 
 
@@ -656,10 +747,15 @@ function updateLegend(name, count) {
 
 
   const color =
+
     (
+
       styles[name] ||
+
       pointIcons[name] ||
+
       {}
+
     ).color || '#a3c037';
 
 
@@ -692,15 +788,21 @@ function updateLegend(name, count) {
       </span>
 
       ${
+
         typeof count === 'number'
 
         ? `
+
           <span class="legend-count">
+
             ${count} elementos
+
           </span>
+
         `
 
         : ''
+
       }
 
     </div>
@@ -739,7 +841,54 @@ function makeDivIcon(layerName, delayMs) {
       : '#a3c037';
 
 
+  /* =====================================================
+     SI LA CAPA TIENE LOGO PNG
+     ===================================================== */
+
+  if (cfg && cfg.image) {
+
+    const html = `
+
+      <div
+        class="map-point-logo"
+        style="
+          --pin-delay:${delayMs}ms;
+        "
+      >
+
+        <img
+          src="${cfg.image}"
+          alt="${labels[layerName] || layerName}"
+        >
+
+      </div>
+
+    `;
+
+
+    return L.divIcon({
+
+      html,
+
+      className: '',
+
+      iconSize: [40, 40],
+
+      iconAnchor: [20, 20],
+
+      popupAnchor: [0, -20]
+
+    });
+
+  }
+
+
+  /* =====================================================
+     ICONOS SVG NORMALES
+     ===================================================== */
+
   const path =
+
     cfg
 
       ? cfg.path
@@ -797,8 +946,11 @@ function makeDivIcon(layerName, delayMs) {
    ========================================================================= */
 
 function buildPopupContent(
+
   properties,
+
   layerName
+
 ) {
 
   if (!properties) return '';
@@ -807,24 +959,42 @@ function buildPopupContent(
   const color =
 
     (
+
       styles[layerName] ||
+
       pointIcons[layerName] ||
+
       {}
+
     ).color || '#a3c037';
+
+
+  const cfg =
+    pointIcons[layerName];
 
 
   const iconPath =
 
-    pointIcons[layerName]
-      ? pointIcons[layerName].path
+    cfg
+      ? cfg.path
+      : null;
+
+
+  const iconImage =
+
+    cfg
+      ? cfg.image
       : null;
 
 
   const title =
 
     properties.nombre ||
+
     properties.Nombre ||
+
     properties.NAME ||
+
     labels[layerName];
 
 
@@ -832,17 +1002,26 @@ function buildPopupContent(
 
 
   for (
+
     const [key, val]
+
     of Object.entries(properties)
+
   ) {
+
 
     if (
 
       [
+
         'nombre',
+
         'Nombre',
+
         'NAME',
+
         'no',
+
         'N°'
 
       ].includes(key)
@@ -855,9 +1034,13 @@ function buildPopupContent(
 
 
     if (
+
       val === null ||
+
       val === undefined ||
+
       val === ''
+
     ) {
 
       continue;
@@ -868,10 +1051,15 @@ function buildPopupContent(
     const formattedKey =
 
       key
+
         .replace(/_/g, ' ')
+
         .replace(
+
           /\b\w/g,
+
           l => l.toUpperCase()
+
         );
 
 
@@ -879,18 +1067,24 @@ function buildPopupContent(
 
 
     if (
+
       typeof val === 'string' &&
+
       val.includes('@')
+
     ) {
 
       formattedVal =
+
         `<a href="mailto:${val}">${val}</a>`;
 
     }
 
+
     else if (
 
       typeof val === 'string' &&
+
       val.startsWith('http')
 
     ) {
@@ -898,11 +1092,17 @@ function buildPopupContent(
       formattedVal =
 
         `<a
+
           href="${val}"
+
           target="_blank"
+
           rel="noopener"
+
         >
+
           Ver enlace
+
         </a>`;
 
     }
@@ -911,8 +1111,11 @@ function buildPopupContent(
     rows.push(
 
       `<div>
+
         <b>${formattedKey}:</b>
+
         ${formattedVal}
+
       </div>`
 
     );
@@ -925,33 +1128,64 @@ function buildPopupContent(
     <div class="map-popup">
 
       <div
+
         class="map-popup__header"
+
         style="background:${color};"
+
       >
 
         ${
-          iconPath
+
+          iconImage
 
             ? `
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#fff"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+
+              <img
+
+                src="${iconImage}"
+
+                alt="${labels[layerName] || layerName}"
+
               >
 
-                <path d="${iconPath}"/>
-
-              </svg>
             `
 
-            : ''
+            : iconPath
+
+              ? `
+
+                <svg
+
+                  viewBox="0 0 24 24"
+
+                  fill="none"
+
+                  stroke="#fff"
+
+                  stroke-width="2"
+
+                  stroke-linecap="round"
+
+                  stroke-linejoin="round"
+
+                >
+
+                  <path d="${iconPath}"/>
+
+                </svg>
+
+              `
+
+              : ''
+
         }
 
+
         <span>
+
           ${title}
+
         </span>
 
       </div>
@@ -975,14 +1209,22 @@ function buildPopupContent(
    ========================================================================= */
 
 async function switchMap(
+
   name,
+
   btnEl
+
 ) {
 
+
   document
+
     .querySelectorAll('.tab-btn')
+
     .forEach(b =>
+
       b.classList.remove('active')
+
     );
 
 
@@ -992,16 +1234,23 @@ async function switchMap(
 
   }
 
+
   else {
 
     document
+
       .querySelectorAll('.tab-btn')
+
       .forEach(b => {
 
         if (
+
           b
+
             .getAttribute('onclick')
+
             ?.includes(`'${name}'`)
+
         ) {
 
           b.classList.add('active');
@@ -1022,6 +1271,7 @@ async function switchMap(
 
   try {
 
+
     /* =====================================================
        CARGAR GEOJSON
        ===================================================== */
@@ -1029,19 +1279,23 @@ async function switchMap(
     if (!cache[name]) {
 
       const res =
+
         await fetch(files[name]);
 
 
       if (!res.ok) {
 
         throw new Error(
+
           `HTTP ${res.status} al cargar ${files[name]}`
+
         );
 
       }
 
 
       cache[name] =
+
         await res.json();
 
     }
@@ -1073,7 +1327,9 @@ async function switchMap(
 
 
       await new Promise(
+
         r => setTimeout(r, 180)
+
       );
 
 
@@ -1104,7 +1360,10 @@ async function switchMap(
 
 
     const layerStyle =
-      styles[name] || {
+
+      styles[name] ||
+
+      {
 
         color: '#a3c037',
 
@@ -1130,7 +1389,9 @@ async function switchMap(
     const geoLayer =
 
       L.geoJSON(
+
         cache[name],
+
         {
 
           style:
@@ -1138,12 +1399,17 @@ async function switchMap(
 
 
           pointToLayer:
+
             (feature, latlng) => {
 
               const delay =
+
                 Math.min(
+
                   pointCounter * 18,
+
                   600
+
                 );
 
 
@@ -1151,39 +1417,54 @@ async function switchMap(
 
 
               return L.marker(
+
                 latlng,
+
                 {
 
                   icon:
+
                     makeDivIcon(
+
                       name,
+
                       delay
+
                     )
 
                 }
+
               );
 
             },
 
 
           onEachFeature:
+
             (feature, layer) => {
+
 
               /* =========================================
                  POPUP
                  ========================================= */
 
               const popupContent =
+
                 buildPopupContent(
+
                   feature.properties,
+
                   name
+
                 );
 
 
               if (popupContent) {
 
                 layer.bindPopup(
+
                   popupContent
+
                 );
 
               }
@@ -1196,7 +1477,9 @@ async function switchMap(
               const tooltipName =
 
                 feature.properties?.nombre ||
+
                 feature.properties?.Nombre ||
+
                 labels[name];
 
 
@@ -1205,32 +1488,42 @@ async function switchMap(
                 layer.bindTooltip(
 
                   String(
+
                     tooltipName
+
                   ),
 
                   {
+
                     direction: 'top',
 
                     sticky: true,
 
                     opacity: 0.9
+
                   }
 
                 );
 
 
                 if (
+
                   layer.getLatLng
+
                 ) {
 
                   searchIndex.push({
 
                     name:
+
                       String(
+
                         tooltipName
+
                       ),
 
                     latlng:
+
                       layer.getLatLng(),
 
                     layer
@@ -1251,10 +1544,13 @@ async function switchMap(
                 layer.on({
 
                   mouseover:
+
                     (e) => {
 
                       if (
+
                         e.target.setStyle
+
                       ) {
 
                         e.target.setStyle({
@@ -1271,11 +1567,15 @@ async function switchMap(
 
 
                   mouseout:
+
                     (e) => {
 
                       currentLayer
+
                         .resetStyle?.(
+
                           e.target
+
                         );
 
                     }
@@ -1307,6 +1607,7 @@ async function switchMap(
     ) {
 
       const clusterGroup =
+
         L.markerClusterGroup({
 
           maxClusterRadius: 45,
@@ -1317,18 +1618,23 @@ async function switchMap(
 
 
       clusterGroup.addLayer(
+
         geoLayer
+
       );
 
 
       currentLayer =
+
         clusterGroup;
 
     }
 
+
     else {
 
       currentLayer =
+
         geoLayer;
 
     }
@@ -1350,6 +1656,7 @@ async function switchMap(
       name,
 
       searchIndex.length ||
+
       cache[name]?.features?.length
 
     );
@@ -1360,14 +1667,20 @@ async function switchMap(
        ===================================================== */
 
     const bounds =
+
       geoLayer.getBounds
+
         ? geoLayer.getBounds()
+
         : null;
 
 
     if (
+
       bounds &&
+
       bounds.isValid()
+
     ) {
 
       map.flyToBounds(
@@ -1394,8 +1707,11 @@ async function switchMap(
   catch (err) {
 
     console.error(
+
       'Error al cargar la capa:',
+
       err
+
     );
 
 
@@ -1420,12 +1736,16 @@ async function switchMap(
 function setupSearch() {
 
   const mapEl =
+
     document.getElementById('map');
 
 
   if (
+
     !mapEl ||
+
     document.getElementById('map-search')
+
   ) {
 
     return;
@@ -1434,6 +1754,7 @@ function setupSearch() {
 
 
   const wrap =
+
     document.createElement('div');
 
 
@@ -1444,10 +1765,15 @@ function setupSearch() {
   wrap.innerHTML = `
 
     <input
+
       type="text"
+
       placeholder="Buscar por nombre en esta capa..."
+
       autocomplete="off"
+
     />
+
 
     <ul style="display:none;"></ul>
 
@@ -1455,7 +1781,10 @@ function setupSearch() {
 
 
   mapEl.style.position =
-    mapEl.style.position || 'relative';
+
+    mapEl.style.position ||
+
+    'relative';
 
 
   mapEl.prepend(
@@ -1464,20 +1793,28 @@ function setupSearch() {
 
 
   const input =
+
     wrap.querySelector('input');
 
 
   const list =
+
     wrap.querySelector('ul');
 
 
   input.addEventListener(
+
     'input',
+
     () => {
 
+
       const q =
+
         input.value
+
           .trim()
+
           .toLowerCase();
 
 
@@ -1499,10 +1836,15 @@ function setupSearch() {
         searchIndex
 
           .filter(
+
             it =>
+
               it.name
+
                 .toLowerCase()
+
                 .includes(q)
+
           )
 
           .slice(0, 8);
@@ -1519,9 +1861,12 @@ function setupSearch() {
 
 
       matches.forEach(
+
         m => {
 
+
           const li =
+
             document.createElement('li');
 
 
@@ -1530,27 +1875,37 @@ function setupSearch() {
 
 
           li.addEventListener(
+
             'click',
+
             () => {
+
 
               map.flyTo(
 
                 m.latlng,
 
                 Math.max(
+
                   map.getZoom(),
+
                   15
+
                 ),
 
                 {
+
                   duration: 0.6
+
                 }
 
               );
 
 
               if (
+
                 m.layer.openPopup
+
               ) {
 
                 m.layer.openPopup();
@@ -1583,11 +1938,15 @@ function setupSearch() {
 
 
   document.addEventListener(
+
     'click',
+
     (e) => {
 
       if (
+
         !wrap.contains(e.target)
+
       ) {
 
         list.style.display =
@@ -1609,8 +1968,11 @@ function setupSearch() {
 function closeSearch() {
 
   const wrap =
+
     document.getElementById(
+
       'map-search'
+
     );
 
 
@@ -1618,10 +1980,12 @@ function closeSearch() {
 
 
   const input =
+
     wrap.querySelector('input');
 
 
   const list =
+
     wrap.querySelector('ul');
 
 
@@ -1649,8 +2013,11 @@ function closeSearch() {
    ========================================================================= */
 
 document.addEventListener(
+
   'DOMContentLoaded',
+
   () => {
+
 
     /* CSS */
 
@@ -1672,19 +2039,25 @@ document.addEventListener(
        ===================================================== */
 
     const observer =
+
       new IntersectionObserver(
 
         (entries) => {
 
           entries.forEach(
+
             entry => {
 
               if (
+
                 entry.isIntersecting
+
               ) {
 
                 entry.target
+
                   .classList
+
                   .add('visible');
 
               }
@@ -1696,17 +2069,24 @@ document.addEventListener(
         },
 
         {
+
           threshold: 0.15
+
         }
 
       );
 
 
     document
+
       .querySelectorAll('.fade-in')
+
       .forEach(
+
         el =>
+
           observer.observe(el)
+
       );
 
 
@@ -1715,19 +2095,29 @@ document.addEventListener(
        ===================================================== */
 
     document
+
       .querySelector('.hamburger')
+
       ?.addEventListener(
+
         'click',
+
         () => {
 
           document
+
             .querySelector('.nav-links')
+
             ?.classList
+
             .toggle(
+
               'mobile-open'
+
             );
 
         }
+
       );
 
 
@@ -1736,8 +2126,11 @@ document.addEventListener(
        ===================================================== */
 
     switchMap(
+
       'Biblioteca'
+
     );
 
   }
+
 );

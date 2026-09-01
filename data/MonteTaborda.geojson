@@ -1,0 +1,13 @@
+{
+  "type": "Feature",
+  "properties": {
+    "nombre": "Monte Taborda"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -74.1634293,
+      4.5493727
+    ]
+  }
+}
