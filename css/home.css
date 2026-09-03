@@ -997,3 +997,820 @@
     min-height: 350px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =============================================================
+   VIDEO / TRAILER
+   ============================================================= */
+
+.clase-video {
+  position: relative;
+
+  padding: clamp(5rem, 9vw, 9rem) 6%;
+
+  background: #fafbf9;
+
+  overflow: hidden;
+}
+
+
+/* =============================================================
+   CONTENEDOR
+   ============================================================= */
+
+.clase-section-inner {
+  width: min(1180px, 100%);
+
+  margin: 0 auto;
+}
+
+
+/* =============================================================
+   HEADER
+   ============================================================= */
+
+.video-header {
+  max-width: 760px;
+
+  margin-bottom: 3rem;
+}
+
+
+.clase-section-label {
+  margin-bottom: 1.2rem;
+
+  color: var(--pink);
+
+  font-size: .7rem;
+
+  font-weight: 700;
+
+  letter-spacing: .12em;
+
+  text-transform: uppercase;
+}
+
+
+.clase-section-title {
+  margin: 0;
+
+  color: #1d2523;
+
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+
+  font-weight: 500;
+
+  line-height: .98;
+
+  letter-spacing: -.055em;
+}
+
+
+.clase-section-title span {
+  color: var(--pink);
+
+  font-weight: 400;
+}
+
+
+.video-description {
+  max-width: 600px;
+
+  margin: 1.5rem 0 0;
+
+  color: #68736f;
+
+  font-size: clamp(1rem, 1.4vw, 1.1rem);
+
+  line-height: 1.75;
+}
+
+
+.video-description strong {
+  color: #394541;
+
+  font-weight: 600;
+}
+
+
+/* =============================================================
+   VIDEO
+   ============================================================= */
+
+.video-wrapper {
+  position: relative;
+
+  width: 100%;
+}
+
+
+/* Marco */
+
+.video-frame {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: #151918;
+
+  box-shadow:
+    0 25px 70px rgba(20, 35, 30, .14),
+    0 5px 20px rgba(20, 35, 30, .08);
+}
+
+
+/* Borde interior */
+
+.video-frame::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border: 1px solid rgba(255,255,255,.12);
+
+  border-radius: inherit;
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+
+/* Iframe */
+
+.video-frame iframe {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  border: 0;
+}
+
+
+/* =============================================================
+   META DEL VIDEO
+   ============================================================= */
+
+.video-meta {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  padding: 1.1rem .25rem 0;
+
+  color: #89938f;
+
+  font-size: .7rem;
+
+  letter-spacing: .04em;
+}
+
+
+.video-meta-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: .65rem;
+}
+
+
+.video-status {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--pink);
+
+  box-shadow:
+    0 0 0 4px rgba(255, 105, 150, .1);
+}
+
+
+.video-duration {
+  color: #a0aaa6;
+
+  text-transform: uppercase;
+
+  letter-spacing: .1em;
+}
+
+
+/* =============================================================
+   HOVER
+   ============================================================= */
+
+.video-frame {
+  transition:
+    transform .5s cubic-bezier(.2,.7,.2,1),
+    box-shadow .5s ease;
+}
+
+
+.video-wrapper:hover .video-frame {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 30px 80px rgba(20, 35, 30, .18),
+    0 8px 25px rgba(20, 35, 30, .1);
+}
+
+
+/* =============================================================
+   RESPONSIVE
+   ============================================================= */
+
+@media (max-width: 700px) {
+
+  .clase-video {
+    padding: 5rem 6%;
+  }
+
+
+  .video-header {
+    margin-bottom: 2rem;
+  }
+
+
+  .clase-section-title {
+    font-size: clamp(2.7rem, 12vw, 4rem);
+
+    line-height: 1;
+  }
+
+
+  .video-description {
+    margin-top: 1.25rem;
+
+    font-size: .95rem;
+
+    line-height: 1.7;
+  }
+
+
+  .video-frame {
+    border-radius: 16px;
+
+    box-shadow:
+      0 15px 40px rgba(20, 35, 30, .12);
+  }
+
+
+  .video-meta {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: .5rem;
+
+    padding-top: 1rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =============================================================
+   CONTACTO
+   ============================================================= */
+
+.contacto {
+  position: relative;
+  overflow: hidden;
+
+  padding: clamp(5rem, 9vw, 8rem) 6%;
+
+  background: #f4f6f3;
+}
+
+
+/* CONTENEDOR */
+
+.contacto-container {
+  width: min(1200px, 100%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  align-items: center;
+
+  gap: clamp(3rem, 7vw, 7rem);
+}
+
+
+/* =============================================================
+   IMAGEN
+   ============================================================= */
+
+.contacto-image {
+  position: relative;
+
+  height: clamp(420px, 48vw, 600px);
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: #dfe5df;
+}
+
+
+.contacto-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.8s cubic-bezier(.2,.7,.2,1);
+}
+
+
+.contacto-image:hover img {
+  transform: scale(1.035);
+}
+
+
+/* Degradado sobre imagen */
+
+.contacto-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(10, 30, 27, 0.55),
+      transparent 45%
+    );
+
+  pointer-events: none;
+}
+
+
+/* Texto sobre fotografía */
+
+.contacto-image-caption {
+  position: absolute;
+
+  left: 1.5rem;
+  bottom: 1.5rem;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.65rem;
+
+  padding: 0.6rem 0.9rem;
+
+  border: 1px solid rgba(255,255,255,.25);
+
+  border-radius: 999px;
+
+  background: rgba(10,30,27,.35);
+
+  color: white;
+
+  font-size: 0.72rem;
+
+  font-weight: 500;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+
+  backdrop-filter: blur(10px);
+}
+
+
+.contacto-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #b8e6b5;
+
+  box-shadow:
+    0 0 0 4px rgba(184,230,181,.15);
+}
+
+
+/* =============================================================
+   CONTENIDO
+   ============================================================= */
+
+.contacto-content {
+  max-width: 620px;
+}
+
+
+/* LABEL */
+
+.contacto-label {
+  display: inline-block;
+
+  margin-bottom: 1.5rem;
+
+  color: var(--green);
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: .12em;
+
+  text-transform: uppercase;
+}
+
+
+/* TÍTULO */
+
+.contacto-title {
+  margin: 0;
+
+  color: #182522;
+
+  font-size: clamp(2.8rem, 5vw, 5.2rem);
+
+  font-weight: 500;
+
+  line-height: .98;
+
+  letter-spacing: -.055em;
+}
+
+
+.contacto-title span {
+  display: block;
+
+  margin-top: .12em;
+
+  color: #60706b;
+
+  font-weight: 400;
+}
+
+
+/* TEXTO */
+
+.contacto-text {
+  max-width: 560px;
+
+  margin: 2rem 0 0;
+
+  color: #52615d;
+
+  font-size: clamp(1rem, 1.4vw, 1.12rem);
+
+  line-height: 1.8;
+}
+
+
+.contacto-text strong {
+  color: #263733;
+
+  font-weight: 650;
+}
+
+
+/* =============================================================
+   WHATSAPP
+   ============================================================= */
+
+.contacto-actions {
+  margin-top: 2.3rem;
+}
+
+
+.contacto-whatsapp {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: .8rem;
+
+  min-height: 56px;
+
+  padding: 0 1.35rem;
+
+  border-radius: 999px;
+
+  background: #193d37;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: .88rem;
+
+  font-weight: 600;
+
+  box-shadow:
+    0 10px 25px rgba(25,61,55,.15);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    background .25s ease;
+}
+
+
+.contacto-whatsapp:hover {
+  transform: translateY(-3px);
+
+  background: #24534b;
+
+  box-shadow:
+    0 15px 35px rgba(25,61,55,.22);
+}
+
+
+.whatsapp-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+.contacto-arrow {
+  margin-left: .3rem;
+
+  font-size: 1.15rem;
+
+  transition: transform .25s ease;
+}
+
+
+.contacto-whatsapp:hover .contacto-arrow {
+  transform: translateX(4px);
+}
+
+
+/* =============================================================
+   META
+   ============================================================= */
+
+.contacto-meta {
+  margin-top: 3rem;
+
+  padding-top: 1.3rem;
+
+  border-top: 1px solid rgba(30,50,45,.12);
+
+  color: #89938f;
+
+  font-size: .64rem;
+
+  font-weight: 600;
+
+  letter-spacing: .1em;
+
+  text-transform: uppercase;
+}
+
+
+/* =============================================================
+   RESPONSIVE
+   ============================================================= */
+
+@media (max-width: 900px) {
+
+  .contacto-container {
+    grid-template-columns: 1fr;
+
+    gap: 3.5rem;
+  }
+
+  .contacto-image {
+    height: 420px;
+
+    max-width: 700px;
+
+    width: 100%;
+
+    margin: 0 auto;
+  }
+
+  .contacto-content {
+    max-width: 700px;
+
+    margin: 0 auto;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .contacto {
+    padding: 4.5rem 6%;
+  }
+
+  .contacto-image {
+    height: 330px;
+
+    border-radius: 18px;
+  }
+
+  .contacto-image-caption {
+    left: 1rem;
+    bottom: 1rem;
+  }
+
+  .contacto-title {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+
+    letter-spacing: -.045em;
+  }
+
+  .contacto-text {
+    margin-top: 1.5rem;
+
+    font-size: .95rem;
+
+    line-height: 1.7;
+  }
+
+  .contacto-whatsapp {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .contacto-meta {
+    line-height: 1.7;
+  }
+
+}
