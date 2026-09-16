@@ -32,7 +32,7 @@ const files = {
   Sin_lucro:       'data/Sin_lucro.geojson',
   Recreacionales:  'data/Recreacionales.geojson',
   Techo_Verde:     'data/Techo_Verde.geojson',
-  monteTaborda:    'data/monteTaborda.geojson'
+  monteTaborda:    'data/MonteTaborda.geojson'
 
 };
 
@@ -144,7 +144,7 @@ const pointIcons = {
 
   monteTaborda: {
     color: '#e67e22',
-    image: 'assets/img/logo.svg'
+    image: '../assets/img/logo.svg'
   }
 
 };
