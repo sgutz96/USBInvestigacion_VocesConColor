@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Clase 03 — La palabra que nace</title>
+
+  <link rel="shortcut icon" href="../assets/img/logo.svg" type="image/x-icon">
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS DEL PROYECTO -->
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/clase.css">
+
+  <!-- BOOTSTRAP -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- ESTILOS ADICIONALES PARA LA PLANIFICACIÓN -->
+  <style>
+    .momento-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      margin-bottom: 1.5rem;
+      border-left: 5px solid var(--green, #a3c037);
+      transition: transform 0.3s ease;
+    }
+    .momento-card:hover {
+      transform: translateY(-3px);
+    }
+    .momento-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .momento-badge {
+      background: rgba(163, 192, 55, 0.15);
+      color: var(--green, #a3c037);
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    .momento-time {
+      font-weight: 700;
+      color: #6c757d;
+    }
+    .materiales-tag {
+      display: inline-block;
+      background: #f8f9fa;
+      border: 1px solid #dee2e6;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      margin-right: 0.5rem;
+      margin-top: 0.5rem;
+      color: #495057;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+  <nav>
+    <a href="../index.html" class="nav-logo">
+      <img
+        class="nav-logo-icon"
+        src="../assets/img/logo.svg"
+        alt="Infancia que Resiste logo"
+      >
+      <div class="nav-brand">
+        Infancia que<br>
+        <span>Resiste</span>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="../index.html#about">Proyecto</a></li>
+      <li><a href="../secciones.html">Secciones</a></li>
+      <li><a href="../index.html#podcast">Podcast</a></li>
+      <li><a href="../index.html#mapa">Mapa</a></li>
+      <li><a href="../index.html#contacto">Contacto</a></li>
+    </ul>
+
+    <button class="hamburger" type="button" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- =====================================================
+       HERO + CARRUSEL
+       ===================================================== -->
+  <section class="clase-hero">
+    <div class="clase-hero-bg">
+      <div
+        id="claseCarousel"
+        class="carousel slide h-100"
+        data-bs-ride="carousel"
+        data-bs-interval="5000"
+      >
+        <!-- INDICADORES -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#claseCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Imagen 1"></button>
+          <button type="button" data-bs-target="#claseCarousel" data-bs-slide-to="1" aria-label="Imagen 2"></button>
+          <button type="button" data-bs-target="#claseCarousel" data-bs-slide-to="2" aria-label="Imagen 3"></button>
+        </div>
+
+        <!-- IMÁGENES -->
+        <div class="carousel-inner h-100">
+          <div class="carousel-item active h-100">
+            <img src="../assets/fotos/Horizontal/Foto_0.jpeg" alt="La palabra que nace - Foto 1">
+          </div>
+          <div class="carousel-item h-100">
+            <img src="../assets/fotos/Horizontal/Foto_1.png" alt="La palabra que nace - Foto 2">
+          </div>
+          <div class="carousel-item h-100">
+            <img src="../assets/fotos/Horizontal/Foto_2.png" alt="La palabra que nace - Foto 3">
+          </div>
+        </div>
+
+        <!-- ANTERIOR / SIGUIENTE -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#claseCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#claseCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+      <div class="clase-hero-overlay"></div>
+    </div>
+
+    <!-- CONTENIDO -->
+    <div class="clase-hero-content">
+      <a href="../secciones.html" class="back-link">
+        ← Volver a Secciones
+      </a>
+      <div class="clase-number-badge">
+        Clase 03
+      </div>
+      <h1 class="clase-hero-title">
+        La palabra que nace
+      </h1>
+      <p class="clase-hero-subtitle">
+        Contar lo que vivimos · Mi lugar en el territorio
+      </p>
+      <div class="clase-tags">
+        <span class="clase-tag tag-artes">Territorio</span>
+        <span class="clase-tag" style="background: rgba(255,255,255,0.2); color: #fff;">Exploración del medio</span>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Explorar</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M12 5v14M5 12l7 7 7-7" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       SOBRE LA SECCIÓN (JUSTIFICACIÓN Y ENFOQUE)
+       ===================================================== -->
+  <section class="clase-about fade-in">
+    <div class="clase-section-inner">
+      <div class="clase-section-label" style="color:var(--green)">
+        Sobre esta sección
+      </div>
+
+      <div class="clase-about-grid">
+        <div class="clase-about-text">
+          <h2 class="clase-section-title">
+            ¿Qué <span>exploramos</span> aquí?
+          </h2>
+          <p>
+            Esta actividad se fundamenta en la comprensión del territorio como una construcción social, cultural y afectiva que adquiere significado a través de las experiencias cotidianas de quienes lo habitan.
+          </p>
+          <p>
+            A través de la exploración, la observación, el diálogo y la representación artística colectiva, reconocemos a los niños y niñas como sujetos activos capaces de interpretar, narrar y resignificar los espacios significativos de su barrio.
+          </p>
+        </div>
+
+        <div class="clase-about-stats">
+          <div class="stat-card">
+            <span class="stat-icon">🎨</span>
+            <strong>Crear</strong>
+            <span>Expresión visual y artística</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">🔍</span>
+            <strong>Explorar</strong>
+            <span>Búsqueda de tesoros</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">💬</span>
+            <strong>Narrar</strong>
+            <span>Círculo de la palabra</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">🤝</span>
+            <strong>Tejer</strong>
+            <span>Construcción colectiva</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       OBJETIVOS
+       ===================================================== -->
+  <section class="clase-objetivos fade-in" style="background: #f9fbf7;">
+    <div class="clase-section-inner">
+      <div class="clase-section-label">Propósito</div>
+      <h2 class="clase-section-title">
+        Objetivos de <span>la actividad</span>
+      </h2>
+
+      <p style="margin-bottom: 2rem; font-weight: 500;">
+        <strong>Objetivo General:</strong> Favorecer la construcción de relatos sobre el territorio a partir de la exploración, la observación, el diálogo y la representación artística de lugares, personas y experiencias significativas, fortaleciendo el reconocimiento del barrio como un espacio de cuidado y encuentro comunitario.
+      </p>
+
+      <div class="objetivos-grid">
+        <div class="objetivo-item">
+          <div class="objetivo-num">1</div>
+          <p>Promover la expresión de experiencias, recuerdos y conocimientos previos mediante el círculo de la palabra y la interacción con imágenes del contexto cercano.</p>
+        </div>
+        <div class="objetivo-item">
+          <div class="objetivo-num">2</div>
+          <p>Favorecer la exploración del entorno a través de la búsqueda de tesoros, fortaleciendo la observación y la curiosidad sobre los espacios habitados.</p>
+        </div>
+        <div class="objetivo-item">
+          <div class="objetivo-num">3</div>
+          <p>Propiciar experiencias artísticas y colaborativas que permitan representar lugares, personas y prácticas de cuidado presentes en la vida cotidiana.</p>
+        </div>
+        <div class="objetivo-item">
+          <div class="objetivo-num">4</div>
+          <p>Documentar relatos, expresiones e interpretaciones infantiles sobre el barrio como insumo fundamental para el proceso investigativo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       FICHA TÉCNICA
+       ===================================================== -->
+  <section class="clase-ficha fade-in">
+    <div class="clase-section-inner">
+      <div class="clase-section-label">Planificación</div>
+      <h2 class="clase-section-title">
+        Ficha <span>técnica</span>
+      </h2>
+
+      <div class="ficha-grid">
+        <div class="ficha-item">
+          <span class="ficha-icon">⏱️</span>
+          <span class="ficha-label">Duración</span>
+          <span class="ficha-value">60 minutos</span>
+        </div>
+        <div class="ficha-item">
+          <span class="ficha-icon">🎈</span>
+          <span class="ficha-label">Población dirigida</span>
+          <span class="ficha-value">Madres y niños de 3 a 6 años</span>
+        </div>
+        <div class="ficha-item">
+          <span class="ficha-icon">👥</span>
+          <span class="ficha-label">Escenario</span>
+          <span class="ficha-value">Comedor Samaritanos del Padre Pío</span>
+        </div>
+        <div class="ficha-item">
+          <span class="ficha-icon">📍</span>
+          <span class="ficha-label">Estrategia</span>
+          <span class="ficha-value">Exploración del medio y arte</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       MOMENTOS DE LA PLANEACIÓN (CONTENIDO DETALLADO)
+       ===================================================== -->
+  <section class="clase-about fade-in" style="background: #fff;">
+    <div class="clase-section-inner">
+      <div class="clase-section-label" style="color:var(--orange)">Paso a paso</div>
+      <h2 class="clase-section-title">
+        Momentos de <span>la planeación</span>
+      </h2>
+      <p style="margin-bottom: 2.5rem;">Desarrollo metodológico detallado para la sesión de trabajo con la comunidad.</p>
+
+      <!-- Momento 1 -->
+      <div class="momento-card">
+        <div class="momento-header">
+          <span class="momento-badge">1. Inicio</span>
+          <span class="momento-time">⏱️ 5 minutos</span>
+        </div>
+        <h4 style="font-weight: 700; margin-bottom: 0.75rem;">Bienvenida consciente</h4>
+        <p>Las maestras reciben a cada niño y niña nombrándolo y poniéndose a su altura. Se ofrecen diferentes opciones de saludo (choque de manos, saludo con movimiento corporal, saludo inventado o canción corta). Cada participante elige cómo desea ser recibido.</p>
+        <div>
+          <span class="materiales-tag">Tarjetas de saludo</span>
+          <span class="materiales-tag">Manta o tapete</span>
+        </div>
+      </div>
+
+      <!-- Momento 2 -->
+      <div class="momento-card">
+        <div class="momento-header">
+          <span class="momento-badge">2. Inicio / Círculo</span>
+          <span class="momento-time">⏱️ 10 minutos</span>
+        </div>
+        <h4 style="font-weight: 700; margin-bottom: 0.75rem;">Círculo de la palabra</h4>
+        <p>Los niños y niñas se ubican en círculo. El grupo elige el instrumento de la palabra que acompañará la sesión. Se favorece la expresión mediante palabras, gestos o movimientos a partir de preguntas orientadoras:</p>
+        <ul style="margin-top: 0.5rem; margin-bottom: 1rem; padding-left: 1.2rem;">
+          <li>¿Cómo llegó tu cuerpo hoy? ¿Qué te hizo sonreír esta mañana?</li>
+          <li>¿Cuál es tu lugar favorito del barrio? ¿Qué lugar te gusta visitar con tu familia?</li>
+          <li>¿Hay algún lugar donde te gusta jugar?</li>
+        </ul>
+        <div>
+          <span class="materiales-tag">Instrumentos musicales</span>
+          <span class="materiales-tag">Tarjeta orientadora</span>
+        </div>
+      </div>
+
+      <!-- Momento 3 -->
+      <div class="momento-card">
+        <div class="momento-header">
+          <span class="momento-badge">3. Desarrollo</span>
+          <span class="momento-time">⏱️ 15 minutos</span>
+        </div>
+        <h4 style="font-weight: 700; margin-bottom: 0.75rem;">Exploradores de tesoros</h4>
+        <p>Después del círculo, cada niño recibe una pequeña bolsa para convertirse en explorador. Las maestras invitan al grupo a realizar una caminata por diferentes espacios del comedor en búsqueda de tesoros previamente ubicados (hojas, piedras, tapas de colores, cintas, semillas y pequeños objetos naturales, fotos del territorio, elementos de la vida cotidiana). Cada participante guarda sus hallazgos y comparte qué le llamó la atención.</p>
+        <div>
+          <span class="materiales-tag">Bolsas de papel o tela</span>
+          <span class="materiales-tag">Hojas y piedras</span>
+          <span class="materiales-tag">Semillas y tapas de colores</span>
+        </div>
+      </div>
+
+      <!-- Momento 4 -->
+      <div class="momento-card">
+        <div class="momento-header">
+          <span class="momento-badge">4. Desarrollo</span>
+          <span class="momento-time">⏱️ 15 minutos</span>
+        </div>
+        <h4 style="font-weight: 700; margin-bottom: 0.75rem;">Diálogo con imágenes del territorio</h4>
+        <p>El grupo regresa al círculo y observa los tesoros encontrados junto con las fotografías de lugares representativos del territorio: escuela, tienda, parque, comedor comunitario, MetroCable, cancha, entre otros. Cada niño muestra su hallazgo y conversamos mediante preguntas guía: <em>¿Qué lugar es este? ¿Cómo se llama? ¿Quién ha estado allí? ¿Qué hacemos en este lugar? ¿Por qué es importante?</em></p>
+        <div>
+          <span class="materiales-tag">Imágenes impresas del barrio</span>
+          <span class="materiales-tag">Tesoros recolectados</span>
+        </div>
+      </div>
+
+      <!-- Momento 5 -->
+      <div class="momento-card">
+        <div class="momento-header">
+          <span class="momento-badge">5. Desarrollo</span>
+          <span class="momento-time">⏱️ 25 minutos</span>
+        </div>
+        <h4 style="font-weight: 700; margin-bottom: 0.75rem;">Construimos el mapa de nuestras historias</h4>
+        <p>Sobre un gran pliego de papel kraft, los niños elaboran una representación colectiva del barrio utilizando los tesoros encontrados y los materiales del proyecto. Incorporan casitas, módulos creativos, muñecos, frutas, verduras y otros elementos para construir lugares significativos. Las maestras acompañan con preguntas abiertas: <em>¿Quién vive aquí? ¿Qué ocurre en este lugar? ¿Cómo cuidan este espacio?</em></p>
+        <div>
+          <span class="materiales-tag">Papel kraft</span>
+          <span class="materiales-tag">Casitas y módulos creativos</span>
+          <span class="materiales-tag">Muñecos y títeres</span>
+          <span class="materiales-tag">Pintura y pinceles</span>
+        </div>
+      </div>
+
+      <!-- Momento 6 -->
+      <div class="momento-card">
+        <div class="momento-header">
+          <span class="momento-badge">6. Cierre</span>
+          <span class="momento-time">⏱️ 10 - 15 minutos</span>
+        </div>
+        <h4 style="font-weight: 700; margin-bottom: 0.75rem;">Galería de historias y socialización</h4>
+        <p>El grupo observa la creación colectiva. Cada niño elige un lugar del mapa y comparte: <em>“Me gusta este lugar porque…”, “Aquí podemos…”, “Aquí me cuidan cuando…”</em>. Las maestras recuperan y documentan las voces infantiles. Para finalizar, cada participante deposita uno de sus tesoros en una canasta común y se despide el espacio mediante una ronda musical breve.</p>
+        <div>
+          <span class="materiales-tag">Mapa colectivo</span>
+          <span class="materiales-tag">Canasta de tesoros</span>
+          <span class="materiales-tag">Instrumentos musicales</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================
+       MATERIAL DE APOYO
+       ===================================================== -->
+  <section class="clase-material fade-in" style="background: #f9fbf7;">
+    <div class="clase-section-inner">
+      <div class="clase-section-label" style="color:var(--orange)">Recursos</div>
+      <h2 class="clase-section-title">
+        Material de <span style="color:var(--orange)">apoyo</span>
+      </h2>
+
+      <div class="material-grid">
+        <a href="../material/Sesión_3_Exploradores.docx" download class="material-card">
+          <div class="material-icon" style="background:rgba(163,192,55,0.15); color:var(--green)">📄</div>
+          <div class="material-info">
+            <strong>Guía de la clase</strong>
+            <span>PDF · Descargable</span>
+          </div>
+          <div class="material-arrow">↓</div>
+        </a>    
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       NAVEGACIÓN ENTRE CLASES
+       ===================================================== -->
+  <section class="clase-nav-section fade-in">
+    <div class="clase-section-inner">
+      <div class="clase-nav-links">
+        <a href="./02-asi-se-siente-mi-mundo.html" class="clase-nav-prev">
+          <span class="clase-nav-dir">← Anterior</span>
+          <span class="clase-nav-name">Clase 02 · Así se siente mi mundo</span>
+        </a>
+
+        <a href="../secciones.html" class="clase-nav-all">
+          Ver todas las clases
+        </a>
+
+        <a href="./04-jugamos-a-cuidarnos.html" class="clase-nav-next">
+          <span class="clase-nav-dir">Siguiente →</span>
+          <span class="clase-nav-name">Clase 04 · Jugamos a cuidarnos</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+  <footer>
+    <div class="footer-brand">
+      <h4>Infancia que Resiste</h4>
+      <p>
+        Un proyecto de la Universidad de San Buenaventura
+        para fortalecer entornos protectores en Ciudad Bolívar
+        a través del arte, la multimedia y la educación para la paz.
+      </p>
+      <span class="tagline">✦ Sentir es crear</span>
+    </div>
+
+    <div class="footer-col">
+      <h5>Secciones</h5>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../secciones.html">Clases</a></li>
+        <li><a href="../index.html#equipo">Equipo</a></li>
+        <li><a href="../index.html#podcast">Podcast</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Contacto</h5>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Correo</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="footer-bottom">
+    © 2025 Infancia que Resiste · Universidad de San Buenaventura — Todos los derechos reservados
+  </div>
+
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach((element) => observer.observe(element));
+
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+    }
+
+    const carouselElement = document.getElementById('claseCarousel');
+    if (carouselElement) {
+      new bootstrap.Carousel(carouselElement, {
+        interval: 5000,
+        ride: 'carousel',
+        pause: 'hover',
+        touch: true,
+        wrap: true
+      });
+    }
+  </script>
+
+</body>
+</html>
