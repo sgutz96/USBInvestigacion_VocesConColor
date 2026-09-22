@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Misión y Visión</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- ===== MISIÓN / VISIÓN ===== -->
+  <section class="mission-vision">
+    <div class="mv-card mission fade-in">
+      <img class="mv-icon" src="images/mision-placeholder.png" alt="Misión">
+      <h3>Misión</h3>
+      <p>
+        Diseñar e implementar una estrategia pedagógica interdisciplinar con enfoque de derechos,
+        que utilice el arte, la creatividad y la multimedia para construir entornos protectores
+        que fomenten la participación, la expresión libre y la educación para la paz en niñas,
+        niños y adolescentes de Ciudad Bolívar.
+      </p>
+    </div>
+    <div class="mv-card vision fade-in">
+      <img class="mv-icon" src="images/vision-placeholder.png" alt="Visión">
+      <h3>Visión</h3>
+      <p>
+        Para los próximos años, <em>Infancia que Resiste</em> se proyecta como un referente comunitario
+        en la creación de entornos protectores que integren educación, territorio y tecnología.
+        Un modelo replicable donde la multimedia sea el puente entre la memoria del barrio,
+        la participación juvenil y la proyección digital del territorio.
+      </p>
+    </div>
+  </section>
+
+  <script>
+    // Activa las animaciones fade-in de global.css al hacer scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
