@@ -1,0 +1,104 @@
+{
+  "investigadores": [
+    {
+      "nombre": "Catalina Carrero Bernal",
+      "rol": "Investigadora principal",
+      "facultad": "Facultad de Humanidades y Ciencias de la Educación",
+      "detalle": "Licenciatura en Educación Infantil · Grupo TAEPE",
+      "color": "green"
+    },
+    {
+      "nombre": "Aura Rocío Ramírez",
+      "rol": "Coinvestigadora",
+      "facultad": "Facultad de Psicología",
+      "detalle": "Neuropsicología · Grupo TAEPE",
+      "color": "blue"
+    },
+    {
+      "nombre": "Juan Sebastián Gutiérrez Alvarado",
+      "rol": "Coinvestigador",
+      "facultad": "Ingeniería en Multimedia",
+      "detalle": "Grupo Solsytec",
+      "color": "orange"
+    },
+    {
+      "nombre": "Nubia Stella Lara Yepes",
+      "rol": "Investigadora aliada",
+      "facultad": "FICONPAZ",
+      "detalle": "Investigadora externa",
+      "color": "purple"
+    }
+  ],
+  "jovenes": [
+    {
+      "nombre": "Paula Andrea Sánchez Vera",
+      "rol": "Joven investigadora",
+      "facultad": "Licenciatura en Filosofía · Facultad de Humanidades y Ciencias de la Educación",
+      "detalle": "Semillero Paideia",
+      "color": "yellow"
+    },
+    {
+      "nombre": "Diana Sofía López Grillo",
+      "rol": "Joven investigadora",
+      "facultad": "Relaciones Internacionales · Facultad de Ciencias Jurídicas y Políticas",
+      "detalle": "Semillero Conflicto, memoria y construcción de paz",
+      "color": "yellow"
+    }
+  ],
+  "semilleros": [
+    {
+      "nombre": "Conflicto, memoria y construcción de paz",
+      "descripcion": "",
+      "facultad": "Facultad de Ciencias Jurídicas y Políticas",
+      "color": "pink",
+      "semilleristas": [
+        "Angel David Guachavez Arenilla",
+        "Angie Valentina Brand Almanza"
+      ]
+    },
+    {
+      "nombre": "Anatolia",
+      "descripcion": "",
+      "facultad": "Facultad de Humanidades y Ciencias de la Educación",
+      "tutorRol": "Tutora",
+      "tutor": "Marta Patricia Mejía Pachón",
+      "color": "blue",
+      "semilleristas": [
+        "Luisa Fernanda Julio Ricardo"
+      ]
+    },
+    {
+      "nombre": "COLJUGARTE",
+      "descripcion": "(Cultura, juego y arte)",
+      "facultad": "Facultad de Humanidades y Ciencias de la Educación",
+      "tutorRol": "Tutora",
+      "tutor": "María Isabel Plata Rosas",
+      "color": "orange",
+      "semilleristas": [
+        "Liseth Sofía Lara Lara"
+      ]
+    },
+    {
+      "nombre": "Paideia",
+      "descripcion": "",
+      "facultad": "Facultad de Humanidades y Ciencias de la Educación",
+      "tutorRol": "Tutora",
+      "tutor": "Catalina Carrero Bernal",
+      "color": "green",
+      "semilleristas": [
+        "Paula Andrea Sánchez Vera"
+      ]
+    },
+    {
+      "nombre": "StoryLab",
+      "descripcion": "",
+      "facultad": "Ingeniería en Multimedia",
+      "tutorRol": "Tutor",
+      "tutor": "Juan Sebastián Gutiérrez Alvarado",
+      "color": "purple",
+      "semilleristas": [
+        "Laura Vanessa Barrero Ardila"
+      ]
+    }
+  ]
+}
