@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Taller 03 — Cuidarme no es un lujo</title>
+
+  <link rel="shortcut icon" href="../assets/img/logo.svg" type="image/x-icon">
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS DEL PROYECTO -->
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/clase.css">
+
+  <!-- BOOTSTRAP -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- ESTILOS DE LA PÁGINA -->
+  <style>
+    /* Momentos de la sesión */
+    .momento-block { border-left: 4px solid var(--orange); padding: 4px 0 4px 24px; margin-top: 40px; }
+    .momento-block:nth-child(3n+2) { border-left-color: var(--green); }
+    .momento-block:nth-child(3n+3) { border-left-color: var(--blue); }
+    .momento-time { font-weight: 900; text-transform: uppercase; letter-spacing: .08em; font-size: .8rem; opacity: .75; }
+    .momento-title { font-weight: 900; font-size: 1.5rem; margin: 4px 0 14px; }
+    .momento-block p, .momento-list li { line-height: 1.7; }
+    .momento-sub { font-weight: 700; margin: 22px 0 8px; }
+    .momento-list { padding-left: 1.2rem; }
+    .momento-mats { margin-top: 14px; font-size: .92rem; opacity: .85; }
+    .refs-list { padding-left: 1.2rem; font-size: .9rem; line-height: 1.6; }
+    .refs-list li { margin-bottom: 8px; word-break: break-word; }
+    details.refs summary { cursor: pointer; font-weight: 700; margin-bottom: 14px; }
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <nav>
+
+    <a href="../index.html" class="nav-logo">
+
+      <img
+        class="nav-logo-icon"
+        src="../assets/img/logo.svg"
+        alt="Infancia que Resiste logo"
+      >
+
+      <div class="nav-brand">
+        Infancia que<br>
+        <span>Resiste</span>
+      </div>
+
+    </a>
+
+
+    <ul class="nav-links">
+
+      <li>
+        <a href="../index.html#about">
+          Proyecto
+        </a>
+      </li>
+
+      <li>
+        <a href="../secciones.html">
+          Secciones
+        </a>
+      </li>
+
+      <li>
+        <a href="../index.html#podcast">
+          Podcast
+        </a>
+      </li>
+
+      <li>
+        <a href="../index.html#mapa">
+          Mapa
+        </a>
+      </li>
+
+      <li>
+        <a href="../index.html#contacto">
+          Contacto
+        </a>
+      </li>
+
+    </ul>
+
+
+    <button
+      class="hamburger"
+      type="button"
+      aria-label="Abrir menú"
+    >
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+  </nav>
+
+
+
+  <!-- =====================================================
+       HERO + CARRUSEL
+       ===================================================== -->
+
+  <section class="clase-hero">
+
+    <div class="clase-hero-bg">
+
+      <div
+        id="claseCarousel"
+        class="carousel slide h-100"
+        data-bs-ride="carousel"
+        data-bs-interval="5000"
+      >
+
+        <div class="carousel-indicators">
+
+          <button
+            type="button"
+            data-bs-target="#claseCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Imagen 1"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#claseCarousel"
+            data-bs-slide-to="1"
+            aria-label="Imagen 2"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#claseCarousel"
+            data-bs-slide-to="2"
+            aria-label="Imagen 3"
+          ></button>
+
+        </div>
+
+
+        <div class="carousel-inner h-100">
+
+          <div class="carousel-item active h-100">
+            <img
+              src="../assets/fotos/Talleres/Taller_03_Foto_0.jpg"
+              alt="Cuidarme no es un lujo - Foto 1"
+            >
+          </div>
+
+          <div class="carousel-item h-100">
+            <img
+              src="../assets/fotos/Talleres/Taller_03_Foto_1.jpg"
+              alt="Cuidarme no es un lujo - Foto 2"
+            >
+          </div>
+
+          <div class="carousel-item h-100">
+            <img
+              src="../assets/fotos/Talleres/Taller_03_Foto_2.jpg"
+              alt="Cuidarme no es un lujo - Foto 3"
+            >
+          </div>
+
+        </div>
+
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#claseCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#claseCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+
+      </div>
+
+      <div class="clase-hero-overlay"></div>
+
+    </div>
+
+
+    <div class="clase-hero-content">
+
+      <a href="../secciones.html" class="back-link">
+        ← Volver a Secciones
+      </a>
+
+      <div class="clase-number-badge">
+        Taller 03
+      </div>
+
+      <h1 class="clase-hero-title">
+        Cuidarme no es un lujo
+      </h1>
+
+      <p class="clase-hero-subtitle">
+        Resignificar el autocuidado como necesidad legítima
+      </p>
+
+      <div class="clase-tags">
+        <span class="clase-tag tag-artes">
+          Resignificación de creencias
+        </span>
+      </div>
+
+    </div>
+
+
+    <div class="scroll-hint">
+
+      <span>Explorar</span>
+
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+      >
+        <path d="M12 5v14M5 12l7 7 7-7" />
+      </svg>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       SOBRE LA SECCIÓN
+       ===================================================== -->
+
+  <section class="clase-about fade-in">
+
+    <div class="clase-section-inner">
+
+      <div
+        class="clase-section-label"
+        style="color:var(--green)"
+      >
+        Sobre esta sección
+      </div>
+
+      <div class="clase-about-grid">
+
+        <div class="clase-about-text">
+
+          <h2 class="clase-section-title">
+            ¿Qué <span>exploramos</span> aquí?
+          </h2>
+
+          <p>
+            Hay una idea que muchas mujeres cargan sin haberla elegido: cuidarse a una misma es un gasto, casi una traición a las responsabilidades. Sus necesidades propias van al final de la fila, y ese momento casi nunca llega. Lo que esa lógica produce no es entrega generosa sino desgaste acumulado: una mujer que se vacía sin reponer tiene menos para dar, no más.
+          </p>
+
+          <p>
+            Este taller trabaja el autocuidado no como bienestar individual desconectado del contexto sino como condición del cuidado colectivo. Antes del gesto más pequeño posible que sea real en su vida, la creencia que lo impide tiene que salir a la luz, examinarse entre todas y reescribirse.
+          </p>
+
+        </div>
+
+        <div class="clase-about-stats">
+
+          <div class="stat-card">
+            <strong>Inicio</strong>
+            <span>Mascarilla facial y recorrido corporal</span>
+          </div>
+
+          <div class="stat-card">
+            <strong>Desarrollo</strong>
+            <span>Reescribir una creencia entre todas</span>
+          </div>
+
+          <div class="stat-card">
+            <strong>Cierre</strong>
+            <span>Un gesto de autocuidado para la semana</span>
+          </div>
+
+          <div class="stat-card">
+            <strong>Momento especial</strong>
+            <span>Reescribir entre todas la frase que prohíbe cuidarse</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       OBJETIVOS
+       ===================================================== -->
+
+  <section class="clase-objetivos fade-in">
+
+    <div class="clase-section-inner">
+
+      <div class="clase-section-label">
+        Propósito
+      </div>
+
+      <h2 class="clase-section-title">
+        Objetivos de <span>la actividad</span>
+      </h2>
+
+      <div class="objetivos-grid">
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">1</div>
+          <p><strong>Objetivo general.</strong> Reconocer el autocuidado como una necesidad legítima y construir al menos un gesto concreto de cuidado propio que pueda sostenerse en la vida cotidiana.</p>
+        </div>
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">2</div>
+          <p>Identificar las creencias que asocian el autocuidado con el egoísmo o la irresponsabilidad, reconociéndolas como construcciones aprendidas y no como verdades naturales.</p>
+        </div>
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">3</div>
+          <p>Comprender que cuidarse es una condición para cuidar bien: no una contradicción con las responsabilidades de crianza sino su fundamento.</p>
+        </div>
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">4</div>
+          <p>Construir un gesto personal de autocuidado que sea real, sencillo y sostenible en el contexto cotidiano de Ciudad Bolívar.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FICHA TÉCNICA
+       ===================================================== -->
+
+  <section class="clase-ficha fade-in">
+
+    <div class="clase-section-inner">
+
+      <div class="clase-section-label">
+        Planificación
+      </div>
+
+      <h2 class="clase-section-title">
+        Ficha <span>técnica</span>
+      </h2>
+
+      <div class="ficha-grid">
+
+        <div class="ficha-item">
+          <span class="ficha-label">Duración</span>
+          <span class="ficha-value">90 minutos</span>
+        </div>
+
+        <div class="ficha-item">
+          <span class="ficha-label">Población</span>
+          <span class="ficha-value">Madres, abuelas y tías a cargo de niñas y niños de 0 a 6 años</span>
+        </div>
+
+        <div class="ficha-item">
+          <span class="ficha-label">Escenario</span>
+          <span class="ficha-value">Comedor comunitario Samaritanos del Padre Pío</span>
+        </div>
+
+        <div class="ficha-item">
+          <span class="ficha-label">Estrategia pedagógica</span>
+          <span class="ficha-value">Resignificación colectiva de creencias</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       MOMENTOS DE LA SESIÓN
+       ===================================================== -->
+
+  <section class="clase-objetivos fade-in">
+
+    <div class="clase-section-inner">
+
+      <div class="clase-section-label">
+        Paso a paso
+      </div>
+
+      <h2 class="clase-section-title">
+        Momentos de <span>la sesión</span>
+      </h2>
+
+      <div class="momento-block">
+        <div class="momento-time">Inicio · 20 minutos</div>
+        <div class="momento-title">Inicio</div>
+        <p>Se abre el espacio con un gesto de cuidado concreto y poco usual para muchas: cada participante recibe una mascarilla facial para aplicarse. La facilitadora acompaña el momento sin prisa: que cada una la abra, la aplique, sienta el frío o la textura en la cara. Solo ese gesto simple de ponerse algo que es para ellas, sin que nadie lo esté pidiendo.</p>
+<p>Con la mascarilla puesta, invita a cerrar los ojos y hacer un recorrido de conciencia corporal en silencio: notar el peso de los pies en el suelo, el ritmo de la respiración, qué partes están contraídas y cuáles sueltas, sin juzgar. La mascarilla no es un recurso decorativo: es la primera demostración práctica, en el cuerpo, de que cuidarse es posible; no en otro momento ni cuando todo esté resuelto, sino ahora mismo.</p>
+<p>Mientras la mascarilla actúa, cada participante comparte una sola palabra que describa cómo llegó su cuerpo hoy; la facilitadora las recibe sin comentario. Al retirarla, pregunta algo simple: ¿cómo se sintió hacer eso? Las respuestas abren el desarrollo desde la experiencia vivida, no desde el concepto.</p>
+      </div>
+
+      <div class="momento-block">
+        <div class="momento-time">Desarrollo · 50 minutos</div>
+        <div class="momento-title">Desarrollo</div>
+        <h4 class="momento-sub">Primera capa: colectiva</h4>
+<p>Mientras algunas todavía sienten el efecto de la mascarilla, la facilitadora pega en la pared un papel grande con una frase escrita: “Cuidarme es quitarle a mis hijos.” El contraste es intencional: acabar de recibir un gesto de cuidado y enfrentarse de inmediato a la creencia que lo prohíbe. El grupo reacciona libremente: ¿han pensado eso alguna vez?, ¿alguien se los dijo?, ¿lo siguen creyendo después de lo que acaban de sentir? La facilitadora sostiene el espacio sin dirigir las respuestas.</p>
+<p>Al final del intercambio, entre todas reescriben la frase; no la facilitadora sola, el grupo, hasta llegar a algo que sientan verdadero. Puede quedar como “Cuando me cuido, tengo más para dar”, o “Mis hijos aprenden a cuidarse mirándome”, o algo completamente distinto que salga de ellas. La frase reescrita se queda en la pared hasta el cierre.</p>
+<h4 class="momento-sub">Segunda capa: individual</h4>
+<p>Cada participante recibe una hoja doblada en dos. En un lado escribe o dibuja algo que hace por los demás todos los días. En el otro, algo pequeño que podría hacer por sí misma, que no requiera condiciones que no existen en su vida ni cueste lo que no tiene. En círculo, cada una comparte solo el lado propio, el del autocuidado, y la facilitadora anota los gestos en un papel aparte. Al final hay una lista construida por ellas mismas, desde su realidad, que prueba que el autocuidado sí cabe en esta vida.</p>
+      </div>
+
+      <div class="momento-block">
+        <div class="momento-time">Cierre · 20 minutos</div>
+        <div class="momento-title">Cierre</div>
+        <p>Cada participante escribe en una tarjeta pequeña un gesto de autocuidado que se compromete a intentar durante la semana, el que eligió antes o uno que surgió en el círculo. La tarjeta se dobla y se lleva. No se comparte ni se revisa después: es un compromiso privado, sin rendición de cuentas a nadie, porque el autocuidado no se practica para ser visto ni evaluado.</p>
+<p>Para cerrar, la facilitadora propone un gesto colectivo: todas en silencio se ponen una mano en el pecho, unos segundos, sin palabras. Ese gesto ancla en el cuerpo lo que el taller trabajó en palabras.</p>
+<p>Antes de despedirse, el enlace con el siguiente encuentro: hoy cada una eligió un gesto para sí misma; la próxima sesión vamos a hablar de cómo ese gesto les llega también a sus hijos, porque lo que una aprende sobre sí misma, ellos lo aprenden mirando.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="clase-ficha fade-in">
+    <div class="clase-section-inner">
+      <div class="clase-section-label">Para el día a día</div>
+      <h2 class="clase-section-title">Prácticas para <span>llevar</span></h2>
+      <div class="objetivos-grid">
+        <div class="objetivo-item">
+          <div class="objetivo-num">1</div>
+          <p><strong>El gesto mínimo.</strong> Las barreras para el autocuidado no son solo de tiempo, son de legitimidad. Romper ese círculo no requiere condiciones ideales: requiere el gesto más pequeño posible que sea real hoy. Lo que acumula no son los propósitos grandes sino los gestos pequeños que sí arrancan.</p>
+        </div>
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">2</div>
+          <p><strong>La frase que reorienta.</strong> Cuando aparezca la culpa por hacer algo para sí misma, tener una frase propia ayuda a reorientar antes de que la culpa cancele el gesto. Puede ser simple, puede ser imperfecta; lo importante es que sea suya. Cada una la elige en el taller y la escribe al respaldo de la tarjeta del compromiso.</p>
+        </div>
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">3</div>
+          <p><strong>Reconocer el desgaste antes de la crisis.</strong> El agotamiento avisa antes de volverse crisis: mandíbula apretada, respiración corta, irritabilidad sin razón aparente, dificultad para escuchar lo que el niño dice. Leer esas señales como información, no como debilidad, permite actuar cuando todavía hay margen. El recorrido corporal del inicio se puede repetir en cualquier momento del día.</p>
+        </div>
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">4</div>
+          <p><strong>Decir que no como acto de cuidado.</strong> Para muchas cuidadoras, decir que no no aparece en el horizonte de lo posible, o aparece cargado de culpa. Poner límites es parte del mismo movimiento: reconocerse como alguien cuyas necesidades también cuentan. Se empieza por algo pequeño: identificar esta semana una situación donde sería posible decir que no sin que el mundo se caiga. El no no es abandono; es un límite, y los límites también cuidan.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       MATERIALES
+       ===================================================== -->
+
+  <section class="clase-material fade-in">
+
+    <div class="clase-section-inner">
+
+      <div
+        class="clase-section-label"
+        style="color:var(--orange)"
+      >
+        Recursos
+      </div>
+
+      <h2 class="clase-section-title">
+        Materiales
+        <span style="color:var(--orange)">
+          necesarios
+        </span>
+      </h2>
+
+      <div class="material-grid">
+
+        <div class="material-card">
+          <div class="material-icon" style="background:rgba(163,192,55,0.15); color:var(--green); font-weight:900">20'</div>
+          <div class="material-info">
+            <strong>Inicio</strong>
+            <span>Mascarillas faciales (una por participante) · Toallitas húmedas o paños para retirar · Música suave instrumental</span>
+          </div>
+        </div>
+
+        <div class="material-card">
+          <div class="material-icon" style="background:rgba(215,130,44,0.15); color:var(--orange); font-weight:900">50'</div>
+          <div class="material-info">
+            <strong>Desarrollo</strong>
+            <span>Papel grande con la frase “Cuidarme es quitarles a mis hijos” · Marcadores de colores para reescribir la frase entre todas · Hojas dobladas en dos (una por participante) · Lápices y colores · Papel adicional para recoger la lista de gestos colectivos</span>
+          </div>
+        </div>
+
+        <div class="material-card">
+          <div class="material-icon" style="background:rgba(85,176,210,0.15); color:var(--blue); font-weight:900">20'</div>
+          <div class="material-info">
+            <strong>Cierre</strong>
+            <span>Tarjetas pequeñas de cartulina (una por participante) · Lápices o esferos</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       REFERENCIAS
+       ===================================================== -->
+
+  <section class="clase-ficha fade-in">
+
+    <div class="clase-section-inner">
+
+      <details class="refs">
+        <summary>Referencias del taller</summary>
+        <ul class="refs-list">
+          <li>Bandura, A. (1986). Fundamentos sociales del pensamiento y la acción: Una teoría cognitiva social. Prentice-Hall.</li><li>Bandura, A. (1997). Autoeficacia: El ejercicio del control. Freeman.</li><li>Bandura, A., y Walters, R. H. (1974). Aprendizaje social y desarrollo de la personalidad. Alianza Editorial.</li><li>Bowlby, J. (1988). Una base segura: Aplicaciones clínicas de una teoría del apego. Paidós.</li><li>Bronfenbrenner, U. (1979). La ecología del desarrollo humano: Experimentos en entornos naturales y diseñados. Harvard University Press.</li><li>Deci, E. L., y Ryan, R. M. (2000). La motivación intrínseca y la autodeterminación del comportamiento humano. Psychological Inquiry, 11(4), 227-268.</li>
+        </ul>
+      </details>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       NAVEGACIÓN
+       ===================================================== -->
+
+  <section class="clase-nav-section fade-in">
+
+    <div class="clase-section-inner">
+
+      <div class="clase-nav-links">
+
+        <a href="./02-mi-nombre-no-es-mama.html" class="clase-nav-prev">
+          <span class="clase-nav-dir">← Anterior</span>
+          <span class="clase-nav-name">Taller 02 · Mi nombre no es mamá</span>
+        </a>
+
+        <a href="../secciones.html" class="clase-nav-all">
+          Ver todas las clases
+        </a>
+
+        <a href="./04-mis-hijos-aprenden-mirandome.html" class="clase-nav-next">
+          <span class="clase-nav-dir">Siguiente →</span>
+          <span class="clase-nav-name">Taller 04 · Mis hijos aprenden mirándome</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer>
+
+    <div class="footer-brand">
+
+      <h4>
+        Infancia que Resiste
+      </h4>
+
+      <p>
+        Un proyecto de la Universidad de San Buenaventura
+        para fortalecer entornos protectores en Ciudad Bolívar
+        a través del arte, la multimedia y la educación para la paz.
+      </p>
+
+      <span class="tagline">
+        ✦ Sentir es crear
+      </span>
+
+    </div>
+
+
+    <div class="footer-col">
+
+      <h5>
+        Secciones
+      </h5>
+
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../secciones.html">Clases</a></li>
+        <li><a href="../index.html#equipo">Equipo</a></li>
+        <li><a href="../index.html#podcast">Podcast</a></li>
+      </ul>
+
+    </div>
+
+
+    <div class="footer-col">
+
+      <h5>
+        Contacto
+      </h5>
+
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Correo</a></li>
+      </ul>
+
+    </div>
+
+  </footer>
+
+
+  <div class="footer-bottom">
+
+    © 2025 Infancia que Resiste ·
+    Universidad de San Buenaventura —
+    Todos los derechos reservados
+
+  </div>
+
+
+
+  <!-- =====================================================
+       BOOTSTRAP JS
+       ===================================================== -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script>
+
+    /* ANIMACIONES */
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+
+        entries.forEach(
+          (entry) => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add('visible');
+
+            }
+
+          }
+        );
+
+      },
+      {
+        threshold: 0.1
+      }
+    );
+
+
+    document
+      .querySelectorAll('.fade-in')
+      .forEach(
+        (element) => observer.observe(element)
+      );
+
+
+
+    /* MENÚ HAMBURGUESA */
+
+    const hamburger =
+      document.querySelector('.hamburger');
+
+    const navLinks =
+      document.querySelector('.nav-links');
+
+
+    if (hamburger && navLinks) {
+
+      hamburger.addEventListener(
+        'click',
+        () => {
+
+          navLinks.classList.toggle('open');
+
+        }
+      );
+
+    }
+
+
+
+    /* CARRUSEL */
+
+    const carouselElement =
+      document.getElementById('claseCarousel');
+
+
+    if (carouselElement) {
+
+      const carousel =
+        new bootstrap.Carousel(
+          carouselElement,
+          {
+            interval: 5000,
+            ride: 'carousel',
+            pause: 'hover',
+            touch: true,
+            wrap: true
+          }
+        );
+
+    }
+
+  </script>
+
+
+</body>
+
+</html>

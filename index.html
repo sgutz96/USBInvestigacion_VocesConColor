@@ -27,22 +27,23 @@
 
 <body>
 
-  <!-- ===== NAV ===== -->
+   <!-- ===== NAV ===== -->
   <nav>
-    <a href="#" class="nav-logo">
-      <img class="nav-logo-icon" src="./assets/img/logo.svg" alt="Infancia que Resiste logo">
-      <div class="nav-brand">Infancia que<br><span>Transforma</span></div>
+    <a href="index.html" class="nav-logo">
+      <img class="nav-logo-icon" src="./assets/img/logo.svg" alt="Logo de Infancia que Resiste">
+      <div class="nav-brand">Infancia que<br><span>Resiste</span></div>
     </a>
 
-    <ul class="nav-links">
-      <li><a href="#about">Proyecto</a></li>
-      <li><a href="#secciones">Secciones</a></li>
-      <li><a href="#podcast">Podcast</a></li>
-      <li><a href="#mapa">Mapa</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#about">Proyecto</a></li>
+      <li><a href="index.html#secciones">Actividades</a></li>
+      <li><a href="index.html#podcast">Podcast</a></li>
+      <li><a href="index.html#mapa">Mapa</a></li>
+      <li><a href="investigacion.html" aria-current="page" class="is-active">Investigación</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
     </ul>
 
-    <button class="hamburger" onclick="toggleMenu()">
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
       <span></span><span></span><span></span>
     </button>
   </nav>
@@ -419,6 +420,178 @@
 
     <div style="margin-top:2.5rem">
       <a href="clases.html" class="btn-primary">Ver las 12 actividades</a>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- ===== Videos Niños  ===== -->
+  <section class="podcast" id="podcast">
+    <div class="podcast-header">
+      <div>
+        <div class="section-label" style="color:var(--pink)">Voces de Transformación</div>
+        <h2 class="section-title" style="color:white">Podcast <span style="color:var(--pink)">Capítulos</span></h2>
+      </div>
+      <a href="#" class="btn-secondary" style="white-space:nowrap;color:var(--pink);border-color:var(--pink)">Ver todos
+        →</a>
+    </div>
+
+    <div class="podcast-grid">
+      <div class="podcast-card fade-in">
+        <div class="podcast-thumb">
+          <img src="/assets/img/podcast/podcast-1.png" alt="Capítulo 1 — Mi Historia" style="object-fit: cover; object-position: top;">
+        </div>
+        <div class="podcast-info">
+          <h3>Capítulo 1 — Mi Historia</h3>
+          <p>"Este proyecto me permitió descubrir mi voz y compartirla con otros. A través del arte pude contar mi
+            historia sin miedo."</p>
+          <a href="https://open.spotify.com/track/3n3Ppam7vgaVa1iaRUc9Lp" target="_blank" class="podcast-btn">▶
+            Escuchar</a>
+        </div>
+      </div>
+
+      <div class="podcast-card fade-in">
+        <div class="podcast-thumb">
+          <img src="/assets/img/podcast/podcast-placeholder.png" alt="Capítulo 2 — Encontré Familia" style="object-fit: cover; object-position: top;">
+        </div>
+        <div class="podcast-info">
+          <h3>Capítulo 2 — Encontré Familia</h3>
+          <p>"Gracias al arte pude expresar mis emociones y sentirme acompañada. Encontré una familia en este espacio
+            creativo."</p>
+          <a href="https://open.spotify.com/track/4uLU6hMCjMI75M1A2tKUQC" target="_blank" class="podcast-btn">▶
+            Escuchar</a>
+        </div>
+      </div>
+
+      <div class="podcast-card fade-in">
+        <div class="podcast-thumb">
+          <img src="/assets/img/podcast/podcast-placeholder.png" alt="Capítulo 3 — Mi Voz Vale"         style="object-fit:cover;object-position:top center;width:100%;height:100%;"                            >
+        </div>
+        <div class="podcast-info">
+          <h3>Capítulo 3 — Mi Voz Vale</h3>
+          <p>"El proyecto me enseñó que mis experiencias son valiosas. Ahora ayudo a otros niños a encontrar su propia
+            voz."</p>
+          <a href="https://open.spotify.com/track/6UelLqGlWMcVH1E5c4H7lY" target="_blank" class="podcast-btn" >▶
+            Escuchar</a>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- ===== Talleres ===== -->
+  <!-- ===== Talleres con cuidadoras ===== -->
+  <section class="secciones" id="talleres">
+    <div class="secciones-header fade-in">
+      <div class="section-label" style="color:var(--orange);justify-content:center">Talleres con cuidadoras</div>
+      <h2 class="section-title">Hilos propios: <span style="color:var(--orange)">tejiendo el cuidado</span></h2>
+      <p class="section-body" style="max-width:560px;margin:0 auto">
+        Seis talleres para que las mujeres cuidadoras del comedor nombren lo que cargan, recuperen su identidad,
+        se cuiden, tejan red y conozcan sus derechos.
+      </p>
+    </div>
+
+    <div class="clases-grid">
+
+      <a href="./Talleres_Cuidadores/01-lo-que-cargo-sin-que-nadie-lo-vea.html" class="clase-card fade-in">
+        <div class="clase-img">
+          <img src="./assets/img/Talleres/Taller_1.jpeg" alt="Taller 1: Lo que cargo sin que nadie lo vea">
+          <div class="clase-num">Taller 01</div>
+        </div>
+        <div class="clase-body">
+          <h3>Lo que cargo sin que nadie lo vea</h3>
+          <p>Nombrar la carga como primer acto de conciencia. Una silueta corporal para marcar dónde se acumula el peso y una canasta para depositar lo que se quiere soltar.</p>
+          <span class="clase-tag" style="background:rgba(163,192,55,0.15);color:#3B6D11">Cartografía corporal</span>
+        </div>
+      </a>
+
+  <!--    <a href="./talleres/02-mi-nombre-no-es-mama.html" class="clase-card fade-in">
+        <div class="clase-img">
+          <img src="./assets/img/Talleres/Taller_2.png" alt="Taller 2: Mi nombre no es mamá">
+          <div class="clase-num">Taller 02</div>
+        </div>
+        <div class="clase-body">
+          <h3>Mi nombre no es mamá</h3>
+          <p>Recuperar la identidad más allá del rol de cuidadora. Un círculo de palabra donde cada una se presenta con su nombre propio y deja una cadena de palabras en el comedor.</p>
+          <span class="clase-tag" style="background:rgba(85,176,210,0.15);color:#1a6a88">Círculo de palabra</span>
+        </div>
+      </a>
+
+      <a href="./talleres/03-cuidarme-no-es-un-lujo.html" class="clase-card fade-in">
+        <div class="clase-img">
+          <img src="./assets/img/Talleres/Taller_3.png" alt="Taller 3: Cuidarme no es un lujo">
+          <div class="clase-num">Taller 03</div>
+        </div>
+        <div class="clase-body">
+          <h3>Cuidarme no es un lujo</h3>
+          <p>Resignificar el autocuidado como necesidad legítima. Con una mascarilla facial como primer gesto, el grupo reescribe entre todas la frase que prohíbe cuidarse.</p>
+          <span class="clase-tag" style="background:rgba(204,102,153,0.15);color:#8c2a5c">Resignificación</span>
+        </div>
+      </a>-->
+
+      <a href="./Talleres_Cuidadores/04-mis-hijos-aprenden-mirandome.html" class="clase-card fade-in">
+        <div class="clase-img">
+          <img src="./assets/img/Talleres/Taller_4.jpeg" alt="Taller 4: Mis hijos aprenden mirándome">
+          <div class="clase-num">Taller 04</div>
+        </div>
+        <div class="clase-body">
+          <h3>Mis hijos aprenden mirándome</h3>
+          <p>Autoeficacia parental y modelamiento consciente. Un video, una reflexión sobre lo que ya enseñan y una carta a sus hijos que llega en la Sesión 12 del bloque de infantes.</p>
+          <span class="clase-tag" style="background:rgba(245,200,66,0.2);color:#7a5c00">Aprendizaje vicario</span>
+        </div>
+      </a>
+
+<!--      <a href="./talleres/05-entre-nosotras-nos-sostenemos.html" class="clase-card fade-in">
+        <div class="clase-img">
+          <img src="./assets/img/Talleres/Taller_5.png" alt="Taller 5: Entre nosotras nos sostenemos">
+          <div class="clase-num">Taller 05</div>
+        </div>
+        <div class="clase-body">
+          <h3>Entre nosotras nos sostenemos</h3>
+          <p>Construcción de una red de cuidado comunitario. Un tejido de hilo y un mapa de red que queda en el comedor como recurso vivo.</p>
+          <span class="clase-tag" style="background:rgba(215,130,44,0.15);color:#8a4a0a">Tejido de redes</span>
+        </div>
+      </a>-->
+
+      <a href="./Talleres_Cuidadores/06-la-que-cuida-tambien-tiene-derechos.html" class="clase-card fade-in">
+        <div class="clase-img">
+          <img src="./assets/img/Talleres/Taller_6.jpeg" alt="Taller 6: La que cuida también tiene derechos">
+          <div class="clase-num">Taller 06</div>
+        </div>
+        <div class="clase-body">
+          <h3>La que cuida también tiene derechos</h3>
+          <p>Las cuidadoras como sujetas políticas con derechos. Rutas de atención, una simulación y piedras con palabra propia que viajan a los hogares.</p>
+          <span class="clase-tag" style="background:rgba(130,90,180,0.15);color:#5b3a8c">Educación popular</span>
+        </div>
+      </a>
+
+    </div>
+
+    <div style="margin-top:2.5rem">
+      <a href="./Talleres.html" class="btn-primary">Ver los 6 talleres</a>
     </div>
   </section>
 

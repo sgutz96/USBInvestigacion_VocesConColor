@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Taller 04 — Mis hijos aprenden mirándome</title>
+
+  <link rel="shortcut icon" href="../assets/img/logo.svg" type="image/x-icon">
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS DEL PROYECTO -->
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/clase.css">
+
+  <!-- BOOTSTRAP -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- ESTILOS DE LA PÁGINA -->
+  <style>
+    /* Momentos de la sesión */
+    .momento-block { border-left: 4px solid var(--orange); padding: 4px 0 4px 24px; margin-top: 40px; }
+    .momento-block:nth-child(3n+2) { border-left-color: var(--green); }
+    .momento-block:nth-child(3n+3) { border-left-color: var(--blue); }
+    .momento-time { font-weight: 900; text-transform: uppercase; letter-spacing: .08em; font-size: .8rem; opacity: .75; }
+    .momento-title { font-weight: 900; font-size: 1.5rem; margin: 4px 0 14px; }
+    .momento-block p, .momento-list li { line-height: 1.7; }
+    .momento-sub { font-weight: 700; margin: 22px 0 8px; }
+    .momento-list { padding-left: 1.2rem; }
+    .momento-mats { margin-top: 14px; font-size: .92rem; opacity: .85; }
+    .refs-list { padding-left: 1.2rem; font-size: .9rem; line-height: 1.6; }
+    .refs-list li { margin-bottom: 8px; word-break: break-word; }
+    details.refs summary { cursor: pointer; font-weight: 700; margin-bottom: 14px; }
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <nav>
+
+    <a href="../index.html" class="nav-logo">
+
+      <img
+        class="nav-logo-icon"
+        src="../assets/img/logo.svg"
+        alt="Infancia que Resiste logo"
+      >
+
+      <div class="nav-brand">
+        Infancia que<br>
+        <span>Resiste</span>
+      </div>
+
+    </a>
+
+
+    <ul class="nav-links">
+
+      <li>
+        <a href="../index.html#about">
+          Proyecto
+        </a>
+      </li>
+
+      <li>
+        <a href="../secciones.html">
+          Secciones
+        </a>
+      </li>
+
+      <li>
+        <a href="../index.html#podcast">
+          Podcast
+        </a>
+      </li>
+
+      <li>
+        <a href="../index.html#mapa">
+          Mapa
+        </a>
+      </li>
+
+      <li>
+        <a href="../index.html#contacto">
+          Contacto
+        </a>
+      </li>
+
+    </ul>
+
+
+    <button
+      class="hamburger"
+      type="button"
+      aria-label="Abrir menú"
+    >
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+  </nav>
+
+
+
+  <!-- =====================================================
+       HERO + CARRUSEL
+       ===================================================== -->
+
+  <section class="clase-hero">
+
+    <div class="clase-hero-bg">
+
+      <div
+        id="claseCarousel"
+        class="carousel slide h-100"
+        data-bs-ride="carousel"
+        data-bs-interval="5000"
+      >
+
+        <div class="carousel-indicators">
+
+          <button
+            type="button"
+            data-bs-target="#claseCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Imagen 1"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#claseCarousel"
+            data-bs-slide-to="1"
+            aria-label="Imagen 2"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#claseCarousel"
+            data-bs-slide-to="2"
+            aria-label="Imagen 3"
+          ></button>
+
+        </div>
+
+
+        <div class="carousel-inner h-100">
+
+          <div class="carousel-item active h-100">
+            <img
+              src="../assets/fotos/Talleres/Taller_04_Foto_0.jpg"
+              alt="Mis hijos aprenden mirándome - Foto 1"
+            >
+          </div>
+
+          <div class="carousel-item h-100">
+            <img
+              src="../assets/fotos/Talleres/Taller_04_Foto_1.jpg"
+              alt="Mis hijos aprenden mirándome - Foto 2"
+            >
+          </div>
+
+          <div class="carousel-item h-100">
+            <img
+              src="../assets/fotos/Talleres/Taller_04_Foto_2.jpg"
+              alt="Mis hijos aprenden mirándome - Foto 3"
+            >
+          </div>
+
+        </div>
+
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#claseCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#claseCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+
+      </div>
+
+      <div class="clase-hero-overlay"></div>
+
+    </div>
+
+
+    <div class="clase-hero-content">
+
+      <a href="../secciones.html" class="back-link">
+        ← Volver a Secciones
+      </a>
+
+      <div class="clase-number-badge">
+        Taller 04
+      </div>
+
+      <h1 class="clase-hero-title">
+        Mis hijos aprenden mirándome
+      </h1>
+
+      <p class="clase-hero-subtitle">
+        Autoeficacia parental y modelamiento consciente
+      </p>
+
+      <div class="clase-tags">
+        <span class="clase-tag tag-artes">
+          Aprendizaje vicario
+        </span>
+      </div>
+
+    </div>
+
+
+    <div class="scroll-hint">
+
+      <span>Explorar</span>
+
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+      >
+        <path d="M12 5v14M5 12l7 7 7-7" />
+      </svg>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       SOBRE LA SECCIÓN
+       ===================================================== -->
+
+  <section class="clase-about fade-in">
+
+    <div class="clase-section-inner">
+
+      <div
+        class="clase-section-label"
+        style="color:var(--green)"
+      >
+        Sobre esta sección
+      </div>
+
+      <div class="clase-about-grid">
+
+        <div class="clase-about-text">
+
+          <h2 class="clase-section-title">
+            ¿Qué <span>exploramos</span> aquí?
+          </h2>
+
+          <p>
+            Los niños y niñas aprenden mirando. No solo de lo que se les explica o se les prohíbe: aprenden del tono con que su mamá habla cuando está cansada, de cómo reacciona cuando algo sale mal, de si se sienta a descansar o nunca para, de si pide ayuda o carga todo sola. Lo que ella hace con su cuerpo, sus emociones y sus relaciones es el primer currículo que reciben.
+          </p>
+
+          <p>
+            Este taller no trabaja desde la culpa, porque la culpa produce parálisis, no cambio. Propone que cada mujer mire con honestidad lo que sus hijos e hijas ya están aprendiendo de ella, reconozca lo que vale la pena sostener y elija con conciencia qué quiere modelar de manera diferente. La autoeficacia se construye reconociendo lo que ya está.
+          </p>
+
+        </div>
+
+        <div class="clase-about-stats">
+
+          <div class="stat-card">
+            <strong>Inicio</strong>
+            <span>Video y silencio</span>
+          </div>
+
+          <div class="stat-card">
+            <strong>Desarrollo</strong>
+            <span>Lo que ya enseño y lo que quiero enseñar</span>
+          </div>
+
+          <div class="stat-card">
+            <strong>Cierre</strong>
+            <span>Carta a mi hijo o hija</span>
+          </div>
+
+          <div class="stat-card">
+            <strong>Momento especial</strong>
+            <span>Una carta que llega a los niños en la Sesión 12</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       OBJETIVOS
+       ===================================================== -->
+
+  <section class="clase-objetivos fade-in">
+
+    <div class="clase-section-inner">
+
+      <div class="clase-section-label">
+        Propósito
+      </div>
+
+      <h2 class="clase-section-title">
+        Objetivos de <span>la actividad</span>
+      </h2>
+
+      <div class="objetivos-grid">
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">1</div>
+          <p><strong>Objetivo general.</strong> Identificar su rol como modelo de aprendizaje para sus hijos e hijas y fortalecer la autoeficacia parental a partir de lo que ya hace bien, no desde la culpa por lo que falta.</p>
+        </div>
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">2</div>
+          <p>Comprender que los niños y niñas aprenden principalmente por observación de quienes los cuidan, no solo por lo que se les dice explícitamente.</p>
+        </div>
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">3</div>
+          <p>Identificar comportamientos y actitudes propias que sus hijos e hijas ya están replicando, tanto los que quieren sostener como los que quieren cambiar.</p>
+        </div>
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">4</div>
+          <p>Fortalecer la autoconfianza en el propio rol de cuidadoras a partir del reconocimiento de capacidades ya presentes.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FICHA TÉCNICA
+       ===================================================== -->
+
+  <section class="clase-ficha fade-in">
+
+    <div class="clase-section-inner">
+
+      <div class="clase-section-label">
+        Planificación
+      </div>
+
+      <h2 class="clase-section-title">
+        Ficha <span>técnica</span>
+      </h2>
+
+      <div class="ficha-grid">
+
+        <div class="ficha-item">
+          <span class="ficha-label">Duración</span>
+          <span class="ficha-value">90 minutos</span>
+        </div>
+
+        <div class="ficha-item">
+          <span class="ficha-label">Población</span>
+          <span class="ficha-value">Madres, abuelas y tías a cargo de niñas y niños de 0 a 6 años</span>
+        </div>
+
+        <div class="ficha-item">
+          <span class="ficha-label">Escenario</span>
+          <span class="ficha-value">Comedor comunitario Samaritanos del Padre Pío</span>
+        </div>
+
+        <div class="ficha-item">
+          <span class="ficha-label">Estrategia pedagógica</span>
+          <span class="ficha-value">Aprendizaje vicario y observación</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       MOMENTOS DE LA SESIÓN
+       ===================================================== -->
+
+  <section class="clase-objetivos fade-in">
+
+    <div class="clase-section-inner">
+
+      <div class="clase-section-label">
+        Paso a paso
+      </div>
+
+      <h2 class="clase-section-title">
+        Momentos de <span>la sesión</span>
+      </h2>
+
+      <div class="momento-block">
+        <div class="momento-time">Inicio · 20 minutos</div>
+        <div class="momento-title">Inicio</div>
+        <p>Se abre el taller con un video corto, de tres a cinco minutos, que muestra situaciones cotidianas donde niños y niñas replican exactamente lo que hacen sus padres o cuidadores: el tono de voz, el gesto de frustración, la forma de consolar, la manera de reírse, incluso la postura al sentarse. No es un video académico: es algo cercano y reconocible, que produce risa y reconocimiento al mismo tiempo.</p>
+<p>La facilitadora no explica nada después del video. Deja unos segundos de silencio y pregunta: ¿reconocieron algo? Las respuestas abren el taller desde la experiencia propia. Ese momento —video, silencio y pregunta— instala la idea central sin necesidad de explicarla: los hijos aprenden mirando, y ellas son lo que más miran.</p>
+      </div>
+
+      <div class="momento-block">
+        <div class="momento-time">Desarrollo · 50 minutos</div>
+        <div class="momento-title">Desarrollo</div>
+        <h4 class="momento-sub">Primer movimiento: la observación</h4>
+<p>Cada participante recibe una hoja dividida en dos columnas. En la primera escribe o dibuja tres cosas que hace habitualmente y que sus hijos e hijas probablemente ya replican: gestos, reacciones, hábitos, formas de hablar. En la segunda, tres cosas que hace, o intenta hacer, y que quisiera que aprendieran de ella. No se corrige ni se orienta el contenido.</p>
+<p>En círculo, cada una comparte lo que escribió. La facilitadora recoge los hilos comunes sin homogeneizar y va señalando algo que el taller necesita dejar instalado: en la segunda columna hay cosas que ya están haciendo. No de manera perfecta ni constante, pero están. Ese reconocimiento no es halago, es evidencia.</p>
+<h4 class="momento-sub">Segundo movimiento: el proyectivo</h4>
+<p>Cada participante elige una cosa de la segunda columna y responde, en voz alta o por escrito: ¿qué tendría que ver en mí esta semana para aprenderlo? No qué le voy a decir ni qué le voy a explicar, sino qué tendría que ver. Esa pregunta desplaza el foco de la instrucción hacia el modelamiento: lo que se enseña con el cuerpo y con la conducta habitual es más poderoso que cualquier conversación.</p>
+      </div>
+
+      <div class="momento-block">
+        <div class="momento-time">Cierre · 20 minutos</div>
+        <div class="momento-title">Cierre</div>
+        <p>Este cierre conecta el bloque de cuidadoras con el bloque de los niños y niñas. Cada participante escribe una carta breve, puede ser un párrafo, dirigida a su hijo o hija. No para entregársela ahora, sino para decirle algo que quiere que sepa sobre lo que está intentando hacer diferente, sobre lo que espera que aprenda de ella, sobre cómo la mira cuando cree que no se da cuenta. Las cartas se recogen y se guardan.</p>
+<p>Llegarán en la Sesión 12 del bloque de infantes, el cierre de todo el proceso, donde los niños y niñas recibirán un gesto de sus cuidadoras que no esperan. Ese puente entre los dos bloques materializa que el cuidado de las madres y el desarrollo de los niños son parte del mismo movimiento.</p>
+<p>Antes de despedirse, el enlace con el siguiente taller: hoy cada una identificó lo que ya enseña y eligió algo que quiere modelar diferente; la próxima sesión vamos a hablar de algo que hace posible todo eso, la red, porque ninguna mujer debería tener que hacerlo completamente sola.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="clase-ficha fade-in">
+    <div class="clase-section-inner">
+      <div class="clase-section-label">Para el día a día</div>
+      <h2 class="clase-section-title">Prácticas para <span>llevar</span></h2>
+      <div class="objetivos-grid">
+        <div class="objetivo-item">
+          <div class="objetivo-num">1</div>
+          <p><strong>Pausa antes de reaccionar.</strong> Los niños y niñas de primera infancia aprenden más de las reacciones que de las explicaciones. Cuando algo sale mal, la reacción de la cuidadora en ese momento es el modelo que queda grabado. No se trata de reaccionar perfectamente sino de darse un segundo antes de responder: un segundo basta para que la respuesta sea menos automática y más elegida.</p>
+        </div>
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">2</div>
+          <p><strong>Hacer en voz alta.</strong> Narrar brevemente lo que se está haciendo mientras se hace: “Me voy a sentar un momento porque estoy cansada.” “Respiré antes de responder porque estaba molesta.” “Le pedí ayuda a la vecina porque no podía sola.” Convierte el modelamiento implícito en modelamiento consciente.</p>
+        </div>
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">3</div>
+          <p><strong>El inventario de lo que ya funciona.</strong> La autoeficacia no se construye desde lo que falta sino desde lo que ya está. Cada semana, antes de dormir, identificar una cosa que hizo bien en la crianza ese día: haber escuchado sin interrumpir, haber llegado a tiempo, haber pedido perdón. No es autocomplacencia: es la base de la confianza para seguir intentando.</p>
+        </div>
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">4</div>
+          <p><strong>Separar el error del fracaso.</strong> Reaccionar mal una vez o perder la paciencia es un error, no un fracaso como cuidadora. El fracaso cierra y el error abre: se puede reparar, se puede nombrar frente al hijo o hija, y se convierte en un modelo de cómo los adultos también se equivocan y se recuperan.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       MATERIALES
+       ===================================================== -->
+
+  <section class="clase-material fade-in">
+
+    <div class="clase-section-inner">
+
+      <div
+        class="clase-section-label"
+        style="color:var(--orange)"
+      >
+        Recursos
+      </div>
+
+      <h2 class="clase-section-title">
+        Materiales
+        <span style="color:var(--orange)">
+          necesarios
+        </span>
+      </h2>
+
+      <div class="material-grid">
+
+        <div class="material-card">
+          <div class="material-icon" style="background:rgba(163,192,55,0.15); color:var(--green); font-weight:900">20'</div>
+          <div class="material-info">
+            <strong>Inicio</strong>
+            <span>Video proyectado (pantalla o televisor disponible en el comedor) · Parlante o sonido</span>
+          </div>
+        </div>
+
+        <div class="material-card">
+          <div class="material-icon" style="background:rgba(215,130,44,0.15); color:var(--orange); font-weight:900">50'</div>
+          <div class="material-info">
+            <strong>Desarrollo</strong>
+            <span>Hojas divididas en dos columnas (una por participante) · Lápices y colores · Papel adicional para recoger los hilos comunes del grupo</span>
+          </div>
+        </div>
+
+        <div class="material-card">
+          <div class="material-icon" style="background:rgba(85,176,210,0.15); color:var(--blue); font-weight:900">20'</div>
+          <div class="material-info">
+            <strong>Cierre</strong>
+            <span>Hojas o tarjetas para escribir la carta · Lápices o esferos · Sobre o carpeta para guardar las cartas hasta la Sesión 12</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       REFERENCIAS
+       ===================================================== -->
+
+  <section class="clase-ficha fade-in">
+
+    <div class="clase-section-inner">
+
+      <details class="refs">
+        <summary>Referencias del taller</summary>
+        <ul class="refs-list">
+          <li>Bandura, A. (1986). Fundamentos sociales del pensamiento y la acción: Una teoría cognitiva social. Prentice-Hall.</li><li>Bandura, A. (1997). Autoeficacia: El ejercicio del control. Freeman.</li><li>Bandura, A., y Walters, R. H. (1974). Aprendizaje social y desarrollo de la personalidad. Alianza Editorial.</li><li>Bowlby, J. (1988). Una base segura: Aplicaciones clínicas de una teoría del apego. Paidós.</li><li>Bronfenbrenner, U. (1979). La ecología del desarrollo humano: Experimentos en entornos naturales y diseñados. Harvard University Press.</li><li>Deci, E. L., y Ryan, R. M. (2000). La motivación intrínseca y la autodeterminación del comportamiento humano. Psychological Inquiry, 11(4), 227-268.</li>
+        </ul>
+      </details>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       NAVEGACIÓN
+       ===================================================== -->
+
+  <section class="clase-nav-section fade-in">
+
+    <div class="clase-section-inner">
+
+      <div class="clase-nav-links">
+
+        <a href="./03-cuidarme-no-es-un-lujo.html" class="clase-nav-prev">
+          <span class="clase-nav-dir">← Anterior</span>
+          <span class="clase-nav-name">Taller 03 · Cuidarme no es un lujo</span>
+        </a>
+
+        <a href="../secciones.html" class="clase-nav-all">
+          Ver todas las clases
+        </a>
+
+        <a href="./05-entre-nosotras-nos-sostenemos.html" class="clase-nav-next">
+          <span class="clase-nav-dir">Siguiente →</span>
+          <span class="clase-nav-name">Taller 05 · Entre nosotras nos sostenemos</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer>
+
+    <div class="footer-brand">
+
+      <h4>
+        Infancia que Resiste
+      </h4>
+
+      <p>
+        Un proyecto de la Universidad de San Buenaventura
+        para fortalecer entornos protectores en Ciudad Bolívar
+        a través del arte, la multimedia y la educación para la paz.
+      </p>
+
+      <span class="tagline">
+        ✦ Sentir es crear
+      </span>
+
+    </div>
+
+
+    <div class="footer-col">
+
+      <h5>
+        Secciones
+      </h5>
+
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../secciones.html">Clases</a></li>
+        <li><a href="../index.html#equipo">Equipo</a></li>
+        <li><a href="../index.html#podcast">Podcast</a></li>
+      </ul>
+
+    </div>
+
+
+    <div class="footer-col">
+
+      <h5>
+        Contacto
+      </h5>
+
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Correo</a></li>
+      </ul>
+
+    </div>
+
+  </footer>
+
+
+  <div class="footer-bottom">
+
+    © 2025 Infancia que Resiste ·
+    Universidad de San Buenaventura —
+    Todos los derechos reservados
+
+  </div>
+
+
+
+  <!-- =====================================================
+       BOOTSTRAP JS
+       ===================================================== -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script>
+
+    /* ANIMACIONES */
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+
+        entries.forEach(
+          (entry) => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add('visible');
+
+            }
+
+          }
+        );
+
+      },
+      {
+        threshold: 0.1
+      }
+    );
+
+
+    document
+      .querySelectorAll('.fade-in')
+      .forEach(
+        (element) => observer.observe(element)
+      );
+
+
+
+    /* MENÚ HAMBURGUESA */
+
+    const hamburger =
+      document.querySelector('.hamburger');
+
+    const navLinks =
+      document.querySelector('.nav-links');
+
+
+    if (hamburger && navLinks) {
+
+      hamburger.addEventListener(
+        'click',
+        () => {
+
+          navLinks.classList.toggle('open');
+
+        }
+      );
+
+    }
+
+
+
+    /* CARRUSEL */
+
+    const carouselElement =
+      document.getElementById('claseCarousel');
+
+
+    if (carouselElement) {
+
+      const carousel =
+        new bootstrap.Carousel(
+          carouselElement,
+          {
+            interval: 5000,
+            ride: 'carousel',
+            pause: 'hover',
+            touch: true,
+            wrap: true
+          }
+        );
+
+    }
+
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Taller 02 — Mi nombre no es mamá</title>
+
+  <link rel="shortcut icon" href="../assets/img/logo.svg" type="image/x-icon">
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS DEL PROYECTO -->
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/clase.css">
+
+  <!-- BOOTSTRAP -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- ESTILOS DE LA PÁGINA -->
+  <style>
+    /* Momentos de la sesión */
+    .momento-block { border-left: 4px solid var(--orange); padding: 4px 0 4px 24px; margin-top: 40px; }
+    .momento-block:nth-child(3n+2) { border-left-color: var(--green); }
+    .momento-block:nth-child(3n+3) { border-left-color: var(--blue); }
+    .momento-time { font-weight: 900; text-transform: uppercase; letter-spacing: .08em; font-size: .8rem; opacity: .75; }
+    .momento-title { font-weight: 900; font-size: 1.5rem; margin: 4px 0 14px; }
+    .momento-block p, .momento-list li { line-height: 1.7; }
+    .momento-sub { font-weight: 700; margin: 22px 0 8px; }
+    .momento-list { padding-left: 1.2rem; }
+    .momento-mats { margin-top: 14px; font-size: .92rem; opacity: .85; }
+    .refs-list { padding-left: 1.2rem; font-size: .9rem; line-height: 1.6; }
+    .refs-list li { margin-bottom: 8px; word-break: break-word; }
+    details.refs summary { cursor: pointer; font-weight: 700; margin-bottom: 14px; }
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <nav>
+
+    <a href="../index.html" class="nav-logo">
+
+      <img
+        class="nav-logo-icon"
+        src="../assets/img/logo.svg"
+        alt="Infancia que Resiste logo"
+      >
+
+      <div class="nav-brand">
+        Infancia que<br>
+        <span>Resiste</span>
+      </div>
+
+    </a>
+
+
+    <ul class="nav-links">
+
+      <li>
+        <a href="../index.html#about">
+          Proyecto
+        </a>
+      </li>
+
+      <li>
+        <a href="../secciones.html">
+          Secciones
+        </a>
+      </li>
+
+      <li>
+        <a href="../index.html#podcast">
+          Podcast
+        </a>
+      </li>
+
+      <li>
+        <a href="../index.html#mapa">
+          Mapa
+        </a>
+      </li>
+
+      <li>
+        <a href="../index.html#contacto">
+          Contacto
+        </a>
+      </li>
+
+    </ul>
+
+
+    <button
+      class="hamburger"
+      type="button"
+      aria-label="Abrir menú"
+    >
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+  </nav>
+
+
+
+  <!-- =====================================================
+       HERO + CARRUSEL
+       ===================================================== -->
+
+  <section class="clase-hero">
+
+    <div class="clase-hero-bg">
+
+      <div
+        id="claseCarousel"
+        class="carousel slide h-100"
+        data-bs-ride="carousel"
+        data-bs-interval="5000"
+      >
+
+        <div class="carousel-indicators">
+
+          <button
+            type="button"
+            data-bs-target="#claseCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Imagen 1"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#claseCarousel"
+            data-bs-slide-to="1"
+            aria-label="Imagen 2"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#claseCarousel"
+            data-bs-slide-to="2"
+            aria-label="Imagen 3"
+          ></button>
+
+        </div>
+
+
+        <div class="carousel-inner h-100">
+
+          <div class="carousel-item active h-100">
+            <img
+              src="../assets/fotos/Talleres/Taller_02_Foto_0.jpg"
+              alt="Mi nombre no es mamá - Foto 1"
+            >
+          </div>
+
+          <div class="carousel-item h-100">
+            <img
+              src="../assets/fotos/Talleres/Taller_02_Foto_1.jpg"
+              alt="Mi nombre no es mamá - Foto 2"
+            >
+          </div>
+
+          <div class="carousel-item h-100">
+            <img
+              src="../assets/fotos/Talleres/Taller_02_Foto_2.jpg"
+              alt="Mi nombre no es mamá - Foto 3"
+            >
+          </div>
+
+        </div>
+
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#claseCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#claseCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+
+      </div>
+
+      <div class="clase-hero-overlay"></div>
+
+    </div>
+
+
+    <div class="clase-hero-content">
+
+      <a href="../secciones.html" class="back-link">
+        ← Volver a Secciones
+      </a>
+
+      <div class="clase-number-badge">
+        Taller 02
+      </div>
+
+      <h1 class="clase-hero-title">
+        Mi nombre no es mamá
+      </h1>
+
+      <p class="clase-hero-subtitle">
+        Recuperar la identidad más allá del rol de cuidadora
+      </p>
+
+      <div class="clase-tags">
+        <span class="clase-tag tag-artes">
+          Círculo de palabra
+        </span>
+      </div>
+
+    </div>
+
+
+    <div class="scroll-hint">
+
+      <span>Explorar</span>
+
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+      >
+        <path d="M12 5v14M5 12l7 7 7-7" />
+      </svg>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       SOBRE LA SECCIÓN
+       ===================================================== -->
+
+  <section class="clase-about fade-in">
+
+    <div class="clase-section-inner">
+
+      <div
+        class="clase-section-label"
+        style="color:var(--green)"
+      >
+        Sobre esta sección
+      </div>
+
+      <div class="clase-about-grid">
+
+        <div class="clase-about-text">
+
+          <h2 class="clase-section-title">
+            ¿Qué <span>exploramos</span> aquí?
+          </h2>
+
+          <p>
+            Ser madre o cuidadora es una parte de quien se es, no todo. Sin embargo, en contextos de precariedad y alta exigencia, el rol termina borrando a la persona: el nombre propio deja de usarse y los gustos, los sueños y las historias personales quedan suspendidos mientras la vida gira alrededor de las necesidades de otros.
+          </p>
+
+          <p>
+            Este taller parte de una pregunta sencilla y poco usual: ¿quién eres tú cuando no estás cuidando a nadie? No para separar ese espacio del cuidado, sino para recordar que existe. Escuchar a otras mujeres nombrarse devuelve el permiso de hacer lo mismo, como acto colectivo de restitución de identidad.
+          </p>
+
+        </div>
+
+        <div class="clase-about-stats">
+
+          <div class="stat-card">
+            <strong>Inicio</strong>
+            <span>Llegar con nombre propio</span>
+          </div>
+
+          <div class="stat-card">
+            <strong>Desarrollo</strong>
+            <span>¿Quién soy yo cuando no estoy cuidando?</span>
+          </div>
+
+          <div class="stat-card">
+            <strong>Cierre</strong>
+            <span>Una palabra propia en una tira de papel</span>
+          </div>
+
+          <div class="stat-card">
+            <strong>Momento especial</strong>
+            <span>Una cadena de palabras propias que queda en el comedor</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       OBJETIVOS
+       ===================================================== -->
+
+  <section class="clase-objetivos fade-in">
+
+    <div class="clase-section-inner">
+
+      <div class="clase-section-label">
+        Propósito
+      </div>
+
+      <h2 class="clase-section-title">
+        Objetivos de <span>la actividad</span>
+      </h2>
+
+      <div class="objetivos-grid">
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">1</div>
+          <p><strong>Objetivo general.</strong> Acompañar a las participantes en el reconocimiento de su identidad más allá del rol de cuidadoras, como punto de partida para fortalecer la autoestima y la autopercepción positiva.</p>
+        </div>
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">2</div>
+          <p>Identificar cualidades, gustos e historias personales que existen por fuera del rol de madre o cuidadora.</p>
+        </div>
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">3</div>
+          <p>Reconocer cómo la identidad reducida al cuidado afecta el bienestar propio y el vínculo con los hijos e hijas.</p>
+        </div>
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">4</div>
+          <p>Generar un primer gesto de autoafirmación a través de la palabra y la expresión creativa.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FICHA TÉCNICA
+       ===================================================== -->
+
+  <section class="clase-ficha fade-in">
+
+    <div class="clase-section-inner">
+
+      <div class="clase-section-label">
+        Planificación
+      </div>
+
+      <h2 class="clase-section-title">
+        Ficha <span>técnica</span>
+      </h2>
+
+      <div class="ficha-grid">
+
+        <div class="ficha-item">
+          <span class="ficha-label">Duración</span>
+          <span class="ficha-value">90 minutos</span>
+        </div>
+
+        <div class="ficha-item">
+          <span class="ficha-label">Población</span>
+          <span class="ficha-value">Mujeres cuidadoras: madres, abuelas y agentes comunitarias</span>
+        </div>
+
+        <div class="ficha-item">
+          <span class="ficha-label">Escenario</span>
+          <span class="ficha-value">Comedor comunitario Samaritanos del Padre Pío</span>
+        </div>
+
+        <div class="ficha-item">
+          <span class="ficha-label">Estrategia pedagógica</span>
+          <span class="ficha-value">Narrativa autobiográfica en círculo de palabra</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       MOMENTOS DE LA SESIÓN
+       ===================================================== -->
+
+  <section class="clase-objetivos fade-in">
+
+    <div class="clase-section-inner">
+
+      <div class="clase-section-label">
+        Paso a paso
+      </div>
+
+      <h2 class="clase-section-title">
+        Momentos de <span>la sesión</span>
+      </h2>
+
+      <div class="momento-block">
+        <div class="momento-time">Inicio · 20 minutos</div>
+        <div class="momento-title">Llegar con nombre propio</div>
+        <p>Se abre el espacio con una pregunta que parece simple: cada participante dice su nombre —no “mamá de”, no “abuela de”— y comparte una sola cosa que le gustaba hacer antes de tener hijos, o algo que le gusta hacer ahora cuando tiene un momento para sí misma.</p>
+<p>No hay respuesta correcta. El facilitador o la facilitadora modela primero, normalizando respuestas inesperadas o de “no sé”, porque el no saber también dice algo. Este momento de apertura no es un rompehielos decorativo: es la primera acción del taller, recuperar el nombre y recuperar algo propio que no depende del rol.</p>
+      </div>
+
+      <div class="momento-block">
+        <div class="momento-time">Desarrollo · 50 minutos</div>
+        <div class="momento-title">¿Quién soy yo cuando no estoy cuidando?</div>
+        <p>Se trabaja en dos momentos encadenados. Primero, cada participante recibe una hoja y materiales para escribir o dibujar, según prefiera, tres cosas: cómo se describe a sí misma sin mencionar a sus hijos ni su rol de madre, qué disfrutó en algún momento de su vida que ya no hace, y qué palabra o imagen la representa a ella, solo a ella. No se corrige ni se orienta el contenido; se acompaña el proceso con música suave y presencia cercana.</p>
+<p>Después, en círculo, quien quiera comparte lo que escribió o dibujó. La facilitadora recoge los hilos comunes sin homogeneizar: hay mujeres que recuerdan bailar, otras que recuerdan estudiar, otras que no encuentran nada, y eso también se nombra con cuidado. El grupo escucha sin interrumpir.</p>
+<p>Al final se reflexiona juntas sobre una idea central: cuando una mujer se reconoce, cuando sabe quién es más allá del cuidado, eso no la aleja de sus hijos; la acerca desde un lugar más real.</p>
+      </div>
+
+      <div class="momento-block">
+        <div class="momento-time">Cierre · 20 minutos</div>
+        <div class="momento-title">Cierre</div>
+        <p>Cada participante escoge una palabra que la represente —la que escribió antes o una nueva que surgió en el círculo— y la escribe en una tira de papel de color. Las tiras se recogen y se cuelgan juntas formando una cadena visible. No se lleva a casa todavía: se deja en el espacio del comedor como registro colectivo de que estuvieron aquí, con nombre propio.</p>
+<p>Antes de cerrar, la facilitadora hace el enlace con el siguiente taller: hoy nombramos quiénes somos; la próxima vez vamos a hablar de cómo cuidarnos a nosotras mismas, no como obligación sino como derecho.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="clase-ficha fade-in">
+    <div class="clase-section-inner">
+      <div class="clase-section-label">Para el día a día</div>
+      <h2 class="clase-section-title">Prácticas para <span>llevar</span></h2>
+      <div class="objetivos-grid">
+        <div class="objetivo-item">
+          <div class="objetivo-num">1</div>
+          <p><strong>El nombre como ancla.</strong> Usar el propio nombre, no el apodo ni “mamá”, activa algo que el rol cotidiano suele silenciar: la sensación de existir como persona y no solo como función. Se invita a practicarlo fuera del taller: presentarse por su nombre, usarlo al hablar de sí misma y notar qué pasa.</p>
+        </div>
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">2</div>
+          <p><strong>El inventario de lo propio.</strong> Hacer una lista, mental o en papel, de cosas que le pertenecen a una más allá del cuidado: un sabor favorito, una canción, un recuerdo que es solo de ella. No tiene que ser grande ni coherente; lo importante es que sea honesto.</p>
+        </div>
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">3</div>
+          <p><strong>La pausa de identidad.</strong> En algún momento del día, antes de dormir o mientras espera el bus, hacerse una pregunta breve: ¿hoy hice algo que fue para mí? No como exigencia sino como observación. Con el tiempo, esa pregunta abre pequeños espacios que antes no existían: no aparece tiempo nuevo, cambia lo que se nota.</p>
+        </div>
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">4</div>
+          <p><strong>Decir “yo” sin pedir permiso.</strong> Muchas mujeres en contextos de alta exigencia aprenden a hablar siempre en función de otros: “mis hijos necesitan”, “en mi casa pasa”. Durante el taller, cada vez que alguien va a hablar de sí misma, se le invita a empezar con “yo”: “yo siento”, “yo quiero”, “yo recuerdo”. Es un gesto pequeño con un efecto de reposicionamiento real.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       MATERIALES
+       ===================================================== -->
+
+  <section class="clase-material fade-in">
+
+    <div class="clase-section-inner">
+
+      <div
+        class="clase-section-label"
+        style="color:var(--orange)"
+      >
+        Recursos
+      </div>
+
+      <h2 class="clase-section-title">
+        Materiales
+        <span style="color:var(--orange)">
+          necesarios
+        </span>
+      </h2>
+
+      <div class="material-grid">
+
+        <div class="material-card">
+          <div class="material-icon" style="background:rgba(163,192,55,0.15); color:var(--green); font-weight:900">20'</div>
+          <div class="material-info">
+            <strong>Inicio</strong>
+            <span>Sillas o cojines</span>
+          </div>
+        </div>
+
+        <div class="material-card">
+          <div class="material-icon" style="background:rgba(215,130,44,0.15); color:var(--orange); font-weight:900">50'</div>
+          <div class="material-info">
+            <strong>Desarrollo</strong>
+            <span>Hojas blancas o de colores (una por participante) · Lápices, colores, marcadores · Revistas viejas para recortar (opcional) · Tijeras y pegante · Música instrumental de fondo</span>
+          </div>
+        </div>
+
+        <div class="material-card">
+          <div class="material-icon" style="background:rgba(85,176,210,0.15); color:var(--blue); font-weight:900">20'</div>
+          <div class="material-info">
+            <strong>Cierre</strong>
+            <span>Tiras de papel de colores (una por participante) · Marcadores permanentes · Hilo, cuerda o lana para colgar las tiras · Cinta adhesiva o gancho para fijar la cadena en la pared</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       REFERENCIAS
+       ===================================================== -->
+
+  <section class="clase-ficha fade-in">
+
+    <div class="clase-section-inner">
+
+      <details class="refs">
+        <summary>Referencias del taller</summary>
+        <ul class="refs-list">
+          <li>Barry, R. A., Longstreth, M., y Bader, L. R. (2021). Evaluando la autodeterminación en el cuidado informal: motivación autónoma, carga y síntomas depresivos. Psychology and Aging, 36(7), 855-869.</li><li>Deci, E. L., y Ryan, R. M. (2000). La motivación intrínseca y la autodeterminación del comportamiento humano. Psychological Inquiry, 11(4), 227-268.</li><li>Freire, P. (1970). Pedagogía del oprimido. Siglo XXI Editores.</li><li>Walsh, C. (2013). Pedagogías decoloniales: Prácticas insurgentes de resistir, (re)existir y (re)vivir. Tomo I. Ediciones Abya-Yala.</li>
+        </ul>
+      </details>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       NAVEGACIÓN
+       ===================================================== -->
+
+  <section class="clase-nav-section fade-in">
+
+    <div class="clase-section-inner">
+
+      <div class="clase-nav-links">
+
+        <a href="./01-lo-que-cargo-sin-que-nadie-lo-vea.html" class="clase-nav-prev">
+          <span class="clase-nav-dir">← Anterior</span>
+          <span class="clase-nav-name">Taller 01 · Lo que cargo sin que nadie lo vea</span>
+        </a>
+
+        <a href="../secciones.html" class="clase-nav-all">
+          Ver todas las clases
+        </a>
+
+        <a href="./03-cuidarme-no-es-un-lujo.html" class="clase-nav-next">
+          <span class="clase-nav-dir">Siguiente →</span>
+          <span class="clase-nav-name">Taller 03 · Cuidarme no es un lujo</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer>
+
+    <div class="footer-brand">
+
+      <h4>
+        Infancia que Resiste
+      </h4>
+
+      <p>
+        Un proyecto de la Universidad de San Buenaventura
+        para fortalecer entornos protectores en Ciudad Bolívar
+        a través del arte, la multimedia y la educación para la paz.
+      </p>
+
+      <span class="tagline">
+        ✦ Sentir es crear
+      </span>
+
+    </div>
+
+
+    <div class="footer-col">
+
+      <h5>
+        Secciones
+      </h5>
+
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../secciones.html">Clases</a></li>
+        <li><a href="../index.html#equipo">Equipo</a></li>
+        <li><a href="../index.html#podcast">Podcast</a></li>
+      </ul>
+
+    </div>
+
+
+    <div class="footer-col">
+
+      <h5>
+        Contacto
+      </h5>
+
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Correo</a></li>
+      </ul>
+
+    </div>
+
+  </footer>
+
+
+  <div class="footer-bottom">
+
+    © 2025 Infancia que Resiste ·
+    Universidad de San Buenaventura —
+    Todos los derechos reservados
+
+  </div>
+
+
+
+  <!-- =====================================================
+       BOOTSTRAP JS
+       ===================================================== -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script>
+
+    /* ANIMACIONES */
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+
+        entries.forEach(
+          (entry) => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add('visible');
+
+            }
+
+          }
+        );
+
+      },
+      {
+        threshold: 0.1
+      }
+    );
+
+
+    document
+      .querySelectorAll('.fade-in')
+      .forEach(
+        (element) => observer.observe(element)
+      );
+
+
+
+    /* MENÚ HAMBURGUESA */
+
+    const hamburger =
+      document.querySelector('.hamburger');
+
+    const navLinks =
+      document.querySelector('.nav-links');
+
+
+    if (hamburger && navLinks) {
+
+      hamburger.addEventListener(
+        'click',
+        () => {
+
+          navLinks.classList.toggle('open');
+
+        }
+      );
+
+    }
+
+
+
+    /* CARRUSEL */
+
+    const carouselElement =
+      document.getElementById('claseCarousel');
+
+
+    if (carouselElement) {
+
+      const carousel =
+        new bootstrap.Carousel(
+          carouselElement,
+          {
+            interval: 5000,
+            ride: 'carousel',
+            pause: 'hover',
+            touch: true,
+            wrap: true
+          }
+        );
+
+    }
+
+  </script>
+
+
+</body>
+
+</html>

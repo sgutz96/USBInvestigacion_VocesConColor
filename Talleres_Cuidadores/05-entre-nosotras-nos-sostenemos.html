@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Taller 05 — Entre nosotras nos sostenemos</title>
+
+  <link rel="shortcut icon" href="../assets/img/logo.svg" type="image/x-icon">
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS DEL PROYECTO -->
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/clase.css">
+
+  <!-- BOOTSTRAP -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- ESTILOS DE LA PÁGINA -->
+  <style>
+    /* Momentos de la sesión */
+    .momento-block { border-left: 4px solid var(--orange); padding: 4px 0 4px 24px; margin-top: 40px; }
+    .momento-block:nth-child(3n+2) { border-left-color: var(--green); }
+    .momento-block:nth-child(3n+3) { border-left-color: var(--blue); }
+    .momento-time { font-weight: 900; text-transform: uppercase; letter-spacing: .08em; font-size: .8rem; opacity: .75; }
+    .momento-title { font-weight: 900; font-size: 1.5rem; margin: 4px 0 14px; }
+    .momento-block p, .momento-list li { line-height: 1.7; }
+    .momento-sub { font-weight: 700; margin: 22px 0 8px; }
+    .momento-list { padding-left: 1.2rem; }
+    .momento-mats { margin-top: 14px; font-size: .92rem; opacity: .85; }
+    .refs-list { padding-left: 1.2rem; font-size: .9rem; line-height: 1.6; }
+    .refs-list li { margin-bottom: 8px; word-break: break-word; }
+    details.refs summary { cursor: pointer; font-weight: 700; margin-bottom: 14px; }
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <nav>
+
+    <a href="../index.html" class="nav-logo">
+
+      <img
+        class="nav-logo-icon"
+        src="../assets/img/logo.svg"
+        alt="Infancia que Resiste logo"
+      >
+
+      <div class="nav-brand">
+        Infancia que<br>
+        <span>Resiste</span>
+      </div>
+
+    </a>
+
+
+    <ul class="nav-links">
+
+      <li>
+        <a href="../index.html#about">
+          Proyecto
+        </a>
+      </li>
+
+      <li>
+        <a href="../secciones.html">
+          Secciones
+        </a>
+      </li>
+
+      <li>
+        <a href="../index.html#podcast">
+          Podcast
+        </a>
+      </li>
+
+      <li>
+        <a href="../index.html#mapa">
+          Mapa
+        </a>
+      </li>
+
+      <li>
+        <a href="../index.html#contacto">
+          Contacto
+        </a>
+      </li>
+
+    </ul>
+
+
+    <button
+      class="hamburger"
+      type="button"
+      aria-label="Abrir menú"
+    >
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+  </nav>
+
+
+
+  <!-- =====================================================
+       HERO + CARRUSEL
+       ===================================================== -->
+
+  <section class="clase-hero">
+
+    <div class="clase-hero-bg">
+
+      <div
+        id="claseCarousel"
+        class="carousel slide h-100"
+        data-bs-ride="carousel"
+        data-bs-interval="5000"
+      >
+
+        <div class="carousel-indicators">
+
+          <button
+            type="button"
+            data-bs-target="#claseCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Imagen 1"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#claseCarousel"
+            data-bs-slide-to="1"
+            aria-label="Imagen 2"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#claseCarousel"
+            data-bs-slide-to="2"
+            aria-label="Imagen 3"
+          ></button>
+
+        </div>
+
+
+        <div class="carousel-inner h-100">
+
+          <div class="carousel-item active h-100">
+            <img
+              src="../assets/fotos/Talleres/Taller_05_Foto_0.jpg"
+              alt="Entre nosotras nos sostenemos - Foto 1"
+            >
+          </div>
+
+          <div class="carousel-item h-100">
+            <img
+              src="../assets/fotos/Talleres/Taller_05_Foto_1.jpg"
+              alt="Entre nosotras nos sostenemos - Foto 2"
+            >
+          </div>
+
+          <div class="carousel-item h-100">
+            <img
+              src="../assets/fotos/Talleres/Taller_05_Foto_2.jpg"
+              alt="Entre nosotras nos sostenemos - Foto 3"
+            >
+          </div>
+
+        </div>
+
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#claseCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#claseCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+
+      </div>
+
+      <div class="clase-hero-overlay"></div>
+
+    </div>
+
+
+    <div class="clase-hero-content">
+
+      <a href="../secciones.html" class="back-link">
+        ← Volver a Secciones
+      </a>
+
+      <div class="clase-number-badge">
+        Taller 05
+      </div>
+
+      <h1 class="clase-hero-title">
+        Entre nosotras nos sostenemos
+      </h1>
+
+      <p class="clase-hero-subtitle">
+        Construcción de red de cuidado comunitario
+      </p>
+
+      <div class="clase-tags">
+        <span class="clase-tag tag-artes">
+          Tejido de redes
+        </span>
+      </div>
+
+    </div>
+
+
+    <div class="scroll-hint">
+
+      <span>Explorar</span>
+
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+      >
+        <path d="M12 5v14M5 12l7 7 7-7" />
+      </svg>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       SOBRE LA SECCIÓN
+       ===================================================== -->
+
+  <section class="clase-about fade-in">
+
+    <div class="clase-section-inner">
+
+      <div
+        class="clase-section-label"
+        style="color:var(--green)"
+      >
+        Sobre esta sección
+      </div>
+
+      <div class="clase-about-grid">
+
+        <div class="clase-about-text">
+
+          <h2 class="clase-section-title">
+            ¿Qué <span>exploramos</span> aquí?
+          </h2>
+
+          <p>
+            Las mujeres sostienen el cuidado, pero ninguna mujer debería tener que cuidar sola. En territorios marcados por la desigualdad, la desconfianza institucional y la ausencia de bienes y servicios mínimos, muchas cuidadoras asumen cargas que tendrían que ser sostenidas por una red.
+          </p>
+
+          <p>
+            Este taller visibiliza la red de cuidado que atraviesa al comedor: quiénes la conforman, qué puede ofrecer cada miembro, qué pueden pedir, qué límites necesitan y en qué momentos debe activarse una ruta institucional o cotidiana. Se teje la red, se mapea, se nombra y se deja como herramienta utilizable. Lo que se nombra y se cuida, puede sostener.
+          </p>
+
+        </div>
+
+        <div class="clase-about-stats">
+
+          <div class="stat-card">
+            <strong>Inicio</strong>
+            <span>El hilo que me sostuvo</span>
+          </div>
+
+          <div class="stat-card">
+            <strong>Desarrollo</strong>
+            <span>Mapeo personal y mapeo colectivo</span>
+          </div>
+
+          <div class="stat-card">
+            <strong>Cierre</strong>
+            <span>El mapa que queda vivo</span>
+          </div>
+
+          <div class="stat-card">
+            <strong>Momento especial</strong>
+            <span>Un mapa de red que queda en el comedor como recurso vivo</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       OBJETIVOS
+       ===================================================== -->
+
+  <section class="clase-objetivos fade-in">
+
+    <div class="clase-section-inner">
+
+      <div class="clase-section-label">
+        Propósito
+      </div>
+
+      <h2 class="clase-section-title">
+        Objetivos de <span>la actividad</span>
+      </h2>
+
+      <div class="objetivos-grid">
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">1</div>
+          <p><strong>Objetivo general.</strong> Identificar y construir colectivamente una red de cuidado comunitario que permita a las mujeres cuidadoras reconocer su red de apoyo cercana, límites seguros y rutas posibles dentro de una comunidad protectora en su cotidianidad.</p>
+        </div>
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">2</div>
+          <p>Reconocer que pedir ayuda no es señal de incapacidad, debilidad o fragilidad, sino una práctica de cuidado compartido.</p>
+        </div>
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">3</div>
+          <p>Identificar personas, lugares, instituciones y recursos comunitarios que pueden sostener a las cuidadoras y a sus familias en situaciones cotidianas o de mayor dificultad.</p>
+        </div>
+
+        <div class="objetivo-item">
+          <div class="objetivo-num">4</div>
+          <p>Construir y socializar un mapa de red que permanezca en el comedor como recurso vivo, útil y actualizable para la comunidad.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FICHA TÉCNICA
+       ===================================================== -->
+
+  <section class="clase-ficha fade-in">
+
+    <div class="clase-section-inner">
+
+      <div class="clase-section-label">
+        Planificación
+      </div>
+
+      <h2 class="clase-section-title">
+        Ficha <span>técnica</span>
+      </h2>
+
+      <div class="ficha-grid">
+
+        <div class="ficha-item">
+          <span class="ficha-label">Duración</span>
+          <span class="ficha-value">95 minutos</span>
+        </div>
+
+        <div class="ficha-item">
+          <span class="ficha-label">Población</span>
+          <span class="ficha-value">Madres, abuelas y tías a cargo de niñas y niños de 0 a 6 años</span>
+        </div>
+
+        <div class="ficha-item">
+          <span class="ficha-label">Escenario</span>
+          <span class="ficha-value">Comedor comunitario Samaritanos del Padre Pío</span>
+        </div>
+
+        <div class="ficha-item">
+          <span class="ficha-label">Estrategia pedagógica</span>
+          <span class="ficha-value">Tejido colectivo y mapeo de redes</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       MOMENTOS DE LA SESIÓN
+       ===================================================== -->
+
+  <section class="clase-objetivos fade-in">
+
+    <div class="clase-section-inner">
+
+      <div class="clase-section-label">
+        Paso a paso
+      </div>
+
+      <h2 class="clase-section-title">
+        Momentos de <span>la sesión</span>
+      </h2>
+
+      <div class="momento-block">
+        <div class="momento-time">Inicio · 25 minutos</div>
+        <div class="momento-title">El hilo que me sostuvo/sostiene</div>
+        <p>Se retoma el cierre del encuentro anterior: ninguna mujer debería tener que sostener el cuidado sola. La facilitadora lleva un hilo de lana o hilo grueso. Sostiene una punta, dice su nombre y completa la frase: “una vez alguien me sostuvo/apoyó/ayudó cuando…”. No se pide una historia larga ni dolorosa; basta nombrar una situación cotidiana: cuando necesitó que alguien escuchara, le cuidó un niño, la acompañó a una cita o le explicó un trámite.</p>
+<p>Después de hablar, sostiene una punta del hilo y lo lanza suavemente a otra participante. Cada mujer hace lo mismo: sostiene un pedazo, dice una frase y lo pasa a la siguiente. Poco a poco se forma una red visible en el centro del círculo. Si una suelta, la red se mueve, pero no desaparece.</p>
+<p>Al final se pregunta: ¿qué sostuvo esta red?, ¿qué la podría romper?, ¿qué necesitaría para funcionar también fuera del taller?</p>
+      </div>
+
+      <div class="momento-block">
+        <div class="momento-time">Desarrollo · 50 minutos</div>
+        <div class="momento-title">Desarrollo</div>
+        <h4 class="momento-sub">Parte A: mapeo personal (25 min)</h4>
+<p>Cada participante recibe una hoja con cuatro círculos dentro del mismo círculo. En el más pequeño escribe su nombre. En el segundo ubica personas cercanas que podrían apoyar algo concreto. En el tercero, lugares de su barrio o vereda que ya usa o podría usar (comedor, colegio, centro de salud, iglesia, junta, biblioteca, casa de una vecina, Manzana del Cuidado, Casa de Igualdad, Casa de Justicia). En el cuarto, instituciones o rutas que deberían responder cuando la red cercana no alcanza. En un quinto espacio, fuera del círculo, escribe lo que hace falta, lo que todavía no se tiene, lo que no sabe dónde buscar, lo que le da miedo pedir.</p>
+<p>Luego marca con colores tres tipos de apoyo: para el cuidado de los niños y niñas, para trámites o instituciones, y emocional o de escucha. Si un nombre no es seguro, no se pone. Si una institución no ha respondido bien, se puede marcar con una alerta. La red se construye con confianza.</p>
+<h4 class="momento-sub">Parte B: mapeo colectivo (25 min)</h4>
+<p>En una cartelera se dibuja el comedor en el centro y alrededor se pegan tarjetas con los recursos que el grupo quiera dejar con mayor visibilidad: personas o roles, lugares del barrio, servicios públicos, rutas de orientación y contactos institucionales que puedan verificarse antes de publicar el mapa. La facilitadora organiza el mapa por necesidades: “cuando necesito descansar”, “cuando necesito que me orienten”, “cuando hay una urgencia”, “cuando necesito hacer un trámite”, “cuando necesito hablar con alguien”.</p>
+<p>El grupo cierra el mapa construyendo tres acuerdos mínimos de red, que se escriben al lado del mapa porque una red debe tener límites.</p>
+      </div>
+
+      <div class="momento-block">
+        <div class="momento-time">Cierre · 20 minutos</div>
+        <div class="momento-title">El mapa que queda vivo</div>
+        <p>Cada mujer recibe una tarjeta pequeña en forma de nudo o hilo. En un lado escribe algo que puede ofrecer a la red (escuchar diez minutos, recordar una reunión, acompañar a un trámite, compartir información, cuidar una planta del comedor, ayudar a leer una carta). En el otro, algo que se permitirá pedir cuando lo necesite. Una a una, las tarjetas se pegan alrededor del mapa colectivo.</p>
+<p>La facilitadora subraya que este mapa no es un adorno ni una lista cerrada: es un recurso vivo que puede corregirse, ampliarse, retirar información que ya no sirve, agregar rutas nuevas y cambiar acuerdos.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       MATERIALES
+       ===================================================== -->
+
+  <section class="clase-material fade-in">
+
+    <div class="clase-section-inner">
+
+      <div
+        class="clase-section-label"
+        style="color:var(--orange)"
+      >
+        Recursos
+      </div>
+
+      <h2 class="clase-section-title">
+        Materiales
+        <span style="color:var(--orange)">
+          necesarios
+        </span>
+      </h2>
+
+      <div class="material-grid">
+
+        <div class="material-card">
+          <div class="material-icon" style="background:rgba(163,192,55,0.15); color:var(--green); font-weight:900">25'</div>
+          <div class="material-info">
+            <strong>Inicio</strong>
+            <span>Lana o hilo grueso · Sillas en círculo · Hoja grande para anotar frases clave · Marcadores</span>
+          </div>
+        </div>
+
+        <div class="material-card">
+          <div class="material-icon" style="background:rgba(215,130,44,0.15); color:var(--orange); font-weight:900">50'</div>
+          <div class="material-info">
+            <strong>Desarrollo</strong>
+            <span>Hojas con círculos · Cartelera grande · Tarjetas de colores · Marcadores, colores y cinta</span>
+          </div>
+        </div>
+
+        <div class="material-card">
+          <div class="material-icon" style="background:rgba(85,176,210,0.15); color:var(--blue); font-weight:900">20'</div>
+          <div class="material-info">
+            <strong>Cierre</strong>
+            <span>Post-its o tarjetas pequeñas · Lapiceros · Cinta adhesiva · Hilos cortos</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       REFERENCIAS
+       ===================================================== -->
+
+  <section class="clase-ficha fade-in">
+
+    <div class="clase-section-inner">
+
+      <details class="refs">
+        <summary>Referencias del taller</summary>
+        <ul class="refs-list">
+          <li>Bronfenbrenner, U. (1979). La ecología del desarrollo humano: Experimentos en entornos naturales y diseñados. Paidós.</li><li>Fals Borda, O., y Brandão, C. R. (1987). Investigación participativa. La Banda Oriental.</li><li>Freire, P. (1970). Pedagogía del oprimido. Siglo XXI Editores.</li><li>Ministerio de Educación de la Nación Argentina. (2023). Pensar la escuela desde la pedagogía del cuidado. Ministerio de Educación de la Nación.</li><li>Montero Gamboa, A. J. (2022). Pedagogía del cuidado y del autocuidado: Una apuesta formativa desde las historias de vida de niños y niñas en Ciudad Bolívar. Instituto para la Investigación Educativa y el Desarrollo Pedagógico.</li><li>ONU Mujeres. (2024). Cuidados a nivel local: Experiencias, aprendizajes y orientaciones para la construcción de sistemas locales de cuidado. ONU Mujeres.</li><li>Programa de las Naciones Unidas para el Desarrollo. (2022). Los cuidados comunitarios en América Latina y el Caribe. PNUD.</li><li>UNICEF y Kaleidos. (2024). Promoción del desarrollo infantil temprano en la comunidad: Aportes para la realización de encuentros comunitarios. Guía 5. UNICEF.</li><li>Sistema Distrital de Cuidado. (2026). Sistema Distrital de Cuidado: Tiempo y servicios para las personas cuidadoras. Alcaldía Mayor de Bogotá. <a href="https://sistemadecuidado.gov.co/" target="_blank" rel="noopener">https://sistemadecuidado.gov.co/</a></li>
+        </ul>
+      </details>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       NAVEGACIÓN
+       ===================================================== -->
+
+  <section class="clase-nav-section fade-in">
+
+    <div class="clase-section-inner">
+
+      <div class="clase-nav-links">
+
+        <a href="./04-mis-hijos-aprenden-mirandome.html" class="clase-nav-prev">
+          <span class="clase-nav-dir">← Anterior</span>
+          <span class="clase-nav-name">Taller 04 · Mis hijos aprenden mirándome</span>
+        </a>
+
+        <a href="../secciones.html" class="clase-nav-all">
+          Ver todas las clases
+        </a>
+
+        <a href="./06-la-que-cuida-tambien-tiene-derechos.html" class="clase-nav-next">
+          <span class="clase-nav-dir">Siguiente →</span>
+          <span class="clase-nav-name">Taller 06 · La que cuida también tiene derechos</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer>
+
+    <div class="footer-brand">
+
+      <h4>
+        Infancia que Resiste
+      </h4>
+
+      <p>
+        Un proyecto de la Universidad de San Buenaventura
+        para fortalecer entornos protectores en Ciudad Bolívar
+        a través del arte, la multimedia y la educación para la paz.
+      </p>
+
+      <span class="tagline">
+        ✦ Sentir es crear
+      </span>
+
+    </div>
+
+
+    <div class="footer-col">
+
+      <h5>
+        Secciones
+      </h5>
+
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../secciones.html">Clases</a></li>
+        <li><a href="../index.html#equipo">Equipo</a></li>
+        <li><a href="../index.html#podcast">Podcast</a></li>
+      </ul>
+
+    </div>
+
+
+    <div class="footer-col">
+
+      <h5>
+        Contacto
+      </h5>
+
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Correo</a></li>
+      </ul>
+
+    </div>
+
+  </footer>
+
+
+  <div class="footer-bottom">
+
+    © 2025 Infancia que Resiste ·
+    Universidad de San Buenaventura —
+    Todos los derechos reservados
+
+  </div>
+
+
+
+  <!-- =====================================================
+       BOOTSTRAP JS
+       ===================================================== -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script>
+
+    /* ANIMACIONES */
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+
+        entries.forEach(
+          (entry) => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add('visible');
+
+            }
+
+          }
+        );
+
+      },
+      {
+        threshold: 0.1
+      }
+    );
+
+
+    document
+      .querySelectorAll('.fade-in')
+      .forEach(
+        (element) => observer.observe(element)
+      );
+
+
+
+    /* MENÚ HAMBURGUESA */
+
+    const hamburger =
+      document.querySelector('.hamburger');
+
+    const navLinks =
+      document.querySelector('.nav-links');
+
+
+    if (hamburger && navLinks) {
+
+      hamburger.addEventListener(
+        'click',
+        () => {
+
+          navLinks.classList.toggle('open');
+
+        }
+      );
+
+    }
+
+
+
+    /* CARRUSEL */
+
+    const carouselElement =
+      document.getElementById('claseCarousel');
+
+
+    if (carouselElement) {
+
+      const carousel =
+        new bootstrap.Carousel(
+          carouselElement,
+          {
+            interval: 5000,
+            ride: 'carousel',
+            pause: 'hover',
+            touch: true,
+            wrap: true
+          }
+        );
+
+    }
+
+  </script>
+
+
+</body>
+
+</html>
