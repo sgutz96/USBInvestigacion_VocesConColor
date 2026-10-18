@@ -1627,3 +1627,30 @@
     max-width: none;
   }
 }
+
+
+.textura1{
+   background-image: url("../assets/img/Texturas/Textura_1.png");
+    background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.textura2 {
+  position: relative;
+  background-image: url("../assets/img/Texturas/Textura_2.png");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.textura3{
+   background-image: url("../assets/img/Texturas/Textura_3.png");
+    background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
