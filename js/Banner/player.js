@@ -6,11 +6,13 @@ const isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)
   || (navigator.maxTouchPoints > 1 && /Macintosh/.test(navigator.userAgent))
   || window.innerWidth < 900;
 
-// ── AR: cómo se coloca el parque ───────────────────────────────
-// El parque mide ~31 unidades de diámetro. En AR se reduce y se pone frente al usuario, sobre el suelo.
-const AR_SCALE = 0.04;       // 1 unidad del parque = 4 cm reales  → ~1,2 m de diámetro
-const AR_DISTANCE = 2.0;     // metros frente al usuario en la colocación inicial
-const AR_EYE_HEIGHT = 1.3;   // altura supuesta de los ojos sobre el suelo (hasta detectar el suelo real)
+// ── AR: el usuario es un personaje dentro del parque (escala 1:1) ──
+const AR_SPAWN = new THREE.Vector3(0, 0, 8);   // dónde aparece (coordenadas del parque); mira hacia el carrusel
+const AR_EYE_HEIGHT = 1.4;    // altura supuesta de los ojos hasta detectar el suelo real
+const AR_WALK_SPEED = 1.6;    // m/s al mantener el dedo pulsado
+const AR_WALK_LIMIT = 15;     // radio máximo al que se puede caminar (la cerca está en 15.5)
+const AR_FULL_WORLD = false;  // false: se ve la cámara real con el parque encima · true: también cielo y horizonte virtuales
+const Y_AXIS = new THREE.Vector3(0, 1, 0);
 
 /**
  * Cámara, controles libres, auto-órbita y modo AR.
@@ -51,14 +53,17 @@ export function createPlayer({ scene, renderer, width, height, ui }) {
 
   // ── AR ───────────────────────────────────────────────────────
   let arSession = null;
-  let arRoot = null;          // grupo que contiene todo el parque mientras dura la sesión AR
-  let arAutoPlaced = false;   // ya se hizo la colocación inicial frente al usuario
+  let arRoot = null;          // grupo con todo el parque mientras dura la sesión AR
+  let arAutoPlaced = false;   // ya se colocó al usuario en el punto de aparición
+  let floorLocked = false;    // ya se ajustó la altura al suelo real
+  let walking = false;        // dedo pulsado → caminar hacia donde se mira
   let hitTestSource = null;
-  let reticle = null;
   let saved = null;           // estado que se restaura al salir de AR
   const tmpDir = new THREE.Vector3();
+  const tmpPos = new THREE.Vector3();
+  const tmpUser = new THREE.Vector3();
 
-  // Los toques sobre los botones no deben colocar el parque
+  // Los toques sobre los botones no deben hacer caminar al personaje
   [arBtn, exploreBtn].forEach(el => el.addEventListener('beforexrselect', e => e.preventDefault()));
 
   async function initAR() {
@@ -72,92 +77,57 @@ export function createPlayer({ scene, renderer, width, height, ui }) {
     } catch (e) { /* puede fallar antes del gesto del usuario */ }
   }
 
-  function makeReticle() {
-    const geo = new THREE.RingGeometry(0.08, 0.11, 32).rotateX(-Math.PI / 2);
-    const m = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ color: 0xffffff, fog: false, toneMapped: false }));
-    m.matrixAutoUpdate = false;   // la matriz viene directa del hit-test
-    m.visible = false;
-    return m;
-  }
-
-  // Mete todo el parque en un grupo reducido, quita cielo/sol/nubes/suelo infinito y lo coloca frente al usuario
+  // Mete el parque en un grupo que se mueve/rota (así se "camina" desplazando el mundo, no la cámara)
   function enterARLayout() {
     saved = {
       camPos: camera.position.clone(),
       camQuat: camera.quaternion.clone(),
-      near: camera.near,
-      far: camera.far,
+      hint: hintEl.querySelector('.hint-text')?.textContent,
       hidden: [],
-      lights: [],
     };
 
     arRoot = new THREE.Group();
     arRoot.name = 'ar-root';
     [...scene.children].forEach(o => arRoot.add(o));
 
-    const sunLights = [];
+    const suns = [];
     arRoot.traverse(o => {
-      if (o.userData.hideInAR) { saved.hidden.push(o); o.visible = false; }
-      if (o.isDirectionalLight && o.castShadow) sunLights.push(o);
+      if (!AR_FULL_WORLD && o.userData.hideInAR) { saved.hidden.push(o); o.visible = false; }
+      if (o.isDirectionalLight) suns.push(o);
     });
+    suns.forEach(l => arRoot.add(l.target));   // el sol y su objetivo se mueven con el parque
 
-    // La luz del sol viaja con el parque: su "target" y el volumen de sombras se reducen igual
-    sunLights.forEach(light => {
-      const sc = light.shadow.camera;
-      saved.lights.push({
-        light, left: sc.left, right: sc.right, top: sc.top, bottom: sc.bottom,
-        near: sc.near, far: sc.far, normalBias: light.shadow.normalBias,
-      });
-      sc.left *= AR_SCALE; sc.right *= AR_SCALE; sc.top *= AR_SCALE; sc.bottom *= AR_SCALE;
-      sc.near *= AR_SCALE; sc.far *= AR_SCALE;
-      sc.updateProjectionMatrix();
-      light.shadow.normalBias *= AR_SCALE;
-      arRoot.add(light.target);
-    });
-
-    arRoot.scale.setScalar(AR_SCALE);
-    arRoot.position.set(0, -AR_EYE_HEIGHT, -AR_DISTANCE);   // se corrige en el primer frame con la pose real
     scene.add(arRoot);
     arAutoPlaced = false;
-
-    reticle = reticle || makeReticle();
-    reticle.visible = false;
-    scene.add(reticle);
-
-    // Objetos pequeños y cercanos: plano cercano más corto
-    camera.near = 0.02;
-    camera.far = 100;
-    camera.updateProjectionMatrix();
-
+    floorLocked = false;
+    walking = false;
     controls.enabled = false;
-    scene.background = null;
-    scene.fog = null;
-    renderer.setClearColor(0x000000, 0);
+
+    if (!AR_FULL_WORLD) {
+      scene.background = null;
+      scene.fog = null;
+      renderer.setClearColor(0x000000, 0);
+    }
+
+    const hintText = hintEl.querySelector('.hint-text');
+    if (hintText) hintText.textContent = 'Mantén el dedo pulsado para caminar';
   }
 
   function exitARLayout() {
     if (!arRoot) return;
-    [...arRoot.children].forEach(o => scene.add(o));   // devuelve el parque (y los targets de luz) a la escena
+    [...arRoot.children].forEach(o => scene.add(o));   // devuelve el parque (y el target del sol) a la escena
     scene.remove(arRoot);
     arRoot = null;
-    if (reticle) scene.remove(reticle);
 
     saved.hidden.forEach(o => { o.visible = true; });
-    saved.lights.forEach(s => {
-      const sc = s.light.shadow.camera;
-      sc.left = s.left; sc.right = s.right; sc.top = s.top; sc.bottom = s.bottom;
-      sc.near = s.near; sc.far = s.far;
-      sc.updateProjectionMatrix();
-      s.light.shadow.normalBias = s.normalBias;
-    });
-
-    camera.near = saved.near;
-    camera.far = saved.far;
     camera.position.copy(saved.camPos);
     camera.quaternion.copy(saved.camQuat);
     camera.updateProjectionMatrix();
     controls.enabled = controlsActive;
+    const hintText = hintEl.querySelector('.hint-text');
+    if (hintText && saved.hint !== undefined) hintText.textContent = saved.hint;
     saved = null;
+    walking = false;
   }
 
   async function setupHitTest(session) {
@@ -167,14 +137,8 @@ export function createPlayer({ scene, renderer, width, height, ui }) {
       if (session !== arSession) { src.cancel(); return; }
       hitTestSource = src;
     } catch (e) {
-      hitTestSource = null;   // sin hit-test se queda la colocación inicial frente al usuario
+      hitTestSource = null;   // sin hit-test se usa AR_EYE_HEIGHT como altura de los ojos
     }
-  }
-
-  // Un toque coloca el parque donde apunta el aro (suelo detectado)
-  function onARSelect() {
-    if (!arRoot || !reticle || !reticle.visible) return;
-    arRoot.position.setFromMatrixPosition(reticle.matrix);
   }
 
   async function startAR() {
@@ -194,7 +158,8 @@ export function createPlayer({ scene, renderer, width, height, ui }) {
       await renderer.xr.setSession(session);
       arSession = session;
       session.addEventListener('end', exitAR);
-      session.addEventListener('select', onARSelect);
+      session.addEventListener('selectstart', () => { walking = true; });
+      session.addEventListener('selectend', () => { walking = false; });
       enterARLayout();
       setupHitTest(session);
       arBtn.innerHTML = '✕ Salir AR'; arBtn.disabled = false;
@@ -224,43 +189,65 @@ export function createPlayer({ scene, renderer, width, height, ui }) {
   arBtn.addEventListener('click', startAR);
   initAR();
 
-  function updateAR() {
+  function updateAR(dt) {
     if (!arRoot) return;
     const xrCam = renderer.xr.getCamera();
 
-    // Colocación inicial: frente a donde mira el usuario, a una altura de suelo supuesta
+    // Aparición: el usuario queda en AR_SPAWN y su mirada actual apunta hacia el centro del parque
     if (!arAutoPlaced) {
       arAutoPlaced = true;
       tmpDir.set(0, 0, -1).applyQuaternion(xrCam.quaternion);
       tmpDir.y = 0;
       if (tmpDir.lengthSq() < 1e-4) tmpDir.set(0, 0, -1);
       tmpDir.normalize();
+      arRoot.rotation.y = Math.atan2(-tmpDir.x, -tmpDir.z);   // el -z del parque pasa a ser hacia donde mira
+      tmpPos.copy(AR_SPAWN).applyAxisAngle(Y_AXIS, arRoot.rotation.y);
       arRoot.position.set(
-        xrCam.position.x + tmpDir.x * AR_DISTANCE,
+        xrCam.position.x - tmpPos.x,
         xrCam.position.y - AR_EYE_HEIGHT,
-        xrCam.position.z + tmpDir.z * AR_DISTANCE
+        xrCam.position.z - tmpPos.z
       );
     }
 
-    // Aro sobre la superficie que detecta el hit-test
+    // Suelo real: la primera superficie horizontal razonable bajo la vista fija la altura del césped
     const frame = renderer.xr.getFrame && renderer.xr.getFrame();
-    if (hitTestSource && frame && reticle) {
+    if (!floorLocked && hitTestSource && frame) {
       const hits = frame.getHitTestResults(hitTestSource);
       const pose = hits.length ? hits[0].getPose(renderer.xr.getReferenceSpace()) : null;
       if (pose) {
-        reticle.visible = true;
-        reticle.matrix.fromArray(pose.transform.matrix);
-      } else {
-        reticle.visible = false;
+        const drop = xrCam.position.y - pose.transform.position.y;
+        const horizontal = pose.transform.matrix[5] > 0.9;   // eje Y del hit = normal de la superficie
+        if (horizontal && drop > 0.9 && drop < 2.1) {
+          arRoot.position.y = pose.transform.position.y;
+          floorLocked = true;
+        }
+      }
+    }
+
+    // Caminar: se desplaza el mundo en sentido contrario a la mirada, sin salir de la cerca
+    if (walking) {
+      tmpDir.set(0, 0, -1).applyQuaternion(xrCam.quaternion);
+      tmpDir.y = 0;
+      tmpDir.normalize();
+      tmpPos.copy(arRoot.position).addScaledVector(tmpDir, -AR_WALK_SPEED * dt);
+      tmpUser.set(xrCam.position.x - tmpPos.x, 0, xrCam.position.z - tmpPos.z)
+        .applyAxisAngle(Y_AXIS, -arRoot.rotation.y);        // posición del usuario en coordenadas del parque
+      if (tmpUser.length() <= AR_WALK_LIMIT) {
+        arRoot.position.x = tmpPos.x;
+        arRoot.position.z = tmpPos.z;
       }
     }
   }
 
   // ── UPDATE ───────────────────────────────────────────────────
   let autoAngle = 0;
+  let lastT = 0;
 
   function update(t) {
-    if (renderer.xr.isPresenting) { updateAR(); return; }   // en AR la cámara la mueve el dispositivo
+    const dt = Math.min(0.1, Math.max(0, t - lastT));
+    lastT = t;
+
+    if (renderer.xr.isPresenting) { updateAR(dt); return; }   // en AR la cámara la mueve el dispositivo
     if (!controlsActive) {
       autoAngle += 0.0011;
       camera.position.x = Math.sin(autoAngle) * 16;
