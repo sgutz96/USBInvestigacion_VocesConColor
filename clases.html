@@ -16,26 +16,26 @@
 
 <body>
 
-  <!-- ===== NAV ===== -->
+   <!-- ===== NAV ===== -->
   <nav>
-    <a href="./index.html" class="nav-logo">
-      <img class="nav-logo-icon" src="./assets/img/logo.svg" alt="Infancia que Resiste logo">
+    <a href="index.html" class="nav-logo">
+      <img class="nav-logo-icon" src="./assets/img/logo.svg" alt="Logo de Infancia que Resiste">
       <div class="nav-brand">Infancia que<br><span>Resiste</span></div>
     </a>
- 
-    <ul class="nav-links">
-      <li><a href="./index.html#about">Proyecto</a></li>
-      <li><a href="./index.html#secciones">Secciones</a></li>
-      <li><a href="./index.html#podcast">Podcast</a></li>
-      <li><a href="./index.html#mapa">Mapa</a></li>
-      <li><a href="./index.html#contacto">Contacto</a></li>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#about">Proyecto</a></li>
+      <li><a href="index.html#secciones">Actividades</a></li>
+      <li><a href="index.html#podcast">Podcast</a></li>
+      <li><a href="index.html#mapa">Mapa</a></li>
+      <li><a href="investigacion.html" aria-current="page" class="is-active">Investigación</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
     </ul>
 
-    <button class="hamburger" onclick="toggleMenu()">
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
       <span></span><span></span><span></span>
     </button>
   </nav>
-
 
 
   <!-- ========== HERO ========== -->
@@ -93,7 +93,7 @@
   <section class="fase-section fade-in" id="fase1">
     <div class="fase-header fase-header--green">
       <div class="fase-header-inner">
-        <div class="fase-number">------------</div>
+        <div class="fase-number">Fase 1</div>
         <div class="fase-header-text">
           <h2>Reconocer · sentir · vincularse</h2>
           <span>Cuidado y territorio</span>
@@ -146,7 +146,123 @@
     </div>
   </section>
 
-    <!-- ===== FOOTER ===== -->
+  <!-- ========== FASE 2 ========== -->
+  <section class="fase-section fade-in" id="fase2">
+    <div class="fase-header fase-header--blue">
+      <div class="fase-header-inner">
+        <div class="fase-number">Fase 2</div>
+        <div class="fase-header-text">
+          <h2>Explorar · expresar · significar</h2>
+          <span>Lenguaje y experiencia</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="actividades-grid">
+
+      <a href="./clases/05-exploradores-del-entorno.html" class="actividad-card fade-in">
+        <div class="actividad-num" style="background:rgba(85,176,210,0.15);color:#1a6a88">05</div>
+        <div class="actividad-body">
+          <h3>Exploradores del entorno</h3>
+          <p>Descubrir con los sentidos</p>
+        </div>
+        <div class="actividad-tag" style="background:rgba(85,176,210,0.12);color:#1a6a88">Sentidos</div>
+        <div class="actividad-arrow">→</div>
+      </a>
+
+      <a href="./clases/06-mi-barrio-cuenta-historias.html" class="actividad-card fade-in">
+        <div class="actividad-num" style="background:rgba(85,176,210,0.15);color:#1a6a88">06</div>
+        <div class="actividad-body">
+          <h3>Mi barrio cuenta historias</h3>
+          <p>Relatos desde la vida cotidiana</p>
+        </div>
+        <div class="actividad-tag" style="background:rgba(215,130,44,0.12);color:#8c4800">Historia</div>
+        <div class="actividad-arrow">→</div>
+      </a>
+
+      <a href="./clases/07-arte-que-habla.html" class="actividad-card fade-in">
+        <div class="actividad-num" style="background:rgba(85,176,210,0.15);color:#1a6a88">07</div>
+        <div class="actividad-body">
+          <h3>Arte que habla</h3>
+          <p>Pintar lo que sentimos y vivimos</p>
+        </div>
+        <div class="actividad-tag" style="background:rgba(204,102,153,0.12);color:#8c2a5c">Arte</div>
+        <div class="actividad-arrow">→</div>
+      </a>
+
+      <a href="./clases/08-personajes-del-cuidado.html" class="actividad-card fade-in">
+        <div class="actividad-num" style="background:rgba(85,176,210,0.15);color:#1a6a88">08</div>
+        <div class="actividad-body">
+          <h3>Personajes del cuidado</h3>
+          <p>Juego de roles para convivir</p>
+        </div>
+        <div class="actividad-tag" style="background:rgba(123,107,170,0.12);color:#3d2e7a">Juego</div>
+        <div class="actividad-arrow">→</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ========== FASE 3 ========== -->
+  <section class="fase-section fade-in" id="fase3">
+    <div class="fase-header fase-header--pink">
+      <div class="fase-header-inner">
+        <div class="fase-number">Fase 3</div>
+        <div class="fase-header-text">
+          <h2>Construir · participar · resignificar</h2>
+          <span>Autonomía y comunidad</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="actividades-grid">
+
+      <a href="./clases/09-tejiendo-acuerdos.html" class="actividad-card fade-in">
+        <div class="actividad-num" style="background:rgba(204,102,153,0.15);color:#8c2a5c">09</div>
+        <div class="actividad-body">
+          <h3>Tejiendo acuerdos</h3>
+          <p>Decisiones que cuidan la vida colectiva</p>
+        </div>
+        <div class="actividad-tag" style="background:rgba(163,192,55,0.12);color:#3B6D11">Acuerdos</div>
+        <div class="actividad-arrow">→</div>
+      </a>
+
+      <a href="./clases/10-la-voz-de-los-ninos.html" class="actividad-card fade-in">
+        <div class="actividad-num" style="background:rgba(204,102,153,0.15);color:#8c2a5c">10</div>
+        <div class="actividad-body">
+          <h3>La voz de los niños</h3>
+          <p>Lo que queremos decir al mundo</p>
+        </div>
+        <div class="actividad-tag" style="background:rgba(85,176,210,0.12);color:#1a6a88">Voz</div>
+        <div class="actividad-arrow">→</div>
+      </a>
+
+      <a href="./clases/11-creadores-de-historias.html" class="actividad-card fade-in">
+        <div class="actividad-num" style="background:rgba(204,102,153,0.15);color:#8c2a5c">11</div>
+        <div class="actividad-body">
+          <h3>Creadores de historias</h3>
+          <p>Nuestro libro comunitario</p>
+        </div>
+        <div class="actividad-tag" style="background:rgba(215,130,44,0.12);color:#8c4800">Creación</div>
+        <div class="actividad-arrow">→</div>
+      </a>
+
+      <a href="./clases/12-la-gran-ronda-de-la-palabra.html" class="actividad-card fade-in">
+        <div class="actividad-num" style="background:rgba(204,102,153,0.15);color:#8c2a5c">12</div>
+        <div class="actividad-body">
+          <h3>La gran ronda de la palabra</h3>
+          <p>Compartir para tejer paz</p>
+        </div>
+        <div class="actividad-tag" style="background:rgba(245,200,66,0.2);color:#7a5c00">Paz</div>
+        <div class="actividad-arrow">→</div>
+      </a>
+
+    </div>
+  </section>
+
+
+
+  <!-- ===== FOOTER ===== -->
   <footer>
     <div class="footer-brand">
       <h4>Infancia que Resiste</h4>
