@@ -3,8 +3,28 @@
    Estilos base y componentes reutilizables en TODAS las páginas.
    ============================================================= */
 
+   /* ===== FUENTES ===== */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DK Cool Crayon';
+  src: url('../assets/fonts/DK Cool  Crayon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 /* ===== VARIABLES ===== */
 :root {
+  --font-title: 'DK Cool Crayon', 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
   --orange: #d7822c;
   --blue: #55b0d2;
   --pink: #cc6699;
@@ -28,10 +48,22 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-body);
   background: var(--white);
   color: #222;
   overflow-x: hidden;
+}
+
+/* Títulos: DK Cool Crayon (solo tiene un peso, se evita el negrita falso) */
+h1, h2, h3 {
+  font-family: var(--font-title);
+  font-weight: normal;
+  font-synthesis: none;
+}
+
+/* Elementos de formulario no heredan la fuente por defecto */
+button, input, select, textarea {
+  font-family: inherit;
 }
 
 /* ===== CRAYON TEXTURE OVERLAY ===== */
@@ -394,3 +426,4 @@ footer {
     gap: 2rem;
   }
 }
+ 
