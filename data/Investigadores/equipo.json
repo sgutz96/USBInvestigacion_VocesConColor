@@ -43,6 +43,13 @@
       "facultad": "Relaciones Internacionales · Facultad de Ciencias Jurídicas y Políticas",
       "detalle": "Semillero Conflicto, memoria y construcción de paz",
       "color": "yellow"
+    },
+    {
+      "nombre": "Laura Vanessa Barrero Ardila",
+      "rol": "Joven investigadora",
+      "facultad": "facultad de Ingeniería",
+      "detalle": "Semillero StoryLab",
+      "color": "yellow"
     }
   ],
   "semilleros": [
@@ -97,7 +104,9 @@
       "tutor": "Juan Sebastián Gutiérrez Alvarado",
       "color": "purple",
       "semilleristas": [
-        "Laura Vanessa Barrero Ardila"
+        "Laura Vanessa Barrero Ardila",
+        "Nicolas Garcia Soto",
+        "Zharick Dayana Peña Gualdron"
       ]
     }
   ]
